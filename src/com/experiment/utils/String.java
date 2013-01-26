@@ -13,4 +13,9 @@ public class String {
         return s.replace(java.lang.String.valueOf((char) 160), " ").trim();
     }
 
+    public static java.lang.String convertStreamToString(java.io.InputStream is) {
+        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
+    }
+
 }

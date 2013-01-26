@@ -4,6 +4,12 @@
     <option name="DEFAULT_COMPILER" value="Javac" />
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../sdks/android-sdk-macosx/extras/google/google_play_services/libproject/google-play-services_lib/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../Android-PullToRefresh/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshListFragment/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/library/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshViewPager/gen" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>

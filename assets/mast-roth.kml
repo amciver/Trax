@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Phoenix, Arizona Christmas Trees</name>
+  <description><![CDATA[2012 Locations for Mast-Roth Farms family-grown Oregon Christmas tree lots.]]></description>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style18">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style19">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style16">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style14">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style17">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style15">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>99th Ave & McDowell</name>
+    <description>A quarter mile north of McDowell on the East side of the road next to the Fear Farm></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>-112.272255,33.468826,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>NW Corner of Estrella & Van Buren</name>
+    <description>In the Safeway parking lot.</description>
+    <styleUrl>#style18</styleUrl>
+    <Point>
+      <coordinates>-112.393143,33.451279,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Royal Palms Baptist Church</name>
+    <description>At Royal Palms Baptist Church on the corner of 19th Avenue and Alice, on the west side of 19th Avenue.</description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>-112.100235,33.564358,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Desert Sky Mall</name>
+    <description>In the Sears parking lot.</description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>-112.221832,33.475491,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>North Scottsdale Nursery</name>
+    <description>On the East side of Scottsdale Rd.  North of Pinnancle Peak Rd and south of E Dynamite Blvd.</description>
+    <styleUrl>#style19</styleUrl>
+    <Point>
+      <coordinates>-111.924980,33.715485,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Dysart & McDowell</name>
+    <description></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>-112.340958,33.464249,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Guadalupe & Country Club Way</name>
+    <description>SW corner of Guadalupe & Country Club Way next to Living Faith Anglican Church.</description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>-111.902824,33.363544,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SE Corner of Baseline & Lindsay</name>
+    <description></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>-111.770683,33.378609,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SW Corner of Baseline & Ellsworth</name>
+    <description></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>-111.636803,33.378674,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>NW Corner of Signal Butte & Southern</name>
+    <description></description>
+    <styleUrl>#style16</styleUrl>
+    <Point>
+      <coordinates>-111.598312,33.393497,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paradise Valley Mall</name>
+    <description>NW corner of Paradise Village Pkwy & Cactus.</description>
+    <styleUrl>#style14</styleUrl>
+    <Point>
+      <coordinates>-111.983986,33.600609,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Arcadia Crossings Shopping Center</name>
+    <description>In the Sears parking lot.</description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>-111.985283,33.479214,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SW Corner of Litchfield & Indian School</name>
+    <description>In the Safeway parking lot.</description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>-112.363930,33.485405,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SE Corner of Broadway & Rural</name>
+    <description></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>-111.925255,33.406708,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SW Corner of 6th Ave & Michigan Dr</name>
+    <description>100 ft South of the intersection on the West side of 6th Avenue.</description>
+    <styleUrl>#style17</styleUrl>
+    <Point>
+      <coordinates>-110.968506,32.169777,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>NW Corner of 4th Ave & 32 St</name>
+    <description>In the Sears parking lot.</description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>-114.625488,32.670033,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Sierra Vista Mall</name>
+    <description></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>-110.259689,31.530592,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Southern & McClintock</name>
+    <description>500 ft North of Southern, on the East side of McClintock.</description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>-111.908630,33.395439,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Imperial Valley Mall</name>
+    <description></description>
+    <styleUrl>#style15</styleUrl>
+    <Point>
+      <coordinates>-115.530701,32.763386,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

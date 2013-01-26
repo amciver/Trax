@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Streakanomics.iml" filepath="$PROJECT_DIR$/Streakanomics.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/ActionBarSherlock-4.2.0.iml" filepath="$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/ActionBarSherlock-4.2.0.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/library/Android-PullToRefresh.iml" filepath="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/Android-PullToRefresh.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshListFragment/Android-PullToRefresh-ListFragment.iml" filepath="$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshListFragment/Android-PullToRefresh-ListFragment.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshViewPager/Android-PullToRefresh-ViewPager.iml" filepath="$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshViewPager/Android-PullToRefresh-ViewPager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trax.iml" filepath="$PROJECT_DIR$/Trax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sdks/android-sdk-macosx/extras/google/google_play_services/libproject/google-play-services_lib/google-play-services.iml" filepath="$PROJECT_DIR$/../sdks/android-sdk-macosx/extras/google/google_play_services/libproject/google-play-services_lib/google-play-services.iml" />
     </modules>
   </component>
 </project>

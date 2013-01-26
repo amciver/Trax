@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_lots"
+          android:icon="@drawable/ic_glass"
+          android:showAsAction="ifRoom|withText">
+        <menu android:id="@+id/options">
+            <item android:id="@+id/lots"
+                  android:title="Lots"
+                  android:onClick="onShowLots"/>
+            <item android:id="@+id/dropsites"
+                  android:title="Dropsites"/>
+        </menu>
+    </item>
+
+    <!--<item android:id="@+id/menu_farms"-->
+    <!--android:title="FARMS"-->
+    <!--android:onClick="onShowFarms"-->
+    <!--android:showAsAction="ifRoom|withText" >-->
+    <!--</item>-->
+</menu>

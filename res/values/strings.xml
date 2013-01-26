@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Streak for the Cash Scheduler</string>
+    <string name="app_name">trax</string>
+    <string name="item1">Trax</string>
 </resources>

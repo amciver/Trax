@@ -4,52 +4,99 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.androidquery.util.AQUtility;
 import com.experiment.adapters.TreeAdapter;
+import com.experiment.listeners.GetInstagramPhotosCompleteListener;
+import com.experiment.services.IInstagramService;
+import com.experiment.services.ImplInstagramService;
 import com.handmark.pulltorefresh.extras.listfragment.PullToRefreshListFragment;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class InitActivity extends SherlockFragmentActivity implements PullToRefreshBase.OnRefreshListener<ListView> {
     //private Resources resources;
 
-    private LinkedList<String> mListItems;
-    private ArrayAdapter<String> mAdapter;
+    private IInstagramService mInstagramService;
 
-    private PullToRefreshListFragment mPullRefreshListFragment;
-    private PullToRefreshListView mPullRefreshListView;
+    private PullToRefreshListFragment mTreesListFragment;
+    private PullToRefreshListView mTreesWrapperListView;
+    private TreeAdapter mTreesAdapter;
+    private List<JSONObject> mTrees = new ArrayList<JSONObject>();
+
+    private final String TAG = "christmastreefarm";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("InitActivity", "onCreate called");
         setContentView(R.layout.main);
 
-        setTrees();
+        //grab the PullToRefreshListFragment, grab the wrapper ListView and set refresh handler
+        mTreesListFragment = (PullToRefreshListFragment) getSupportFragmentManager().findFragmentById(R.id.trees);
+        mTreesWrapperListView = mTreesListFragment.getPullToRefreshListView();
+        mTreesWrapperListView.setOnRefreshListener(this);
 
+        mTreesAdapter = new TreeAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, mTrees);
+        mTreesWrapperListView.getRefreshableView().setAdapter(mTreesAdapter);
+
+        //ui setup, need hook in to underlying ListView, not wrapper
+        mTreesWrapperListView.getRefreshableView().setDivider(null);
+        mTreesWrapperListView.getRefreshableView().setDividerHeight(0);
+
+        mTreesListFragment.setListShown(true);
+
+        //set up instagram service and perform logic first time through to set adapter
+        mInstagramService = new ImplInstagramService();
+        mInstagramService.setOnGetInstagramPhotosCompleteListener(new GetInstagramPhotosCompleteListener() {
+            @Override
+            public void onPhotoFetchComplete(final JSONArray photos) {
+                try {
+                    for (int i = 0; i < photos.length(); i++) {
+                        JSONObject item = (JSONObject) photos.get(i);
+                        mTrees.add(0, item);
+                    }
+                } catch (JSONException e) {
+                    Log.e("InitActivity", e.getMessage(), e);
+                }
+
+                mTreesAdapter.notifyDataSetChanged();
+
+                //TODO: This works now, would like no visible "selection" when setting item
+                mTreesWrapperListView.getRefreshableView().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mTreesWrapperListView.getRefreshableView().setSelection(photos.length());
+                    }
+                });
+
+                mTreesWrapperListView.onRefreshComplete();
+            }
+        });
+
+        mInstagramService.getInstagramPhotosAsync(TAG);
     }
+
+//    @Override
+//    public void onSaveInstanceState(Bundle savedInstanceState) {
+//        super.onSaveInstanceState(savedInstanceState);
+//
+//        savedInstanceState.putBoolean("MyBoolean", true);
+//        savedInstanceState.putDouble("myDouble", 1.9);
+//        savedInstanceState.putInt("MyInt", 1);
+//        savedInstanceState.putString("MyString", "Welcome back to Android");
+//    }
 
     @Override
     protected void onDestroy() {
-
+        Log.d("InitiActivity", "onDestory called");
         super.onDestroy();
 
         //clean the file cache when root activity exit
@@ -78,14 +125,12 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
     }
 
     public boolean onShowLots(com.actionbarsherlock.view.MenuItem item) {
-        //Intent intent = new Intent(InitActivity.this, LotsFragment.class);
-        //startActivity(intent);
         Intent myIntent = new Intent(InitActivity.this, LotSelectionActivity.class);
         startActivity(myIntent);
         return true;
     }
 
-    public boolean onShowFarms(com.actionbarsherlock.view.MenuItem item) {
+    public boolean onShowDropsites(com.actionbarsherlock.view.MenuItem item) {
         return false;
     }
 
@@ -95,100 +140,10 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
         // All other menu item clicks are handled by onOptionsItemSelected()
     }
 
-    public void onClick(View v) {
-        Intent myIntent = new Intent(InitActivity.this, LotSelectionActivity.class);
-        startActivity(myIntent);
-    }
-
     @Override
     public void onRefresh(PullToRefreshBase<ListView> refreshView) {
         Log.d("InitActivity", "Notification to refresh the listing of trees called");
-    }
+        mInstagramService.getInstagramPhotosAsync(TAG);
 
-    public void setTrees() {
-        mPullRefreshListFragment = (PullToRefreshListFragment) getSupportFragmentManager().findFragmentById(
-                R.id.trees);
-
-        // Get PullToRefreshListView from Fragment
-        mPullRefreshListView = mPullRefreshListFragment.getPullToRefreshListView();
-
-        // Set a listener to be invoked when the list should be refreshed.
-        mPullRefreshListView.setOnRefreshListener(this);
-
-        // You can also just use mPullRefreshListFragment.getListView()
-        ListView actualListView = mPullRefreshListView.getRefreshableView();
-
-
-        List<JSONObject> items = new ArrayList<JSONObject>();
-        JSONArray trees = getJSON();
-        try {
-            for (int i = 0; i < trees.length(); i++) {
-                JSONObject item = (JSONObject) trees.get(i);
-                items.add(item);
-            }
-        } catch (Exception e) {
-            Log.e("TreesFragment", "BOOM");
-        }
-
-
-        //mListItems = new LinkedList<String>();
-        //mListItems.addAll(Arrays.asList(mStrings));
-        //mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mListItems);
-
-        // You can also just use setListAdapter(mAdapter) or
-        // mPullRefreshListView.setAdapter(mAdapter)
-        TreeAdapter adapter = new TreeAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, items);
-        actualListView.setAdapter(adapter);
-
-        mPullRefreshListFragment.setListShown(true);
-
-
-        //setListAdapter(adapter);
-
-    }
-
-    final String CLIENT_ID = "f8bf37e4a94c4de392b43ebac820bda4";
-
-    private JSONArray getJSON() {
-        try {
-
-            HttpClient client = new DefaultHttpClient();
-            //HttpGet request = new HttpGet("http://api.twicsy.com/search/christmas+tree");
-
-            HttpGet request = new HttpGet("https://api.instagram.com/v1/tags/christmastreefarm/media/recent?client_id=" + CLIENT_ID);
-            HttpResponse response = client.execute(request);
-
-            // Check if server response is valid
-            StatusLine status = response.getStatusLine();
-            if (status.getStatusCode() != 200) {
-                throw new IOException("Invalid response from server: " + status.toString());
-            }
-
-            // Pull content stream from response
-            HttpEntity entity = response.getEntity();
-            InputStream inputStream = entity.getContent();
-
-            ByteArrayOutputStream content = new ByteArrayOutputStream();
-
-            //read response into a buffered stream
-            int readBytes = 0;
-            byte[] sBuffer = new byte[512];
-            while ((readBytes = inputStream.read(sBuffer)) != -1) {
-                content.write(sBuffer, 0, readBytes);
-            }
-
-            //return result from buffered stream
-            String dataAsString = new String(content.toByteArray());
-            JSONObject jsonObject = new JSONObject(dataAsString);
-
-            //JSONArray jsonArray = jsonObject.getJSONArray("results");
-            JSONArray jsonArray = jsonObject.getJSONArray("data");
-            return jsonArray;
-
-        } catch (Exception e) {
-            System.out.println(e.getLocalizedMessage());
-        }
-
-        return null;
     }
 }

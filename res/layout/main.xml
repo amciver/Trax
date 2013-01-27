@@ -4,11 +4,6 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
-    <!--<fragment-->
-    <!--android:id="@+id/trees"-->
-    <!--class="com.experiment.fragments.TreesFragment"-->
-    <!--android:layout_width="fill_parent"-->
-    <!--android:layout_height="fill_parent"/>-->
     <fragment
             android:id="@+id/trees"
             android:name="com.handmark.pulltorefresh.extras.listfragment.PullToRefreshListFragment"

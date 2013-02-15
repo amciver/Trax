@@ -3,11 +3,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="4dip">
+                android:padding="4dip">
     <ProgressBar
             android:id="@+id/progress"
-            android:layout_width="15dip"
-            android:layout_height="15dip"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
             android:layout_centerInParent="true"
             />
     <ImageView

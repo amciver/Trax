@@ -20,10 +20,10 @@
             android:layout_height="wrap_content">
         <ImageView
                 android:id="@+id/location"
-                android:layout_width="24dip"
-                android:layout_height="24dip"
+                android:layout_width="48dip"
+                android:layout_height="48dip"
                 android:layout_marginRight="8dip"
-                android:src="@drawable/ic_green01"/>
+                android:src="@drawable/ic_action_location"/>
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -32,36 +32,46 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center">
-                <TextView android:id="@+id/farm"
+                <TextView android:id="@+id/location"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:layout_marginRight="4dip"
                           android:text="Mast-Roth Farms:"/>
+                <TextView android:id="@+id/hours"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginRight="4dip"
+                          android:text="9am - 7pm"/>
 
             </LinearLayout>
 
             <LinearLayout android:layout_width="wrap_content"
                           android:layout_height="wrap_content">
                 <ImageView
+                        android:id="@+id/lot_dollar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/ic_dollar"/>
+                <ImageView
                         android:id="@+id/lot_amex"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/ic_american_express_24"/>
+                        android:src="@drawable/ic_american_express"/>
                 <ImageView
                         android:id="@+id/lot_visa"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/ic_visa_24"/>
+                        android:src="@drawable/ic_visa"/>
                 <ImageView
                         android:id="@+id/lot_mastercard"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/ic_mastercard_24"/>
+                        android:src="@drawable/ic_mastercard"/>
                 <ImageView
                         android:id="@+id/lot_discover"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/ic_discover_24"/>
+                        android:src="@drawable/ic_discover"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -2,14 +2,15 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_lots"
-          android:icon="@drawable/ic_glass"
+          android:icon="@drawable/ic_action_search"
           android:showAsAction="ifRoom|withText">
         <menu android:id="@+id/options">
             <item android:id="@+id/lots"
-                  android:title="Lots"
+                  android:title="@string/option_lots"
                   android:onClick="onShowLots"/>
             <item android:id="@+id/dropsites"
-                  android:title="Dropsites"/>
+                  android:title="@string/option_dropsites"
+                  android:onClick="onShowLots"/>
         </menu>
     </item>
 

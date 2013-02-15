@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">trax</string>
-    <string name="item1">Trax</string>
+    <string name="app_name">O Tannenbaum</string>
+    <string name="option_lots">Lots</string>
+    <string name="option_dropsites">Dropsites</string>
 </resources>

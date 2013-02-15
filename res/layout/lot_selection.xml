@@ -15,13 +15,13 @@
             android:layout_weight="1">
         <fragment
                 android:id="@+id/lots_lots"
-                class="com.experiment.fragments.LotsFragment"
+                class="com.experiment.trax.fragments.LotsFragment"
                 android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"/>
         <!--<fragment-->
         <!--android:id="@+id/lots_details"-->
-        <!--class="com.experiment.fragments.DetailsFragment"-->
+        <!--class="com.experiment.trax.fragments.DetailsFragment"-->
         <!--android:layout_weight="1"-->
         <!--android:layout_width="fill_parent"-->
         <!--android:layout_height="fill_parent"/>-->

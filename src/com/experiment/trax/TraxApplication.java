@@ -14,10 +14,5 @@ public class TraxApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
-//        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext()).
-//                defaultDisplayImageOptions(DisplayImageOptions.createSimple()).
-//                build();
-//        ImageLoader.getInstance().init(config);
     }
 }

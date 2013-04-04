@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import com.androidquery.AQuery;
 import com.androidquery.callback.ImageOptions;
-import com.experiment.R;
+import com.experiment.trax.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -51,6 +51,8 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
             Log.e("TreeAdapter", e.getMessage(), e);
         }
 
+        //convertView.setBackgroundColor(R.color.abs__primary_text_holo_light);
+
         AQuery aq = new AQuery(convertView);
 
         ImageOptions options = new ImageOptions();
@@ -59,9 +61,9 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
         options.fallback = 0;
         options.ratio = 1.0f;
         options.animation = AQuery.FADE_IN_NETWORK;
-        options.round = 15;
+        //options.round = 15;
 
-        aq.id(R.id.image).progress(R.id.progress).image(url, options);
+        aq.id(R.id.tree).progress(R.id.progress).image(url, options);
 
 
         return convertView;

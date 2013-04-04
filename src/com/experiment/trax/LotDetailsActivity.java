@@ -2,7 +2,6 @@ package com.experiment.trax;
 
 import android.os.Bundle;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.experiment.R;
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,5 +23,12 @@ public class LotDetailsActivity extends SherlockFragmentActivity {
 //                             Bundle savedInstanceState) {
 //        // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout, container, false);
+//    }
+
+//    @Override
+//    public boolean onContextItemSelected(MenuItem aItem) {
+//        Log.d("MakingCall", "Im in oncontextitemselected");
+//        //AdapterContextMenuInfo menuInfo = (AdapterContextMenuInfo) aItem.getMenuInfo();
+//        return false;
 //    }
 }

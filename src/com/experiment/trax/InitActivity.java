@@ -2,18 +2,19 @@ package com.experiment.trax;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ListView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.androidquery.util.AQUtility;
-import com.experiment.R;
 import com.experiment.trax.adapters.TreeAdapter;
 import com.experiment.trax.listeners.GetInstagramPhotosCompleteListener;
 import com.experiment.trax.services.IInstagramService;
 import com.experiment.trax.services.ImplInstagramService;
+import com.experiment.trax.services.ImplLocationService;
 import com.handmark.pulltorefresh.extras.listfragment.PullToRefreshListFragment;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -38,40 +39,67 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Log.d("InitActivity", "onCreate called");
+
+        setUpServices();
         setContentView(R.layout.main);
 
-        final ActionBar actionBar = getSupportActionBar();
+        String font = "billabong";
+        SpannableString s = new SpannableString("O Tannenbaum");
+        s.setSpan(new com.experiment.trax.utils.TypefaceSpan(this, font), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        // Specify that tabs should be displayed in the action bar.
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        // Update the action bar title with the TypefaceSpan instance
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(s);
 
-        // Create a tab listener that is called when the user changes tabs.
-        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
-            public void onTabSelected(ActionBar.Tab tab,
-                                      FragmentTransaction ft) {
-            }
-
-            public void onTabUnselected(ActionBar.Tab tab,
-                                        FragmentTransaction ft) {
-            }
-
-            public void onTabReselected(ActionBar.Tab tab,
-                                        FragmentTransaction ft) {
-            }
-        };
-
-        actionBar.addTab(actionBar.newTab()
-                .setText("instagram")
-                .setTabListener(tabListener));
-
-        actionBar.addTab(actionBar.newTab()
-                .setText("twitter")
-                .setTabListener(tabListener));
-
-        actionBar.addTab(actionBar.newTab()
-                .setText("youtube")
-                .setTabListener(tabListener));
+//        final ActionBar actionBar = getSupportActionBar();
+//
+//        // Specify that tabs should be displayed in the action bar.
+//        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+//
+//        // Create a tab listener that is called when the user changes tabs.
+//        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
+//            public void onTabSelected(ActionBar.Tab tab,
+//                                      FragmentTransaction ft) {
+//            }
+//
+//            public void onTabUnselected(ActionBar.Tab tab,
+//                                        FragmentTransaction ft) {
+//            }
+//
+//            public void onTabReselected(ActionBar.Tab tab,
+//                                        FragmentTransaction ft) {
+//            }
+//        };
+//
+//        LayoutInflater inflater = LayoutInflater.from(this);
+//        View customView = inflater.inflate(R.layout.tab_title, null);
+//        TextView instagram = (TextView) customView.findViewById(R.id.action_custom_title);
+//        instagram.setText("Instagram");
+//        actionBar.addTab(actionBar.newTab()
+//                .setTabListener(tabListener)
+//                .setCustomView(instagram));
+//
+//        actionBar.addTab(actionBar.newTab()
+//                .setText("twitter")
+//                .setTabListener(tabListener));
+//
+//        actionBar.addTab(actionBar.newTab()
+//                .setText("youtube")
+//                .setTabListener(tabListener));
+//
+//        for(int i = 0; i<actionBar.getTabCount(); i++){
+//            LayoutInflater inflater = LayoutInflater.from(this);
+//            View customView = inflater.inflate(R.layout.tab_title, null);
+//
+//            TextView titleTV = (TextView) customView.findViewById(R.id.action_custom_title);
+//            titleTV.setText(tabNames[i]);
+//            //Here you can also add any other styling you want.
+//
+//            bar.getTabAt(i).setCustomView(customView);
+//        }
 
         //grab the PullToRefreshListFragment, grab the wrapper ListView and set refresh handler
         mTreesListFragment = (PullToRefreshListFragment) getSupportFragmentManager().findFragmentById(R.id.trees);
@@ -118,6 +146,10 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
         mInstagramService.getInstagramPhotosAsync(TAG);
     }
 
+    private void setUpServices() {
+        ImplLocationService.INSTANCE.setApplicationContext(getApplicationContext());
+    }
+
 //    @Override
 //    public void onSaveInstanceState(Bundle savedInstanceState) {
 //        super.onSaveInstanceState(savedInstanceState);
@@ -159,6 +191,7 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
     }
 
     public boolean onShowLots(com.actionbarsherlock.view.MenuItem item) {
+
         Intent myIntent = new Intent(InitActivity.this, LotSelectionActivity.class);
         startActivity(myIntent);
         return true;

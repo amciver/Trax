@@ -10,6 +10,7 @@
       <directory url="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshListFragment/gen" includeSubdirectories="true" />
       <directory url="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/library/gen" includeSubdirectories="true" />
       <directory url="file://$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshViewPager/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../sdks/android-sdk-macosx/extras/google/google_play_services/libproject/google-play-services_lib/src/gen" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
@@ -24,7 +25,11 @@
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
-    <annotationProcessing enabled="false" useClasspath="true" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
   </component>
 </project>
 

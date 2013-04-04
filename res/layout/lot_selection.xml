@@ -7,23 +7,28 @@
             android:id="@+id/lots_map"
             class="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_weight="1"/>
-    <FrameLayout
+    <fragment
+            android:id="@+id/lots_listing"
+            class="com.experiment.trax.fragments.LotsFragment"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-        <fragment
-                android:id="@+id/lots_lots"
-                class="com.experiment.trax.fragments.LotsFragment"
-                android:layout_weight="1"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"/>
-        <!--<fragment-->
-        <!--android:id="@+id/lots_details"-->
-        <!--class="com.experiment.trax.fragments.DetailsFragment"-->
-        <!--android:layout_weight="1"-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="fill_parent"/>-->
-    </FrameLayout>
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+    <!--<FrameLayout-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1">-->
+    <!--<fragment-->
+    <!--android:id="@+id/lots_listing"-->
+    <!--class="com.experiment.trax.fragments.LotsFragment"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"/>-->
+    <!--&lt;!&ndash;<fragment&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/lots_details"&ndash;&gt;-->
+    <!--&lt;!&ndash;class="com.experiment.trax.fragments.DetailsFragment"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="fill_parent"/>&ndash;&gt;-->
+    <!--</FrameLayout>-->
 </LinearLayout>

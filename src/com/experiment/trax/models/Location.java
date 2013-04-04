@@ -2,6 +2,8 @@ package com.experiment.trax.models;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.util.Hashtable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: amciver
@@ -11,15 +13,27 @@ import com.google.android.gms.maps.model.LatLng;
  */
 public class Location {
 
+    private String id;
     private String name;
+    private float rating;
     private String business;
     private String description;
     private LatLng point;
     private String phone;
+    private Hashtable<Integer, String> hoursOpen = new Hashtable<Integer, String>();
+    private Hashtable<Integer, String> hoursClose = new Hashtable<Integer, String>();
     private boolean acceptsAmex = false;
     private boolean acceptsVisa = false;
     private boolean acceptsMastercard = false;
     private boolean acceptsDiscover = false;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getPhone() {
         return phone;
@@ -27,6 +41,22 @@ public class Location {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getOpeningTime(int dayOfWeek) {
+        return com.experiment.trax.utils.String.formatHours(hoursOpen.get(dayOfWeek));
+    }
+
+    public String getClosingTime(int dayOfWeek) {
+        return com.experiment.trax.utils.String.formatHours(hoursClose.get(dayOfWeek));
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 
     public boolean isAcceptsAmex() {

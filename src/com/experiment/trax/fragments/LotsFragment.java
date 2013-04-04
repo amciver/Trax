@@ -1,16 +1,21 @@
 package com.experiment.trax.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockListFragment;
-import com.experiment.R;
+import com.experiment.trax.R;
 import com.experiment.trax.adapters.LotAdapter;
 import com.experiment.trax.listeners.GetLocationsCompleteListener;
 import com.experiment.trax.models.Location;
+import com.experiment.trax.services.ImplLocationService;
 import com.experiment.trax.services.ImplSimpleDBService;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -41,24 +46,36 @@ public class LotsFragment extends SherlockListFragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("LotsFragment", "Clicked short");
+                GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
+                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                googleMap.setMyLocationEnabled(true);
+                googleMap.getUiSettings().setCompassEnabled(true);
+                googleMap.getUiSettings().setZoomControlsEnabled(false);
+
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLocations.get(i).getPoint(), 13));
             }
         });
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("LotsFragment", "Clicked long");
-                return false;
-            }
-        });
+//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Log.d("LotsFragment", "Clicked long");
+//                return false;
+//            }
+//        });
 
         listView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
             @Override
             public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-                AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) contextMenuInfo;
 
+                AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) contextMenuInfo;
                 Location location = mLocations.get(info.position);
+
+                //if we dont have a phone number, return now
+                if (location.getPhone().length() != 7 &&
+                        location.getPhone().length() != 10)
+                    return;
+
                 contextMenu.setHeaderTitle(location.getName());
 
                 android.view.MenuInflater inflater = getActivity().getMenuInflater();
@@ -66,18 +83,33 @@ public class LotsFragment extends SherlockListFragment {
             }
         });
 
-        //empty class as we will populate this with an adapter once we fetch locations in LotSelectionActivity
         setLots();
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-//                android.R.layout.simple_list_item_1, values);
-//        setListAdapter(adapter);
     }
 
-//    public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-//        Log.d("LotsFragment", "Create context menu");
-//        MenuInflater inflater = getSherlockActivity().getSupportMenuInflater();
-//        inflater.inflate(R.menu.lot_menu, contextMenu);
-//    }
+    @Override
+    public boolean onContextItemSelected(android.view.MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.call_item: {
+                AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+                Location location = mLocations.get(info.position);
+
+                Intent action = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + location.getPhone()));
+                startActivity(action);
+                return true;
+            }
+            case R.id.directions_item: {
+
+                AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+                Location location = mLocations.get(info.position);
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr=" + ImplLocationService.getCurrentLocation().getLatitude() + "," + ImplLocationService.getCurrentLocation().getLongitude() + "&daddr=" + location.getPoint().latitude + "," + location.getPoint().longitude));
+                startActivity(intent);
+                return true;
+            }
+            default:
+                return super.onContextItemSelected(item);
+
+        }
+    }
 
     public void setLots() {
         ImplSimpleDBService srvc = new ImplSimpleDBService();
@@ -112,10 +144,49 @@ public class LotsFragment extends SherlockListFragment {
 //                });
 
                 GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.630182, -112.018622), 10));
                 googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                googleMap.setMyLocationEnabled(true);
                 googleMap.getUiSettings().setCompassEnabled(true);
-                googleMap.getUiSettings().setZoomControlsEnabled(true);
+                googleMap.getUiSettings().setZoomControlsEnabled(false);
+                googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+                    @Override
+                    public View getInfoWindow(Marker marker) {
+                        return null;  //To change body of implemented methods use File | Settings | File Templates.
+                    }
+
+                    @Override
+                    public View getInfoContents(Marker marker) {
+                        // Getting view from the layout file info_window_layout
+                        View v = getLayoutInflater(null).inflate(R.layout.lot_info_window, null);
+
+                        // Getting the position from the marker
+                        LatLng latLng = marker.getPosition();
+
+                        Location location = null;
+                        String id = marker.getId();
+                        for (Location l : mLocations)
+                            if (l.getId().equals(id)) {
+                                location = l;
+                            }
+
+                        if (location != null) {
+                            TextView title = (TextView) v.findViewById(R.id.lot_info_title);
+                            title.setText(location.getName());
+
+                            TextView description = (TextView) v.findViewById(R.id.lot_info_description);
+                            description.setText(location.getDescription());
+                        }
+
+                        return v;
+                    }
+                });
+                CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(33.630182, -112.018622));
+                CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
+
+                googleMap.moveCamera(center);
+                googleMap.animateCamera(zoom);
+
+                //googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.630182, -112.018622), 10));
                 googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                     @Override
                     public void onInfoWindowClick(Marker marker) {
@@ -135,37 +206,49 @@ public class LotsFragment extends SherlockListFragment {
 
                 //zoom in on the first one, which is closest to user
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLocations.get(0).getPoint(), 13));
-
             }
         });
         srvc.getLocationsAsync(getActivity().getApplicationContext(), new LatLng(33.630182, -112.018622));
     }
 
     private void addLotToMap(GoogleMap googleMap, BitmapDescriptor icon, Location location) {
-        googleMap.addMarker(new MarkerOptions()
+        Marker marker = googleMap.addMarker(new MarkerOptions()
                 .position(location.getPoint())
                 .title(location.getName())
                 .snippet(location.getDescription())
                 .icon(icon));
+        location.setId(marker.getId());
     }
+
+
+//    public boolean onContextItemSelected(MenuItem aItem) {
+//        Log.d("MakingCall", "Im in fragment");
+//        //AdapterContextMenuInfo menuInfo = (AdapterContextMenuInfo) aItem.getMenuInfo();
+//        return false;
+//    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        Log.d("MakingCall", "Im in fragment, onOptionsItemSelected");
+//        return super.onOptionsItemSelected(item);    //To change body of overridden methods use File | Settings | File Templates.
+//    }
 
 //    @Override
 //    public void onListItemClick(ListView l, View v, int position, long id) {
 //        super.onListItemClick(l, v, position, id);
 //
-//        //GoogleMap googleMap = ((SupportMapFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
-//        //googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(locations.get(i).getPoint(), 13));
+//        GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
+//        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLocations.get(position).getPoint(), 13));
 //
+////        Intent intent = new Intent(getActivity().getApplicationContext(), LotDetailsActivity.class);
+////        startActivity(intent);
 //
-//        Intent intent = new Intent(getActivity().getApplicationContext(), LotDetailsActivity.class);
-//        startActivity(intent);
-//
-//        //FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-//        //LotsFragment lotsFragment = (LotsFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_lots));
-//        //DetailsFragment detailsFragment = (DetailsFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_details));
-//        //trans.hide(lotsFragment);
-//        //trans.show(detailsFragment);
-//        //trans.commit();
+////        FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+////        LotsFragment lotsFragment = (LotsFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_lots));
+////        DetailsFragment detailsFragment = (DetailsFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_details));
+////        trans.hide(lotsFragment);
+////        trans.show(detailsFragment);
+////        trans.commit();
 //    }
 
 

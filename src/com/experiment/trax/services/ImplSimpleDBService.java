@@ -53,39 +53,44 @@ public class ImplSimpleDBService implements ISimpleDBService {
             TreeMap<Float, Location> locations = new TreeMap<Float, com.experiment.trax.models.Location>();
 
             try {
-                android.location.Location currentLocation = (android.location.Location) location[0];
 
-                SelectResult result = SimpleDB.getInstance().select(new SelectRequest("select * from `Locations`"));
-                for (Item lot : result.getItems()) {
-                    android.location.Location lotLocation = new android.location.Location(currentLocation.getProvider());
+                if (location[0] != null) {
+                    android.location.Location currentLocation = location[0];
 
-                    Location internalLotLocation = new Location();
-                    internalLotLocation.setName(lot.getName());
+                    SelectResult result = SimpleDB.getInstance().select(new SelectRequest("select * from `Locations`"));
+                    for (Item lot : result.getItems()) {
+                        android.location.Location lotLocation = new android.location.Location(currentLocation.getProvider());
 
-                    for (Attribute attribute : lot.getAttributes()) {
+                        Location internalLotLocation = new Location();
+                        internalLotLocation.setName(lot.getName());
 
-                        if (attribute.getName().equalsIgnoreCase("business"))
-                            internalLotLocation.setBusiness(attribute.getValue());
-                        if (attribute.getName().equalsIgnoreCase("description"))
-                            internalLotLocation.setDescription(attribute.getValue());
-                        if (attribute.getName().equalsIgnoreCase("amex"))
-                            internalLotLocation.setAcceptsAmex(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
-                        if (attribute.getName().equalsIgnoreCase("visa"))
-                            internalLotLocation.setAcceptsVisa(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
-                        if (attribute.getName().equalsIgnoreCase("mastercard"))
-                            internalLotLocation.setAcceptsMastercard(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
-                        if (attribute.getName().equalsIgnoreCase("discover"))
-                            internalLotLocation.setAcceptsDiscover(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
-                        if (attribute.getName().equalsIgnoreCase("phone"))
-                            internalLotLocation.setPhone(attribute.getValue());
-                        if (attribute.getName().equalsIgnoreCase("lat"))
-                            lotLocation.setLatitude(Double.parseDouble(attribute.getValue()));
-                        if (attribute.getName().equalsIgnoreCase("lng"))
-                            lotLocation.setLongitude(Double.parseDouble(attribute.getValue()));
+                        for (Attribute attribute : lot.getAttributes()) {
+
+                            if (attribute.getName().equalsIgnoreCase("rating"))
+                                internalLotLocation.setRating(Float.parseFloat(attribute.getValue()));
+                            if (attribute.getName().equalsIgnoreCase("business"))
+                                internalLotLocation.setBusiness(attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("description"))
+                                internalLotLocation.setDescription(attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("amex"))
+                                internalLotLocation.setAcceptsAmex(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
+                            if (attribute.getName().equalsIgnoreCase("visa"))
+                                internalLotLocation.setAcceptsVisa(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
+                            if (attribute.getName().equalsIgnoreCase("mastercard"))
+                                internalLotLocation.setAcceptsMastercard(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
+                            if (attribute.getName().equalsIgnoreCase("discover"))
+                                internalLotLocation.setAcceptsDiscover(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
+                            if (attribute.getName().equalsIgnoreCase("phone"))
+                                internalLotLocation.setPhone(attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("lat"))
+                                lotLocation.setLatitude(Double.parseDouble(attribute.getValue()));
+                            if (attribute.getName().equalsIgnoreCase("lng"))
+                                lotLocation.setLongitude(Double.parseDouble(attribute.getValue()));
+                        }
+
+                        internalLotLocation.setPoint(new LatLng(lotLocation.getLatitude(), lotLocation.getLongitude()));
+                        locations.put(currentLocation.distanceTo(lotLocation), internalLotLocation);
                     }
-
-                    internalLotLocation.setPoint(new LatLng(lotLocation.getLatitude(), lotLocation.getLongitude()));
-                    locations.put(currentLocation.distanceTo(lotLocation), internalLotLocation);
                 }
             } catch (Exception e) {
                 Log.e("GetLocationsTask", "Failure attempting to get locations", e);

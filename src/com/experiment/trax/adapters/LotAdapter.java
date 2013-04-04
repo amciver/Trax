@@ -1,14 +1,16 @@
 package com.experiment.trax.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.experiment.R;
+import com.experiment.trax.R;
 import com.experiment.trax.models.Location;
+import org.joda.time.DateTime;
 
 import java.util.List;
 
@@ -35,6 +37,8 @@ public class LotAdapter extends ArrayAdapter<Location> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
+        Log.d("LotAdapter", "getView called for position [" + position + "]");
+
         View v = convertView;
         if (v == null) {
             LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -43,74 +47,76 @@ public class LotAdapter extends ArrayAdapter<Location> {
 
         Location location = mLots.get(position);
         if (location != null) {
-            TextView farm = (TextView) v.findViewById(R.id.farm);
-            if (farm != null)
-                farm.setText(location.getBusiness());
+            TextView name = (TextView) v.findViewById(R.id.lot_name);
+            if (name != null)
+                name.setText(location.getName());
 
-//            TextView phone = (TextView)v.findViewById(R.id.lot_phone);
-//            if(phone != null)
-//                phone.setText(location.getPhone());
+//            RatingBar rating = (RatingBar) v.findViewById(R.id.lot_ratingBar);
+//            if (rating != null)
+//                rating.setRating(location.getRating());
 
-            ImageView icon = (ImageView) v.findViewById(R.id.location);
-            icon.setImageResource(R.drawable.ic_action_location);
-//            if (icon != null) {
-//                if (position == 0)
-//                    icon.setImageResource(R.drawable.ic_green01);
-//                if (position == 1)
-//                    icon.setImageResource(R.drawable.ic_green02);
-//                if (position == 2)
-//                    icon.setImageResource(R.drawable.ic_green03);
-//                if (position == 3)
-//                    icon.setImageResource(R.drawable.ic_green04);
-//                if (position == 4)
-//                    icon.setImageResource(R.drawable.ic_green05);
-//                if (position == 5)
-//                    icon.setImageResource(R.drawable.ic_green06);
-//                if (position == 6)
-//                    icon.setImageResource(R.drawable.ic_green07);
-//                if (position == 7)
-//                    icon.setImageResource(R.drawable.ic_green08);
-//                if (position == 8)
-//                    icon.setImageResource(R.drawable.ic_green09);
-//                if (position == 9)
-//                    icon.setImageResource(R.drawable.ic_green10);
-//            }
+            TextView phone = (TextView) v.findViewById(R.id.lot_phone);
+            if (phone != null) {
+                if (location.getPhone() != null && !location.getPhone().isEmpty())
+                    phone.setText(com.experiment.trax.utils.String.formatPhoneNumber(location.getPhone(), "-"));
+                else
+                    phone.setText(R.string.not_available);
+            }
+
+            String openingTime = location.getOpeningTime(DateTime.now().getDayOfWeek());
+            String closingTime = location.getClosingTime(DateTime.now().getDayOfWeek());
+            if (openingTime == null ||
+                    openingTime.length() == 0 ||
+                    closingTime == null ||
+                    closingTime.length() == 0) {
+
+
+            } else {
+                TextView open = (TextView) v.findViewById(R.id.lot_hours_open);
+                if (open != null) {
+                    open.setText(location.getOpeningTime(DateTime.now().getDayOfWeek()));
+                }
+
+                TextView close = (TextView) v.findViewById(R.id.lot_hours_close);
+                if (close != null) {
+                    close.setText(location.getOpeningTime(DateTime.now().getDayOfWeek()));
+                }
+            }
+
+//            ImageView icon = (ImageView) v.findViewById(R.id.lot_location);
+//            icon.setImageResource(R.drawable.ic_action_location);
 
             ImageView amex = (ImageView) v.findViewById(R.id.lot_amex);
             if (amex != null) {
-                if (location.isAcceptsAmex())
-                    amex.setVisibility(View.VISIBLE);
+                if (!location.isAcceptsAmex())
+                    amex.setVisibility(View.INVISIBLE);
                 else
-                    amex.setVisibility(View.GONE);
+                    amex.setVisibility(View.VISIBLE);
             }
 
             ImageView visa = (ImageView) v.findViewById(R.id.lot_visa);
             if (visa != null) {
-                if (location.isAcceptsVisa())
-                    visa.setVisibility(View.VISIBLE);
+                if (!location.isAcceptsVisa())
+                    visa.setVisibility(View.INVISIBLE);
                 else
-                    visa.setVisibility(View.GONE);
+                    visa.setVisibility(View.VISIBLE);
             }
 
             ImageView mastercard = (ImageView) v.findViewById(R.id.lot_mastercard);
             if (mastercard != null) {
-                if (location.isAcceptsMastercard())
-                    mastercard.setVisibility(View.VISIBLE);
+                if (!location.isAcceptsMastercard())
+                    mastercard.setVisibility(View.INVISIBLE);
                 else
-                    mastercard.setVisibility(View.GONE);
+                    mastercard.setVisibility(View.VISIBLE);
             }
 
             ImageView discover = (ImageView) v.findViewById(R.id.lot_discover);
             if (discover != null) {
-                if (location.isAcceptsDiscover())
-                    discover.setVisibility(View.VISIBLE);
+                if (!location.isAcceptsDiscover())
+                    discover.setVisibility(View.INVISIBLE);
                 else
-                    discover.setVisibility(View.GONE);
+                    discover.setVisibility(View.VISIBLE);
             }
-
-//            TextView lotName = (TextView)v.findViewById(R.id.lot_name);
-//            if(lotName != null)
-//                lotName.setText(location.getName());
         }
         return v;
     }

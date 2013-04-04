@@ -2,11 +2,15 @@ package com.experiment.trax;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.androidquery.util.AQUtility;
@@ -40,57 +44,55 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //TODO: this will provide a different font but currently not vertically centered
+        String font = "billabong";
+        SpannableString s = new SpannableString(getApplicationContext().getString(R.string.app_name));
+        s.setSpan(new com.experiment.trax.utils.TypefaceSpan(this, font), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        getSupportActionBar().setTitle(s);
+
         Log.d("InitActivity", "onCreate called");
 
         setUpServices();
         setContentView(R.layout.main);
 
-        //TODO: this will provide a different font but currently not vertically centered
-        String font = "billabong";
-        SpannableString s = new SpannableString("O Tannenbaum");
-        s.setSpan(new com.experiment.trax.utils.TypefaceSpan(this, font), 0, s.length(),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        final ActionBar actionBar = getSupportActionBar();
 
-        // Update the action bar title with the TypefaceSpan instance
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(s);
+        // Specify that tabs should be displayed in the action bar.
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-//        final ActionBar actionBar = getSupportActionBar();
-//
-//        // Specify that tabs should be displayed in the action bar.
-//        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-//
-//        // Create a tab listener that is called when the user changes tabs.
-//        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
-//            public void onTabSelected(ActionBar.Tab tab,
-//                                      FragmentTransaction ft) {
-//            }
-//
-//            public void onTabUnselected(ActionBar.Tab tab,
-//                                        FragmentTransaction ft) {
-//            }
-//
-//            public void onTabReselected(ActionBar.Tab tab,
-//                                        FragmentTransaction ft) {
-//            }
-//        };
-//
-//        LayoutInflater inflater = LayoutInflater.from(this);
-//        View customView = inflater.inflate(R.layout.tab_title, null);
-//        TextView instagram = (TextView) customView.findViewById(R.id.action_custom_title);
-//        instagram.setText("Instagram");
-//        actionBar.addTab(actionBar.newTab()
-//                .setTabListener(tabListener)
-//                .setCustomView(instagram));
-//
-//        actionBar.addTab(actionBar.newTab()
-//                .setText("twitter")
-//                .setTabListener(tabListener));
+        // Create a tab listener that is called when the user changes tabs.
+        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
+            public void onTabSelected(ActionBar.Tab tab,
+                                      FragmentTransaction ft) {
+            }
+
+            public void onTabUnselected(ActionBar.Tab tab,
+                                        FragmentTransaction ft) {
+            }
+
+            public void onTabReselected(ActionBar.Tab tab,
+                                        FragmentTransaction ft) {
+            }
+        };
+
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View customView = inflater.inflate(R.layout.tab_title, null);
+        TextView photos = (TextView) customView.findViewById(R.id.action_custom_title);
+        photos.setText("Photos");
+        actionBar.addTab(actionBar.newTab()
+                .setTabListener(tabListener)
+                .setCustomView(photos));
+
+        actionBar.addTab(actionBar.newTab()
+                .setText("Types")
+                .setTabListener(tabListener));
 //
 //        actionBar.addTab(actionBar.newTab()
 //                .setText("youtube")
 //                .setTabListener(tabListener));
-//
+
 //        for(int i = 0; i<actionBar.getTabCount(); i++){
 //            LayoutInflater inflater = LayoutInflater.from(this);
 //            View customView = inflater.inflate(R.layout.tab_title, null);

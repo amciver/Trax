@@ -15,10 +15,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,7 +27,7 @@ import java.util.TreeMap;
 
 public class ImplSimpleDBService implements ISimpleDBService {
 
-    final static int RETURN_COUNT = 10;
+    final static int RETURN_COUNT = 1;
 
     List<GetLocationsCompleteListener> mGetLocationsCompleteListeners = new ArrayList<GetLocationsCompleteListener>();
 
@@ -64,6 +61,10 @@ public class ImplSimpleDBService implements ISimpleDBService {
                         Location internalLotLocation = new Location();
                         internalLotLocation.setName(lot.getName());
 
+                        //used to temporarily store hours of open and close for each location
+                        Hashtable<Integer, String> hoursOpen = new Hashtable<Integer, String>();
+                        Hashtable<Integer, String> hoursClose = new Hashtable<Integer, String>();
+
                         for (Attribute attribute : lot.getAttributes()) {
 
                             if (attribute.getName().equalsIgnoreCase("rating"))
@@ -82,13 +83,51 @@ public class ImplSimpleDBService implements ISimpleDBService {
                                 internalLotLocation.setAcceptsDiscover(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
                             if (attribute.getName().equalsIgnoreCase("phone"))
                                 internalLotLocation.setPhone(attribute.getValue());
+
+                            //create a key -> value to day of week and time opened or closed
+                            if (attribute.getName().equalsIgnoreCase("1_open"))
+                                hoursOpen.put(1, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("1_close"))
+                                hoursClose.put(1, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("2_open"))
+                                hoursOpen.put(2, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("2_close"))
+                                hoursClose.put(2, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("3_open"))
+                                hoursOpen.put(3, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("3_close"))
+                                hoursClose.put(3, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("4_open"))
+                                hoursOpen.put(4, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("4_close"))
+                                hoursClose.put(4, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("5_open"))
+                                hoursOpen.put(5, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("5_close"))
+                                hoursClose.put(5, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("6_open"))
+                                hoursOpen.put(6, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("6_close"))
+                                hoursClose.put(6, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("7_open"))
+                                hoursOpen.put(7, attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("7_close"))
+                                hoursClose.put(7, attribute.getValue());
+
                             if (attribute.getName().equalsIgnoreCase("lat"))
                                 lotLocation.setLatitude(Double.parseDouble(attribute.getValue()));
                             if (attribute.getName().equalsIgnoreCase("lng"))
                                 lotLocation.setLongitude(Double.parseDouble(attribute.getValue()));
                         }
 
+                        //store the times the lot is opened and closed
+                        internalLotLocation.setHoursOpen(hoursOpen);
+                        internalLotLocation.setHoursClose(hoursClose);
+
+                        //store the location of the lot
                         internalLotLocation.setPoint(new LatLng(lotLocation.getLatitude(), lotLocation.getLongitude()));
+
+                        //save it to our locations listing to return back to the consumer
                         locations.put(currentLocation.distanceTo(lotLocation), internalLotLocation);
                     }
                 }

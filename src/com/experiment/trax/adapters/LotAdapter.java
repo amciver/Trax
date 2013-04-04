@@ -63,23 +63,32 @@ public class LotAdapter extends ArrayAdapter<Location> {
                     phone.setText(R.string.not_available);
             }
 
-            String openingTime = location.getOpeningTime(DateTime.now().getDayOfWeek());
-            String closingTime = location.getClosingTime(DateTime.now().getDayOfWeek());
+            int day = DateTime.now().getDayOfWeek();
+            String openingTime = location.getOpeningTime(day);
+            String closingTime = location.getClosingTime(day);
             if (openingTime == null ||
                     openingTime.length() == 0 ||
                     closingTime == null ||
                     closingTime.length() == 0) {
 
+                //remove the seperator, we dont have the hours
+                TextView seperator = (TextView) v.findViewById(R.id.lot_phone_seperator);
+                seperator.setVisibility(View.GONE);
 
             } else {
+
+                //we have a phone number, make sure the seperator is there
+                TextView seperator = (TextView) v.findViewById(R.id.lot_phone_seperator);
+                seperator.setVisibility(View.VISIBLE);
+
                 TextView open = (TextView) v.findViewById(R.id.lot_hours_open);
                 if (open != null) {
-                    open.setText(location.getOpeningTime(DateTime.now().getDayOfWeek()));
+                    open.setText(openingTime);
                 }
 
                 TextView close = (TextView) v.findViewById(R.id.lot_hours_close);
                 if (close != null) {
-                    close.setText(location.getOpeningTime(DateTime.now().getDayOfWeek()));
+                    close.setText(closingTime);
                 }
             }
 

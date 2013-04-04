@@ -127,6 +127,22 @@ public class Location {
         this.name = name;
     }
 
+    public Hashtable<Integer, String> getHoursClose() {
+        return hoursClose;
+    }
+
+    public void setHoursClose(Hashtable<Integer, String> hoursClose) {
+        this.hoursClose = hoursClose;
+    }
+
+    public Hashtable<Integer, String> getHoursOpen() {
+        return hoursOpen;
+    }
+
+    public void setHoursOpen(Hashtable<Integer, String> hoursOpen) {
+        this.hoursOpen = hoursOpen;
+    }
+
     public static Location asLocation(android.location.Location location) {
         Location l = new Location();
         l.setPoint(new LatLng(location.getLatitude(), location.getLongitude()));

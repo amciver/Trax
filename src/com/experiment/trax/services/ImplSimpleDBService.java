@@ -27,7 +27,7 @@ import java.util.*;
 
 public class ImplSimpleDBService implements ISimpleDBService {
 
-    final static int RETURN_COUNT = 1;
+    final static int RETURN_COUNT = 10;
 
     List<GetLocationsCompleteListener> mGetLocationsCompleteListeners = new ArrayList<GetLocationsCompleteListener>();
 

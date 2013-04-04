@@ -42,26 +42,25 @@
   <component name="ChangeListManager">
     <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/models/Location.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/models/Location.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot.xml" afterPath="$PROJECT_DIR$/res/layout/lot.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Streak for the Cash Scheduler.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365095026251" ignored="false" />
+    <file path="/Dummy.txt" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365112162357" ignored="false" />
     <file path="$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshViewPager/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362781708461" ignored="false" />
     <file path="$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshListFragment/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362781708461" ignored="false" />
-    <file path="/fragment.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364622733005" ignored="false" />
+    <file path="/fragment.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365113842137" ignored="false" />
     <file path="$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362113686424" ignored="false" />
     <file path="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362113686424" ignored="false" />
     <file path="$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/gen/com/actionbarsherlock/Manifest.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362113657543" ignored="false" />
     <file path="/ImplSimpleDBService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365107491742" ignored="false" />
-    <file path="/LotAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365110714734" ignored="false" />
+    <file path="/LotAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365114739509" ignored="false" />
     <file path="/LotsFragment.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364686793489" ignored="false" />
-    <file path="/lot.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365111410797" ignored="false" />
+    <file path="/lot.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365113212803" ignored="false" />
     <file path="/Location.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364340477057" ignored="false" />
     <file path="/String.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362950456323" ignored="false" />
     <file path="/a.dummy" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362950093508" ignored="false" />
@@ -76,7 +75,7 @@
     <file path="/lot_menu.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364622491800" ignored="false" />
     <file path="/ImplLocationService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364685241203" ignored="false" />
     <file path="/TypefaceSpan.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364965625379" ignored="false" />
-    <file path="/strings.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365110917555" ignored="false" />
+    <file path="/strings.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365112447697" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,22 +143,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TreeAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="55" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ImplSimpleDBService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="71" selection-start="5738" selection-end="5777" vertical-scroll-proportion="0.0">
+            <state line="29" column="71" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1908#1952#0" expanded="true" />
-                <element signature="e#2712#2729#0" expanded="true" />
+                <element signature="e#1909#1953#0" expanded="true" />
+                <element signature="e#2713#2730#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -183,20 +173,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InitActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="InitActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="29" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.7544757">
+            <state line="48" column="81" selection-start="1955" selection-end="1964" vertical-scroll-proportion="-4.423077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LotAdapter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LotAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="50" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="38" column="22" selection-start="992" selection-end="992" vertical-scroll-proportion="0.939759">
+              <folding>
+                <element signature="method#showPhone#0;class#LotAdapter#0" expanded="false" />
+                <element signature="method#showHours#0;class#LotAdapter#0" expanded="false" />
+                <element signature="method#showPaymentMethods#0;class#LotAdapter#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -227,12 +221,17 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="50" selection-start="620" selection-end="620" vertical-scroll-proportion="-3.75">
-              <folding>
-                <element signature="tag#LinearLayout#0;tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#LinearLayout#1;tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#LinearLayout#2;tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
-              </folding>
+            <state line="46" column="72" selection-start="2107" selection-end="2107" vertical-scroll-proportion="1.7115384">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LotSelectionActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="47" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -240,7 +239,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="36" selection-start="183" selection-end="183" vertical-scroll-proportion="-2.4">
+            <state line="4" column="35" selection-start="182" selection-end="182" vertical-scroll-proportion="-2.4">
               <folding />
             </state>
           </provider>
@@ -265,7 +264,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/lot_selection.xml" />
         <option value="$PROJECT_DIR$/res/layout/lot_info_window.xml" />
         <option value="$PROJECT_DIR$/res/menu/lot_menu.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
@@ -276,11 +274,12 @@
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/models/Location.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/lot.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/lot.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
       </list>
     </option>
   </component>
@@ -687,6 +686,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -996,7 +1013,11 @@
       <created>1365095034491</created>
       <updated>1365095034491</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fetching phone number from SDB now, added tabs back in, modified lot selection appearance">
+      <created>1365112182369</created>
+      <updated>1365112182369</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1030,7 +1051,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23635058" sideWeight="0.754717" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.78197676" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40493467" sideWeight="0.4913917" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32365748" sideWeight="0.4913917" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.28837878" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.7065997" order="7" side_tool="false" content_ui="tabs" />
@@ -1040,8 +1061,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.78197676" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26327115" sideWeight="0.6792453" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207547" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26327115" sideWeight="0.67634255" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3207547" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1088,7 +1109,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fetching phone number from SDB now, added tabs back in, modified lot selection appearance" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1107,6 +1128,7 @@
     <MESSAGE value="Themes added, font change in title, coloring change, fixed defect with cards disappearing in list" />
     <MESSAGE value="XML structure change, added TODO" />
     <MESSAGE value="Cleaned up code" />
+    <MESSAGE value="Fetching phone number from SDB now, added tabs back in, modified lot selection appearance" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1130,15 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="59" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1188,16 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="71" selection-start="5738" selection-end="5777" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1908#1952#0" expanded="true" />
-            <element signature="e#2712#2729#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/models/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="0" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0">
@@ -1214,38 +1217,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="35" selection-start="182" selection-end="182" vertical-scroll-proportion="-2.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="71" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1909#1953#0" expanded="true" />
+            <element signature="e#2713#2730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="47" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="50" selection-start="620" selection-end="620" vertical-scroll-proportion="-3.75">
-          <folding>
-            <element signature="tag#LinearLayout#0;tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#LinearLayout#1;tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#LinearLayout#2;tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="50" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="36" selection-start="183" selection-end="183" vertical-scroll-proportion="-2.4">
+        <state line="46" column="72" selection-start="2107" selection-end="2107" vertical-scroll-proportion="1.7115384">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="29" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.7544757">
+        <state line="48" column="81" selection-start="1955" selection-end="1964" vertical-scroll-proportion="-4.423077">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="22" selection-start="992" selection-end="992" vertical-scroll-proportion="0.939759">
+          <folding>
+            <element signature="method#showPhone#0;class#LotAdapter#0" expanded="false" />
+            <element signature="method#showHours#0;class#LotAdapter#0" expanded="false" />
+            <element signature="method#showPaymentMethods#0;class#LotAdapter#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

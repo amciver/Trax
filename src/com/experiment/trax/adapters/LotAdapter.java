@@ -55,78 +55,115 @@ public class LotAdapter extends ArrayAdapter<Location> {
 //            if (rating != null)
 //                rating.setRating(location.getRating());
 
-            TextView phone = (TextView) v.findViewById(R.id.lot_phone);
-            if (phone != null) {
-                if (location.getPhone() != null && !location.getPhone().isEmpty())
-                    phone.setText(com.experiment.trax.utils.String.formatPhoneNumber(location.getPhone(), "-"));
-                else
-                    phone.setText(R.string.not_available);
-            }
-
-            int day = DateTime.now().getDayOfWeek();
-            String openingTime = location.getOpeningTime(day);
-            String closingTime = location.getClosingTime(day);
-            if (openingTime == null ||
-                    openingTime.length() == 0 ||
-                    closingTime == null ||
-                    closingTime.length() == 0) {
-
-                //remove the seperator, we dont have the hours
-                TextView seperator = (TextView) v.findViewById(R.id.lot_phone_seperator);
-                seperator.setVisibility(View.GONE);
-
-            } else {
-
-                //we have a phone number, make sure the seperator is there
-                TextView seperator = (TextView) v.findViewById(R.id.lot_phone_seperator);
-                seperator.setVisibility(View.VISIBLE);
-
-                TextView open = (TextView) v.findViewById(R.id.lot_hours_open);
-                if (open != null) {
-                    open.setText(openingTime);
-                }
-
-                TextView close = (TextView) v.findViewById(R.id.lot_hours_close);
-                if (close != null) {
-                    close.setText(closingTime);
-                }
-            }
+            showPhone(v, location);
 
 //            ImageView icon = (ImageView) v.findViewById(R.id.lot_location);
 //            icon.setImageResource(R.drawable.ic_action_location);
 
-            ImageView amex = (ImageView) v.findViewById(R.id.lot_amex);
-            if (amex != null) {
-                if (!location.isAcceptsAmex())
-                    amex.setVisibility(View.INVISIBLE);
-                else
-                    amex.setVisibility(View.VISIBLE);
-            }
-
-            ImageView visa = (ImageView) v.findViewById(R.id.lot_visa);
-            if (visa != null) {
-                if (!location.isAcceptsVisa())
-                    visa.setVisibility(View.INVISIBLE);
-                else
-                    visa.setVisibility(View.VISIBLE);
-            }
-
-            ImageView mastercard = (ImageView) v.findViewById(R.id.lot_mastercard);
-            if (mastercard != null) {
-                if (!location.isAcceptsMastercard())
-                    mastercard.setVisibility(View.INVISIBLE);
-                else
-                    mastercard.setVisibility(View.VISIBLE);
-            }
-
-            ImageView discover = (ImageView) v.findViewById(R.id.lot_discover);
-            if (discover != null) {
-                if (!location.isAcceptsDiscover())
-                    discover.setVisibility(View.INVISIBLE);
-                else
-                    discover.setVisibility(View.VISIBLE);
-            }
+            showHours(v, location);
+            showPaymentMethods(v, location);
         }
         return v;
+    }
+
+    private void showName(View v, Location location) {
+        TextView name = (TextView) v.findViewById(R.id.lot_name);
+        if (name != null) {
+            if (location.getName() != null &&
+                    location.getName().length() != 0) {
+                name.setVisibility(View.VISIBLE);
+                name.setText(location.getName());
+            } else
+                name.setVisibility(View.GONE);
+        }
+    }
+
+    private void showPhone(View v, Location location) {
+        TextView phone = (TextView) v.findViewById(R.id.lot_phone);
+        if (phone != null) {
+            if (location.getPhone() != null && !location.getPhone().isEmpty())
+                phone.setText(com.experiment.trax.utils.String.formatPhoneNumber(location.getPhone(), "-"));
+            else
+                phone.setText(R.string.not_available);
+        }
+    }
+
+    private void showHours(View v, Location location) {
+
+        int day = DateTime.now().getDayOfWeek();
+        String openingTime = location.getOpeningTime(day);
+        String closingTime = location.getClosingTime(day);
+        if (openingTime == null ||
+                openingTime.length() == 0 ||
+                closingTime == null ||
+                closingTime.length() == 0) {
+
+            //we have no hours, hide items
+            TextView open = (TextView) v.findViewById(R.id.lot_hours_open);
+            if (open != null) {
+                open.setVisibility(View.VISIBLE);
+                open.setText(getContext().getString(R.string.not_available));
+            }
+
+            TextView seperator = (TextView) v.findViewById(R.id.lot_time_seperator);
+            if (seperator != null)
+                seperator.setVisibility(View.GONE);
+
+            TextView close = (TextView) v.findViewById(R.id.lot_hours_close);
+            if (close != null) {
+                close.setVisibility(View.GONE);
+            }
+        } else {
+
+            //we have hours of operation, make sure the seperator is there
+            TextView seperator = (TextView) v.findViewById(R.id.lot_time_seperator);
+            seperator.setVisibility(View.VISIBLE);
+
+            TextView open = (TextView) v.findViewById(R.id.lot_hours_open);
+            if (open != null) {
+                open.setVisibility(View.VISIBLE);
+                open.setText(openingTime);
+            }
+
+            TextView close = (TextView) v.findViewById(R.id.lot_hours_close);
+            if (close != null) {
+                close.setVisibility(View.VISIBLE);
+                close.setText(closingTime);
+            }
+        }
+    }
+
+    private void showPaymentMethods(View v, Location location) {
+        ImageView amex = (ImageView) v.findViewById(R.id.lot_amex);
+        if (amex != null) {
+            if (!location.isAcceptsAmex())
+                amex.setVisibility(View.INVISIBLE);
+            else
+                amex.setVisibility(View.VISIBLE);
+        }
+
+        ImageView visa = (ImageView) v.findViewById(R.id.lot_visa);
+        if (visa != null) {
+            if (!location.isAcceptsVisa())
+                visa.setVisibility(View.INVISIBLE);
+            else
+                visa.setVisibility(View.VISIBLE);
+        }
+
+        ImageView mastercard = (ImageView) v.findViewById(R.id.lot_mastercard);
+        if (mastercard != null) {
+            if (!location.isAcceptsMastercard())
+                mastercard.setVisibility(View.INVISIBLE);
+            else
+                mastercard.setVisibility(View.VISIBLE);
+        }
+
+        ImageView discover = (ImageView) v.findViewById(R.id.lot_discover);
+        if (discover != null) {
+            if (!location.isAcceptsDiscover())
+                discover.setVisibility(View.INVISIBLE);
+            else
+                discover.setVisibility(View.VISIBLE);
+        }
     }
 }

@@ -50,10 +50,10 @@
                 android:layout_height="wrap_content">
             <TextView
                     android:textSize="12dp"
-                    android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lot_phone"/>
+                    android:text="@string/lot_phone"
+                    android:layout_marginRight="4dip"/>
             <TextView android:id="@+id/lot_phone"
                       android:textSize="12dp"
                       android:layout_width="wrap_content"
@@ -66,17 +66,17 @@
                 android:layout_height="wrap_content">
             <TextView
                     android:textSize="12dp"
-                    android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lot_hours"/>
+                    android:text="@string/lot_hours"
+                    android:layout_marginRight="4dip"/>
             <TextView android:id="@+id/lot_hours_open"
                       android:textSize="12dp"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:text="@string/not_available"/>
             <TextView
-                    android:id="@+id/lot_phone_seperator"
+                    android:id="@+id/lot_time_seperator"
                     android:textSize="12dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

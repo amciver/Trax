@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">O Tannenbaum</string>
     <string name="not_available">N/A</string>
-    <string name="lot_phone">Phone:</string>
-    <string name="lot_hours">Hours:</string>
+    <string name="lot_phone">phone:</string>
+    <string name="lot_hours">hours:</string>
     <string name="option_lots">Lots</string>
     <string name="option_dropsites">Dropsites</string>
 </resources>

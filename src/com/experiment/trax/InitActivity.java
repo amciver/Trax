@@ -45,6 +45,7 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
         setUpServices();
         setContentView(R.layout.main);
 
+        //TODO: this will provide a different font but currently not vertically centered
         String font = "billabong";
         SpannableString s = new SpannableString("O Tannenbaum");
         s.setSpan(new com.experiment.trax.utils.TypefaceSpan(this, font), 0, s.length(),

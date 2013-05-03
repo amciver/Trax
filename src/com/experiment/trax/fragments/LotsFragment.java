@@ -12,6 +12,7 @@ import com.actionbarsherlock.app.SherlockListFragment;
 import com.experiment.trax.R;
 import com.experiment.trax.adapters.LotAdapter;
 import com.experiment.trax.listeners.GetLocationsCompleteListener;
+import com.experiment.trax.listeners.SetLotsCompleteListener;
 import com.experiment.trax.models.Location;
 import com.experiment.trax.services.ImplLocationService;
 import com.experiment.trax.services.ImplSimpleDBService;
@@ -34,6 +35,12 @@ import java.util.List;
 public class LotsFragment extends SherlockListFragment {
 
     List<Location> mLocations = new ArrayList<Location>();
+
+    List<SetLotsCompleteListener> mSetLotsCompleteListeners = new ArrayList<SetLotsCompleteListener>();
+
+    public void setOnSetLotsCompleteListener(SetLotsCompleteListener listener) {
+        this.mSetLotsCompleteListeners.add(listener);
+    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -112,6 +119,10 @@ public class LotsFragment extends SherlockListFragment {
     }
 
     public void setLots() {
+
+        android.location.Location currentLocation = ImplLocationService.getCurrentLocation();
+        final LatLng currentCoordinates = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+
         ImplSimpleDBService srvc = new ImplSimpleDBService();
         srvc.setOnGetLocationCompleteListener(new GetLocationsCompleteListener() {
             @Override
@@ -180,13 +191,12 @@ public class LotsFragment extends SherlockListFragment {
                         return v;
                     }
                 });
-                CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(33.630182, -112.018622));
+                CameraUpdate center = CameraUpdateFactory.newLatLng(currentCoordinates);
                 CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
 
                 googleMap.moveCamera(center);
                 googleMap.animateCamera(zoom);
 
-                //googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.630182, -112.018622), 10));
                 googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                     @Override
                     public void onInfoWindowClick(Marker marker) {
@@ -198,17 +208,25 @@ public class LotsFragment extends SherlockListFragment {
                 for (Location location : mLocations) {
                     Log.d("showLots", "Location " + location.getPointAsString() + " being added to map");
 
-                    BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED);
+                    BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
                     addLotToMap(googleMap, icon, location);
 
                     position++;
                 }
 
+                Log.d("setLots", "Notifying " + mSetLotsCompleteListeners.size() + " listeners");
+                //notify all listeners that work is complete
+                for (SetLotsCompleteListener listener : mSetLotsCompleteListeners) {
+                    listener.onSetLotsCompleted();
+                }
+
                 //zoom in on the first one, which is closest to user
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLocations.get(0).getPoint(), 13));
+                if (mLocations.size() > 0)
+                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLocations.get(0).getPoint(), 13));
             }
         });
-        srvc.getLocationsAsync(getActivity().getApplicationContext(), new LatLng(33.630182, -112.018622));
+
+        srvc.getLocationsAsync(getActivity().getApplicationContext(), currentCoordinates);
     }
 
     private void addLotToMap(GoogleMap googleMap, BitmapDescriptor icon, Location location) {

@@ -79,13 +79,13 @@ public class LotAdapter extends ArrayAdapter<Location> {
     }
 
     private void showPhone(View v, Location location) {
-        TextView phone = (TextView) v.findViewById(R.id.lot_phone);
-        if (phone != null) {
-            if (location.getPhone() != null && !location.getPhone().isEmpty())
-                phone.setText(com.experiment.trax.utils.String.formatPhoneNumber(location.getPhone(), "-"));
-            else
-                phone.setText(R.string.not_available);
-        }
+//        TextView phone = (TextView) v.findViewById(R.id.lot_phone);
+//        if (phone != null) {
+//            if (location.getPhone() != null && !location.getPhone().isEmpty())
+//                phone.setText(com.experiment.trax.utils.String.formatPhoneNumber(location.getPhone(), "-"));
+//            else
+//                phone.setText(R.string.not_available);
+//        }
     }
 
     private void showHours(View v, Location location) {
@@ -137,7 +137,7 @@ public class LotAdapter extends ArrayAdapter<Location> {
         ImageView amex = (ImageView) v.findViewById(R.id.lot_amex);
         if (amex != null) {
             if (!location.isAcceptsAmex())
-                amex.setVisibility(View.INVISIBLE);
+                amex.setVisibility(View.GONE);
             else
                 amex.setVisibility(View.VISIBLE);
         }
@@ -145,7 +145,7 @@ public class LotAdapter extends ArrayAdapter<Location> {
         ImageView visa = (ImageView) v.findViewById(R.id.lot_visa);
         if (visa != null) {
             if (!location.isAcceptsVisa())
-                visa.setVisibility(View.INVISIBLE);
+                visa.setVisibility(View.GONE);
             else
                 visa.setVisibility(View.VISIBLE);
         }
@@ -153,7 +153,7 @@ public class LotAdapter extends ArrayAdapter<Location> {
         ImageView mastercard = (ImageView) v.findViewById(R.id.lot_mastercard);
         if (mastercard != null) {
             if (!location.isAcceptsMastercard())
-                mastercard.setVisibility(View.INVISIBLE);
+                mastercard.setVisibility(View.GONE);
             else
                 mastercard.setVisibility(View.VISIBLE);
         }
@@ -161,7 +161,7 @@ public class LotAdapter extends ArrayAdapter<Location> {
         ImageView discover = (ImageView) v.findViewById(R.id.lot_discover);
         if (discover != null) {
             if (!location.isAcceptsDiscover())
-                discover.setVisibility(View.INVISIBLE);
+                discover.setVisibility(View.GONE);
             else
                 discover.setVisibility(View.VISIBLE);
         }

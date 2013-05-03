@@ -1,20 +1,11 @@
 package com.experiment.trax;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.androidquery.util.AQUtility;
 import com.experiment.trax.adapters.TreeAdapter;
+import com.experiment.trax.core.BaseActivity;
 import com.experiment.trax.listeners.GetInstagramPhotosCompleteListener;
 import com.experiment.trax.services.IInstagramService;
 import com.experiment.trax.services.ImplInstagramService;
@@ -29,8 +20,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InitActivity extends SherlockFragmentActivity implements PullToRefreshBase.OnRefreshListener<ListView> {
-    //private Resources resources;
+public class InitActivity extends BaseActivity implements PullToRefreshBase.OnRefreshListener<ListView> {
 
     private IInstagramService mInstagramService;
     private PullToRefreshListFragment mTreesListFragment;
@@ -44,65 +34,9 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //TODO: this will provide a different font but currently not vertically centered
-        String font = "billabong";
-        SpannableString s = new SpannableString(getApplicationContext().getString(R.string.app_name));
-        s.setSpan(new com.experiment.trax.utils.TypefaceSpan(this, font), 0, s.length(),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        getSupportActionBar().setTitle(s);
-
-        Log.d("InitActivity", "onCreate called");
 
         setUpServices();
         setContentView(R.layout.main);
-
-        final ActionBar actionBar = getSupportActionBar();
-
-        // Specify that tabs should be displayed in the action bar.
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-        // Create a tab listener that is called when the user changes tabs.
-        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
-            public void onTabSelected(ActionBar.Tab tab,
-                                      FragmentTransaction ft) {
-            }
-
-            public void onTabUnselected(ActionBar.Tab tab,
-                                        FragmentTransaction ft) {
-            }
-
-            public void onTabReselected(ActionBar.Tab tab,
-                                        FragmentTransaction ft) {
-            }
-        };
-
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View customView = inflater.inflate(R.layout.tab_title, null);
-        TextView photos = (TextView) customView.findViewById(R.id.action_custom_title);
-        photos.setText("Photos");
-        actionBar.addTab(actionBar.newTab()
-                .setTabListener(tabListener)
-                .setCustomView(photos));
-
-        actionBar.addTab(actionBar.newTab()
-                .setText("Types")
-                .setTabListener(tabListener));
-//
-//        actionBar.addTab(actionBar.newTab()
-//                .setText("youtube")
-//                .setTabListener(tabListener));
-
-//        for(int i = 0; i<actionBar.getTabCount(); i++){
-//            LayoutInflater inflater = LayoutInflater.from(this);
-//            View customView = inflater.inflate(R.layout.tab_title, null);
-//
-//            TextView titleTV = (TextView) customView.findViewById(R.id.action_custom_title);
-//            titleTV.setText(tabNames[i]);
-//            //Here you can also add any other styling you want.
-//
-//            bar.getTabAt(i).setCustomView(customView);
-//        }
 
         //grab the PullToRefreshListFragment, grab the wrapper ListView and set refresh handler
         mTreesListFragment = (PullToRefreshListFragment) getSupportFragmentManager().findFragmentById(R.id.trees);
@@ -163,46 +97,6 @@ public class InitActivity extends SherlockFragmentActivity implements PullToRefr
 //        savedInstanceState.putString("MyString", "Welcome back to Android");
 //    }
 
-    @Override
-    protected void onDestroy() {
-        Log.d("InitiActivity", "onDestory called");
-        super.onDestroy();
-
-        //clean the file cache when root activity exit
-        //the resulting total cache size will be less than 3M
-        if (isTaskRoot()) {
-            AQUtility.cleanCacheAsync(this);
-        }
-    }
-
-    //TODO: This needs to be in a base class for all the activities
-    @Override
-    public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
-        com.actionbarsherlock.view.MenuInflater inflater = getSupportMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
-
-//        MenuItem item = menu.add("Testing");
-//        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-//        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-//            @Override
-//            public boolean onMenuItemClick(MenuItem menuItem) {
-//                return false;  //To change body of implemented methods use File | Settings | File Templates.
-//            }
-//        });
-
-        return true;
-    }
-
-    public boolean onShowLots(com.actionbarsherlock.view.MenuItem item) {
-
-        Intent myIntent = new Intent(InitActivity.this, LotSelectionActivity.class);
-        startActivity(myIntent);
-        return true;
-    }
-
-    public boolean onShowDropsites(com.actionbarsherlock.view.MenuItem item) {
-        return false;
-    }
 
     public void onGroupItemClick(MenuItem item) {
         // One of the group items (using the onClick attribute) was clicked

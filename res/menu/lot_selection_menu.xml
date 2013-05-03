@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_lot_selection"
+          android:onClick="onRefreshLots"
+          android:icon="@drawable/ic_action_reload"
+          android:showAsAction="always">
+        <!--<menu android:id="@+id/options">-->
+        <!--<item android:id="@+id/lots"-->
+        <!--android:title="@string/option_lots"-->
+        <!--android:onClick="onShowLots"/>-->
+        <!--<item android:id="@+id/dropsites"-->
+        <!--android:title="@string/option_dropsites"-->
+        <!--android:onClick="onShowLots"/>-->
+        <!--</menu>-->
+    </item>
+
+    <!--<item android:id="@+id/menu_farms"-->
+    <!--android:title="FARMS"-->
+    <!--android:onClick="onShowDropsites"-->
+    <!--android:showAsAction="ifRoom|withText" >-->
+    <!--</item>-->
+</menu>

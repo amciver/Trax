@@ -9,7 +9,7 @@
     <application android:name=".TraxApplication"
                  android:icon="@drawable/christmas_tree"
                  android:label="@string/app_name"
-                 android:theme="@style/Theme.Otannenbaum">
+                 android:theme="@style/Theme.Otan_green">
         <uses-library android:name="com.google.android.maps"/>
         <activity android:name=".InitActivity"
                   android:label="@string/app_name">

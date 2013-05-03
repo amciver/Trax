@@ -1,7 +1,7 @@
 package com.experiment.trax;
 
 import android.os.Bundle;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.experiment.trax.core.BaseActivity;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,7 +10,7 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
  * Time: 10:23 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LotDetailsActivity extends SherlockFragmentActivity {
+public class LotDetailsActivity extends BaseActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

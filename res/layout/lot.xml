@@ -1,122 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:gravity="left|center"
-              android:orientation="vertical"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp" android:orientation="vertical">
+    <TextView android:id="@+id/lot_name"
+              android:textStyle="bold"
               android:layout_width="wrap_content"
-              android:paddingBottom="4dip"
-              android:paddingTop="4dip"
-              android:paddingLeft="4dip" android:paddingRight="4dip">
-    <!--<LinearLayout-->
-    <!--android:orientation="horizontal"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content">-->
-    <!--<ImageView-->
-    <!--android:id="@+id/lot_location"-->
-    <!--android:layout_width="48dip"-->
-    <!--android:layout_height="48dip"-->
-    <!--android:src="@drawable/ic_action_location"/>-->
+              android:layout_height="wrap_content"
+              android:text="@string/not_available"
+            />
     <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            <TextView android:id="@+id/lot_name"
-                      android:textStyle="bold"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="@string/not_available"/>
-            <!--<TextView-->
-            <!--android:textStyle="bold"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text=":"/>-->
-            <!--<RatingBar-->
-            <!--android:numStars="5"-->
-            <!--style="?android:attr/ratingBarStyleSmall"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/lot_ratingBar" -->
-            <!--android:layout_marginLeft="4dip"/>-->
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:textSize="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lot_phone"
-                    android:layout_marginRight="4dip"/>
-            <TextView android:id="@+id/lot_phone"
-                      android:textSize="12dp"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="@string/not_available"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:textSize="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lot_hours"
-                    android:layout_marginRight="4dip"/>
-            <TextView android:id="@+id/lot_hours_open"
-                      android:textSize="12dp"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="@string/not_available"/>
-            <TextView
-                    android:id="@+id/lot_time_seperator"
-                    android:textSize="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="-"/>
-            <TextView android:id="@+id/lot_hours_close"
-                      android:textSize="12dp"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text=""/>
-        </LinearLayout>
-        <LinearLayout
+            android:layout_height="match_parent">
+        <TextView android:id="@+id/lot_hours_open"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal|top"/>
+        <TextView
+                android:id="@+id/lot_time_seperator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="-4dip">
-            <ImageView
-                    android:id="@+id/lot_cash"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/ic_cash"/>
-            <ImageView
-                    android:id="@+id/lot_amex"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/ic_american_express"/>
-            <ImageView
-                    android:id="@+id/lot_visa"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/ic_visa"/>
-            <ImageView
-                    android:id="@+id/lot_mastercard"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/ic_mastercard"/>
-            <ImageView
-                    android:id="@+id/lot_discover"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/ic_discover"/>
-        </LinearLayout>
+                android:text="-"
+                android:visibility="gone"/>
+        <TextView android:id="@+id/lot_hours_close"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                />
     </LinearLayout>
-    <!--</LinearLayout>-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="left">
+        <ImageView
+                android:id="@+id/lot_cash"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_cash" android:layout_marginLeft="-2dp"/>
+        <ImageView
+                android:id="@+id/lot_visa"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_visa"/>
+        <ImageView
+                android:id="@+id/lot_mastercard"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_mastercard"/>
+        <ImageView
+                android:id="@+id/lot_amex"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_american_express"/>
+        <ImageView
+                android:id="@+id/lot_discover"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_discover"/>
+    </LinearLayout>
 </LinearLayout>

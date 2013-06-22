@@ -5,8 +5,10 @@
               android:paddingLeft="4dp"
               android:paddingTop="4dp"
               android:paddingRight="4dp"
-              android:paddingBottom="4dp" android:orientation="vertical">
+              android:paddingBottom="4dp"
+              android:orientation="vertical">
     <TextView android:id="@+id/lot_name"
+              android:textColor="#7D7D7D"
               android:textStyle="bold"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -17,16 +19,19 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
         <TextView android:id="@+id/lot_hours_open"
+                  android:textColor="#7D7D7D"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_gravity="center_horizontal|top"/>
         <TextView
                 android:id="@+id/lot_time_seperator"
+                android:textColor="#7D7D7D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
                 android:visibility="gone"/>
         <TextView android:id="@+id/lot_hours_close"
+                  android:textColor="#7D7D7D"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                 />
@@ -34,12 +39,14 @@
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_gravity="left">
+            android:layout_height="wrap_content"
+            android:layout_gravity="left">
         <ImageView
                 android:id="@+id/lot_cash"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:src="@drawable/ic_cash" android:layout_marginLeft="-2dp"/>
+                android:src="@drawable/ic_cash"
+                android:layout_marginLeft="-2dp"/>
         <ImageView
                 android:id="@+id/lot_visa"
                 android:layout_width="fill_parent"

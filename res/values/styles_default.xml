@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TitleFont" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#7D7D7D</item>
+        <!--<item name="android:textSize"></item>-->
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/not_available</item>
+    </style>
+    <style name="SubTitleFont" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#7D7D7D</item>
+    </style>
+    <style name="ContentFont" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#7D7D7D</item>
+    </style>
+</resources>

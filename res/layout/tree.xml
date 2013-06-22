@@ -2,17 +2,35 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dip">
+                android:layout_height="fill_parent">
     <ProgressBar
             android:id="@+id/progress"
-            android:layout_width="30dip"
-            android:layout_height="30dip"
-            android:layout_centerInParent="true"
-            />
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"/>
     <ImageView
             android:id="@+id/tree"
-            android:layout_width="300dip"
-            android:layout_height="300dip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="24dip"
+            android:layout_marginBottom="24dip"
+            android:layout_marginTop="32dip"
             android:layout_centerInParent="true"/>
+    <TextView android:id="@+id/photo_date"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_marginLeft="24dip"
+              android:textSize="10sp"
+              android:text="@string/not_available">
+    </TextView>
+    <TextView android:id="@+id/photo_location"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="24dip"
+              android:textSize="10sp"
+              android:text="@string/not_available">
+    </TextView>
 </RelativeLayout>

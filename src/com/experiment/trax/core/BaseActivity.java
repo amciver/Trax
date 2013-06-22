@@ -6,8 +6,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.androidquery.util.AQUtility;
@@ -25,11 +23,23 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
 
     //This font should not include extension and should be a .ttf font placed
     //within assets/fonts folder
-    final String FONT = "kayleigh";
+    private final String FONT = "kayleigh";
+
+    //private ViewPager mViewPager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        mViewPager = (ViewPager)findViewById(R.id.main_pager);
+//        mViewPager.setOnPageChangeListener(
+//                new ViewPager.SimpleOnPageChangeListener() {
+//                    @Override
+//                    public void onPageSelected(int position) {
+//                        getSupportActionBar().setSelectedNavigationItem(position);
+//                    }
+//                });
+
 
         SpannableString s = new SpannableString(getApplicationContext().getString(R.string.app_name));
         s.setSpan(new com.experiment.trax.utils.TypefaceSpan(this, FONT), 0, s.length(),
@@ -38,7 +48,7 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
         getSupportActionBar().setTitle(s);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        onAddTabs();
+        //onAddTabs();
 
         Log.d("BaseActivity", "onCreate called");
     }
@@ -55,6 +65,7 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
         ActionBar.TabListener tabListener = new ActionBar.TabListener() {
             public void onTabSelected(ActionBar.Tab tab,
                                       FragmentTransaction ft) {
+                //mViewPager.setCurrentItem(tab.getPosition());
             }
 
             public void onTabUnselected(ActionBar.Tab tab,
@@ -66,18 +77,18 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
             }
         };
 
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View customView = inflater.inflate(R.layout.tab_title, null);
-        //TextView photos = (TextView) customView.findViewById(R.id.action_custom_title);
-        //photos.setText("Photos");
-        actionBar.addTab(actionBar.newTab()
-                .setText("Photos")
-                .setTabListener(tabListener));
-        //.setCustomView(photos));
-
-        actionBar.addTab(actionBar.newTab()
-                .setText("Types")
-                .setTabListener(tabListener));
+//        LayoutInflater inflater = LayoutInflater.from(this);
+//        View customView = inflater.inflate(R.layout.tab_title, null);
+//        //TextView photos = (TextView) customView.findViewById(R.id.action_custom_title);
+//        //photos.setText("Photos");
+//        actionBar.addTab(actionBar.newTab()
+//                .setText("Photos")
+//                .setTabListener(tabListener));
+//        //.setCustomView(photos));
+//
+//        actionBar.addTab(actionBar.newTab()
+//                .setText("Types")
+//                .setTabListener(tabListener));
 //
 //        actionBar.addTab(actionBar.newTab()
 //                .setText("youtube")

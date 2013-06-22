@@ -18,7 +18,7 @@
         <option name="deviceConfiguration" value="Portrait" />
         <option name="localeLanguage" value="ar" />
         <option name="targetHashString" value="android-16" />
-        <option name="theme" value="Theme.Sherlock.Light" />
+        <option name="theme" value="Theme" />
       </profile>
     </option>
     <option name="selection" value="[Full]" />
@@ -36,162 +36,42 @@
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ImplLocationService" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ab_transparent_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ab_transparent_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ab_transparent_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_cab_done_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_cab_done_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_cab_done_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_cab_done_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_cab_done_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_cab_done_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cab_background_bottom_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cab_background_bottom_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cab_background_bottom_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cab_background_top_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cab_background_top_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cab_background_top_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_reload.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/ic_action_reload.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_reload.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_reload.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/kayleigh.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/list_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/list_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/list_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progress_primary_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progress_primary_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progress_primary_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progress_secondary_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progress_secondary_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progress_secondary_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/spinner_ab_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/spinner_ab_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/spinner_ab_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/spinner_ab_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/spinner_ab_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/spinner_ab_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tab_selected_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tab_selected_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tab_selected_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tab_selected_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tab_selected_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tab_selected_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tab_selected_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tab_selected_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tab_selected_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tab_unselected_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tab_unselected_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tab_unselected_focused_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tab_unselected_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tab_unselected_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tab_unselected_pressed_otan_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/listeners/SetLotsCompleteListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/lot_selection_menu.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/billabong.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/roundhand.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ab_transparent_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_cab_done_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_cab_done_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cab_background_bottom_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cab_background_top_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/list_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/progress_primary_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/progress_secondary_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/spinner_ab_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/spinner_ab_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tab_selected_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tab_selected_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tab_selected_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tab_unselected_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tab_unselected_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/ab_transparent_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_cab_done_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_cab_done_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cab_background_bottom_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cab_background_top_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/list_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/progress_primary_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/progress_secondary_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/spinner_ab_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/spinner_ab_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/tab_selected_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/tab_selected_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/tab_selected_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/tab_unselected_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/tab_unselected_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/ab_transparent_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_cab_done_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_cab_done_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cab_background_bottom_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cab_background_top_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/list_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/progress_primary_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/progress_secondary_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/spinner_ab_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/spinner_ab_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/tab_selected_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/tab_selected_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/tab_selected_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/tab_unselected_focused_otannenbaum.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/tab_unselected_pressed_otannenbaum.9.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ab_bottom_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ab_bottom_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ab_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ab_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ab_stacked_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ab_stacked_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_cab_done_default_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_cab_done_default_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/menu_dropdown_panel_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_dropdown_panel_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/progress_bg_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progress_bg_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/spinner_ab_default_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/spinner_ab_default_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/spinner_ab_disabled_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/spinner_ab_disabled_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/ab_bottom_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ab_bottom_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/ab_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ab_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/ab_stacked_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ab_stacked_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_cab_done_default_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_cab_done_default_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/menu_dropdown_panel_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_dropdown_panel_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/progress_bg_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progress_bg_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/spinner_ab_default_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/spinner_ab_default_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/spinner_ab_disabled_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/spinner_ab_disabled_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/ab_bottom_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ab_bottom_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/ab_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ab_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/ab_stacked_solid_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ab_stacked_solid_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_cab_done_default_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_cab_done_default_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/menu_dropdown_panel_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_dropdown_panel_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/progress_bg_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progress_bg_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/spinner_ab_default_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/spinner_ab_default_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/spinner_ab_disabled_otannenbaum.9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/spinner_ab_disabled_otan_green.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable/btn_cab_done_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/drawable/btn_cab_done_otan_green.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable/pressed_background_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/drawable/pressed_background_otan_green.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable/progress_horizontal_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/drawable/progress_horizontal_otan_green.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable/selectable_background_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/drawable/selectable_background_otan_green.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable/spinner_background_ab_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/drawable/spinner_background_ab_otan_green.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable/tab_indicator_ab_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/drawable/tab_indicator_ab_otan_green.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/values-v14/styles_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/values-v14/styles_otan_green.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/values/colors_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/values/colors_otan_green.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/values/styles_otannenbaum.xml" afterPath="$PROJECT_DIR$/res/values/styles_otan_green.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/core/AspectRatioImageView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/models/Type.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/TypeAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/TypesFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/in_from_left.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/in_from_right.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/out_to_left.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/out_to_right.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/styles_default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/tree_type.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/LotDetailsActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/LotDetailsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot.xml" afterPath="$PROJECT_DIR$/res/layout/lot.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot_selection.xml" afterPath="$PROJECT_DIR$/res/layout/lot_selection.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot_details.xml" afterPath="$PROJECT_DIR$/res/layout/lot_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/tree.xml" afterPath="$PROJECT_DIR$/res/layout/tree.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Streak for the Cash Scheduler.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1367213018031" ignored="false" />
-    <file path="$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshViewPager/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362781708461" ignored="false" />
+    <file path="/Dummy.txt" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371766771379" ignored="false" />
     <file path="$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshListFragment/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362781708461" ignored="false" />
     <file path="/fragment.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1367299483955" ignored="false" />
     <file path="$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362113686424" ignored="false" />
-    <file path="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362113686424" ignored="false" />
     <file path="$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/gen/com/actionbarsherlock/Manifest.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362113657543" ignored="false" />
     <file path="/ImplSimpleDBService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1366262137956" ignored="false" />
     <file path="/LotAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1366067437539" ignored="false" />
@@ -200,23 +80,37 @@
     <file path="/Location.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364340477057" ignored="false" />
     <file path="/String.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362950456323" ignored="false" />
     <file path="/a.dummy" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362950093508" ignored="false" />
-    <file path="/InitActivity.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365719701283" ignored="false" />
+    <file path="/InitActivity.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1368045612489" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365722278090" ignored="false" />
     <file path="/styles_otan_red.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1363584189701" ignored="false" />
-    <file path="/tree.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1363616497546" ignored="false" />
-    <file path="/TreeAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364966386403" ignored="false" />
+    <file path="/tree.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371878057500" ignored="false" />
+    <file path="/TreeAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371880218388" ignored="false" />
     <file path="/LotInfoAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1363840438842" ignored="false" />
     <file path="/lot_selection.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1363840673652" ignored="false" />
     <file path="/lot_info_window.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364359397190" ignored="false" />
     <file path="/lot_menu.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364622491800" ignored="false" />
-    <file path="/ImplLocationService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364685241203" ignored="false" />
+    <file path="/ImplLocationService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371879817535" ignored="false" />
     <file path="/TypefaceSpan.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365707864788" ignored="false" />
     <file path="/strings.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365112447697" ignored="false" />
     <file path="/lot_selection_menu.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365115982417" ignored="false" />
     <file path="/LotSelectionActivity.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1367385082494" ignored="false" />
-    <file path="/BaseActivity.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365721690836" ignored="false" />
+    <file path="/BaseActivity.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1368043360955" ignored="false" />
     <file path="/LotDetailsActivity.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365719927083" ignored="false" />
     <file path="/SetLotsCompleteListener.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1366522139842" ignored="false" />
+    <file path="/main.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1368043230752" ignored="false" />
+    <file path="/TabAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1368054183426" ignored="false" />
+    <file path="/PullToRefreshListFragmentWrapper.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1368051776758" ignored="false" />
+    <file path="/TraxApplication.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1370557174885" ignored="false" />
+    <file path="/TypesFragment.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1370554399379" ignored="false" />
+    <file path="/Type.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1368053098534" ignored="false" />
+    <file path="/TypeAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1368054059643" ignored="false" />
+    <file path="/tree_type.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1368075575497" ignored="false" />
+    <file path="/styles_default.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1370407838622" ignored="false" />
+    <file path="/pull_to_refresh_header_horizontal.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1370546898567" ignored="false" />
+    <file path="/PhotosFragment.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371165091340" ignored="false" />
+    <file path="/ViewsAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1370553961190" ignored="false" />
+    <file path="/ImplInstagramService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371878687418" ignored="false" />
+    <file path="/ILocationService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371879264088" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +130,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -270,22 +165,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" line="55" class="com.experiment.trax.LotSelectionActivity" package="com.experiment.trax">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -299,26 +178,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LotAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
+      <file leaf-file-name="PhotosFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="34" selection-start="2914" selection-end="2914" vertical-scroll-proportion="0.0">
+            <state line="155" column="31" selection-start="5595" selection-end="5595" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LotSelectionActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
+      <file leaf-file-name="TreeAdapter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="12" selection-start="862" selection-end="862" vertical-scroll-proportion="0.53246754">
+            <state line="100" column="44" selection-start="3555" selection-end="3555" vertical-scroll-proportion="0.42194092">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1039#1203#0" expanded="true" />
-                <element signature="e#1192#1193#0" expanded="true" />
-                <element signature="e#2355#2519#0" expanded="true" />
-                <element signature="e#2508#2509#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LotAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="18" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -326,8 +210,49 @@
       <file leaf-file-name="LotsFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="27" selection-start="5134" selection-end="5134" vertical-scroll-proportion="0.0">
+            <state line="246" column="30" selection-start="11316" selection-end="11316" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ILocationService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="17" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewsAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="54" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tree.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/tree.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="45" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-5.480769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImplInstagramService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="64" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -335,34 +260,19 @@
       <file leaf-file-name="ImplLocationService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="46" selection-start="665" selection-end="682" vertical-scroll-proportion="0.0">
+            <state line="65" column="0" selection-start="2136" selection-end="2198" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImplSimpleDBService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="14" selection-start="8793" selection-end="8793" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
+      <file leaf-file-name="lot.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetLocationsCompleteListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocationsCompleteListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SetLotsCompleteListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/SetLotsCompleteListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
+            <state line="48" column="16" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.5769231">
               <folding />
             </state>
           </provider>
@@ -387,28 +297,27 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/models/Location.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/LotDetailsActivity.java" />
+        <option value="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/res/values/pull_refresh_strings.xml" />
+        <option value="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/res/layout/pull_to_refresh_header_horizontal.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/TypesFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" />
+        <option value="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/res/values/attrs.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/core/AspectRatioImageView.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/res/layout/lot.xml" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
-        <option value="$PROJECT_DIR$/res/layout/lot_selection.xml" />
-        <option value="$PROJECT_DIR$/res/menu/lot_selection_menu.xml" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
-        <option value="$PROJECT_DIR$/res/menu/lot_menu.xml" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/listeners/SetLotsCompleteListener.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/tree.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="44" />
+    <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="809" />
   </component>
@@ -625,6 +534,26 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -680,6 +609,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -871,64 +822,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="139" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
@@ -1198,7 +1097,11 @@
       <created>1365114832750</created>
       <updated>1365114832750</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adjusted theme, fixed background processing view, cleaned up views">
+      <created>1367613979877</created>
+      <updated>1367613979877</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1222,32 +1125,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="44" width="1440" height="809" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="809" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24031563" sideWeight="0.67343974" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31707317" sideWeight="0.67343974" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24528302" sideWeight="0.49713057" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23635058" sideWeight="0.754717" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.78197676" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31204644" sideWeight="0.4913917" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.28837878" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.7065997" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2597968" sideWeight="0.48852223" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3846154" sideWeight="0.9031564" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41654572" sideWeight="0.48852223" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23802613" sideWeight="0.9031564" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32656023" sideWeight="0.49426112" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.78197676" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2733142" sideWeight="0.7445573" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25544268" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24031563" sideWeight="0.61538464" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2984218" sideWeight="0.76197386" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35268506" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40028694" sideWeight="0.61538464" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36865023" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1290,7 +1193,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with displaying of lots phone numbers and hours of operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted theme, fixed background processing view, cleaned up views" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1311,6 +1214,7 @@
     <MESSAGE value="Cleaned up code" />
     <MESSAGE value="Fetching phone number from SDB now, added tabs back in, modified lot selection appearance" />
     <MESSAGE value="Fixed issues with displaying of lots phone numbers and hours of operations" />
+    <MESSAGE value="Adjusted theme, fixed background processing view, cleaned up views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1320,130 +1224,130 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values-v14/styles_otan_green.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="41" column="31" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetInstagramPhotosCompleteListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+        <state line="11" column="17" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/libs/android-support-v4.jar!/android/support/v4/app/ListFragment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="16" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.35555556" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lot_info_window.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/tree.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocationsCompleteListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="46" selection-start="665" selection-end="682" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="14" selection-start="8793" selection-end="8793" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/lot_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="342" selection-end="342" vertical-scroll-proportion="0.3448276">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
-      <provider editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="398" selection-end="398" vertical-scroll-proportion="-4.8">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/SetLotsCompleteListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="52" selection-start="621" selection-end="621" vertical-scroll-proportion="0.33163264">
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/lot_selection_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="664" selection-end="664" vertical-scroll-proportion="0.31707317">
+        <state line="17" column="35" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/core/AspectRatioImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/lot_info_window.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="40" selection-end="53" vertical-scroll-proportion="-0.5769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="31" selection-start="5595" selection-end="5595" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/joda-time-2.2.jar!/org/joda/time/format/DateTimeFormatter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="0" selection-start="5467" selection-end="5467" vertical-scroll-proportion="0.8179272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="54" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="34" selection-start="2914" selection-end="2914" vertical-scroll-proportion="0.0">
+        <state line="36" column="18" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="16" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.5769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/tree.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="45" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-5.480769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="27" selection-start="5134" selection-end="5134" vertical-scroll-proportion="0.0">
+        <state line="246" column="30" selection-start="11316" selection-end="11316" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="12" selection-start="862" selection-end="862" vertical-scroll-proportion="0.53246754">
+        <state line="11" column="17" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="64" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1039#1203#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#2355#2519#0" expanded="true" />
-            <element signature="e#2508#2509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2136" selection-end="2198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="44" selection-start="3555" selection-end="3555" vertical-scroll-proportion="0.42194092">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

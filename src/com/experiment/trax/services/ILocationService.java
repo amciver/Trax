@@ -13,4 +13,6 @@ public interface ILocationService {
 
     void setApplicationContext(Context applicationContext);
 
+    String getLocality(double latitude, double longitude);
+
 }

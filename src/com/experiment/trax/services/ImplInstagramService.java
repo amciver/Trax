@@ -29,6 +29,7 @@ import java.util.List;
  */
 public class ImplInstagramService implements IInstagramService {
 
+    private final int COUNT = 20;
     private final String CLIENT_ID = "f8bf37e4a94c4de392b43ebac820bda4";
     private Hashtable<String, String> mTagMapping = new Hashtable<String, String>();
     private JSONArray mResults = null;
@@ -53,7 +54,7 @@ public class ImplInstagramService implements IInstagramService {
             try {
 
                 String tag = params[0];
-                String endpoint = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=" + CLIENT_ID;
+                String endpoint = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=" + CLIENT_ID + "&count=" + COUNT;
 
                 //if we have not seen this tag before add it, otherwise get the next_url
                 if (mTagMapping.containsKey(tag))
@@ -90,7 +91,7 @@ public class ImplInstagramService implements IInstagramService {
                 results = jsonObject.getJSONArray("data");
 
                 Log.d("ImplInstagramService", "Storing endpoint [" + jsonObject.getJSONObject("pagination").optString("next_url") + "] for tag [" + tag + "]");
-                mTagMapping.put(tag, jsonObject.getJSONObject("pagination").optString("next_url"));
+                mTagMapping.put(tag, jsonObject.getJSONObject("pagination").optString("next_url") + "&count=" + COUNT);
 
 
             } catch (Exception e) {

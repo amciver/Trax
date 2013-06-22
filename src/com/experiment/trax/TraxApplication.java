@@ -11,8 +11,11 @@ import android.app.Application;
  */
 public class TraxApplication extends Application {
 
+    public final String PREFS = "traxPrefs";
+
     @Override
     public void onCreate() {
         super.onCreate();
     }
+
 }

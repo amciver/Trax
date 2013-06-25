@@ -41,34 +41,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/core/AspectRatioImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/models/Type.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/TypeAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/TypesFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/in_from_left.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/in_from_right.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/out_to_left.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/out_to_right.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/styles_default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/tree_type.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocalityCompleteListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot.xml" afterPath="$PROJECT_DIR$/res/layout/lot.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot_details.xml" afterPath="$PROJECT_DIR$/res/layout/lot_details.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/tree.xml" afterPath="$PROJECT_DIR$/res/layout/tree.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Streak for the Cash Scheduler.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371766771379" ignored="false" />
+    <file path="/Dummy.txt" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371880471453" ignored="false" />
     <file path="$USER_HOME$/Downloads/Android-PullToRefresh-master/extras/PullToRefreshListFragment/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362781708461" ignored="false" />
     <file path="/fragment.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1367299483955" ignored="false" />
     <file path="$USER_HOME$/Downloads/ActionBarSherlock-4.2.0/library/project.properties" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1362113686424" ignored="false" />
@@ -84,12 +65,12 @@
     <file path="/AndroidManifest.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365722278090" ignored="false" />
     <file path="/styles_otan_red.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1363584189701" ignored="false" />
     <file path="/tree.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371878057500" ignored="false" />
-    <file path="/TreeAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371880218388" ignored="false" />
+    <file path="/TreeAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1372187982354" ignored="false" />
     <file path="/LotInfoAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1363840438842" ignored="false" />
     <file path="/lot_selection.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1363840673652" ignored="false" />
     <file path="/lot_info_window.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364359397190" ignored="false" />
     <file path="/lot_menu.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1364622491800" ignored="false" />
-    <file path="/ImplLocationService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371879817535" ignored="false" />
+    <file path="/ImplLocationService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1372187182678" ignored="false" />
     <file path="/TypefaceSpan.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365707864788" ignored="false" />
     <file path="/strings.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365112447697" ignored="false" />
     <file path="/lot_selection_menu.xml" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1365115982417" ignored="false" />
@@ -110,7 +91,8 @@
     <file path="/PhotosFragment.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371165091340" ignored="false" />
     <file path="/ViewsAdapter.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1370553961190" ignored="false" />
     <file path="/ImplInstagramService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371878687418" ignored="false" />
-    <file path="/ILocationService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1371879264088" ignored="false" />
+    <file path="/ILocationService.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1372186015687" ignored="false" />
+    <file path="/GetLocalityCompleteListener.java" changelist="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" time="1372185832358" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,28 +163,20 @@
       <file leaf-file-name="PhotosFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="31" selection-start="5595" selection-end="5595" vertical-scroll-proportion="0.0">
+            <state line="149" column="37" selection-start="5241" selection-end="5241" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeAdapter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TreeAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="44" selection-start="3555" selection-end="3555" vertical-scroll-proportion="0.42194092">
+            <state line="113" column="38" selection-start="4248" selection-end="4248" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4360#4361#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LotAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="18" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -216,10 +190,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ILocationService.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ILocationService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="17" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+            <state line="3" column="64" selection-start="108" selection-end="135" vertical-scroll-proportion="0.0882353">
               <folding />
             </state>
           </provider>
@@ -228,19 +202,7 @@
       <file leaf-file-name="ViewsAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="54" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tree.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/tree.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="45" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-5.480769">
+            <state line="48" column="30" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -249,7 +211,7 @@
       <file leaf-file-name="ImplInstagramService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="64" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0">
+            <state line="79" column="74" selection-start="3104" selection-end="3104" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -257,23 +219,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImplLocationService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
+      <file leaf-file-name="IInstagramService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/IInstagramService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="2136" selection-end="2198" vertical-scroll-proportion="0.0">
+            <state line="15" column="27" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lot.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="GetInstagramPhotosCompleteListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetInstagramPhotosCompleteListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="16" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.5769231">
+            <state line="11" column="0" selection-start="224" selection-end="328" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetLocalityCompleteListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocalityCompleteListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImplLocationService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="47" selection-start="4486" selection-end="4486" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1677#1706#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -297,7 +276,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/res/values/pull_refresh_strings.xml" />
         <option value="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/res/layout/pull_to_refresh_header_horizontal.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/TypesFragment.java" />
@@ -310,6 +288,7 @@
         <option value="$PROJECT_DIR$/res/layout/lot.xml" />
         <option value="$PROJECT_DIR$/res/layout/tree.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocalityCompleteListener.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" />
@@ -1101,7 +1080,11 @@
       <created>1367613979877</created>
       <updated>1367613979877</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Layout changes to photos view, adapter changes">
+      <created>1371880496021</created>
+      <updated>1371880496021</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1140,13 +1123,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.7065997" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41654572" sideWeight="0.48852223" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23802613" sideWeight="0.9031564" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18577649" sideWeight="0.9031564" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32656023" sideWeight="0.49426112" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.78197676" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2984218" sideWeight="0.76197386" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35268506" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2984218" sideWeight="0.8142235" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34687954" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1193,7 +1176,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted theme, fixed background processing view, cleaned up views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout changes to photos view, adapter changes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1215,6 +1198,7 @@
     <MESSAGE value="Fetching phone number from SDB now, added tabs back in, modified lot selection appearance" />
     <MESSAGE value="Fixed issues with displaying of lots phone numbers and hours of operations" />
     <MESSAGE value="Adjusted theme, fixed background processing view, cleaned up views" />
+    <MESSAGE value="Layout changes to photos view, adapter changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1224,30 +1208,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/InitActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="31" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetInstagramPhotosCompleteListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="35" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/core/AspectRatioImageView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="13" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0">
@@ -1265,23 +1225,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="31" selection-start="5595" selection-end="5595" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/joda-time-2.2.jar!/org/joda/time/format/DateTimeFormatter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="0" selection-start="5467" selection-end="5467" vertical-scroll-proportion="0.8179272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="54" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1298,7 +1244,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="16" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.5769231">
+        <state line="48" column="16" selection-start="2118" selection-end="2118" vertical-scroll-proportion="-0.28846154">
           <folding />
         </state>
       </provider>
@@ -1308,7 +1254,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="45" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-5.480769">
+        <state line="27" column="45" selection-start="1198" selection-end="1198" vertical-scroll-proportion="1.5769231">
           <folding />
         </state>
       </provider>
@@ -1320,35 +1266,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+        <state line="48" column="30" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetInstagramPhotosCompleteListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="224" selection-end="328" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocalityCompleteListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="64" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0">
+        <state line="79" column="74" selection-start="3104" selection-end="3104" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/IInstagramService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2136" selection-end="2198" vertical-scroll-proportion="0.0">
+        <state line="15" column="27" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="37" selection-start="5241" selection-end="5241" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="44" selection-start="3555" selection-end="3555" vertical-scroll-proportion="0.42194092">
+        <state line="113" column="38" selection-start="4248" selection-end="4248" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4360#4361#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="47" selection-start="4486" selection-end="4486" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1677#1706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="64" selection-start="108" selection-end="135" vertical-scroll-proportion="0.0882353">
+          <folding />
         </state>
       </provider>
     </entry>

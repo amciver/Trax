@@ -1,8 +1,6 @@
 package com.experiment.trax.adapters;
 
 import android.content.Context;
-import android.location.Address;
-import android.location.Geocoder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,15 +10,15 @@ import android.widget.TextView;
 import com.androidquery.AQuery;
 import com.androidquery.callback.ImageOptions;
 import com.experiment.trax.R;
+import com.experiment.trax.listeners.GetLocalityCompleteListener;
+import com.experiment.trax.services.ImplLocationService;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Created with IntelliJ IDEA.
@@ -64,7 +62,7 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
 
             location = mTrees.get(position).optString("location");
 
-            Log.d("TreeAdapter", "Time created for position [" + position + "] is [" + created.toString(formatter) + "]");
+            Log.d("TreeAdapter", "Time created for position [" + position + "] at location [" + location + "] is [" + created.toString(formatter) + "]");
 
         } catch (JSONException e) {
             Log.e("TreeAdapter", e.getMessage(), e);
@@ -73,7 +71,6 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
         //convertView.setBackgroundColor(R.color.abs__primary_text_holo_light);
 
         //TODO: Will this blow up if the returned type is not a TextView?
-
 
         AQuery aq = new AQuery(convertView);
         ImageOptions options = new ImageOptions();
@@ -90,26 +87,34 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
         if (photoDate != null)
             photoDate.setText(created.toString(formatter));
 
-        TextView photoLocation = (TextView) convertView.findViewById(R.id.photo_location);
-        if (photoLocation != null && location != null) {
-            double latitude = 37.751851;
-            double longitude = -122.426147;
-            Geocoder geocoder = new Geocoder(getContext(), Locale.getDefault());
+        final TextView photoLocation = (TextView) convertView.findViewById(R.id.photo_location);
+        if (photoLocation != null && !location.equalsIgnoreCase("null")) {
+
+            boolean haveCoordinates = true;
+
+            double latitude = 8675309;
+            double longitude = 8675309;
+
             try {
-                List<Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
-                if (addresses.size() > 0) {
-                    String result = addresses.get(0).getLocality() + ", " + addresses.get(0).getAdminArea();
-                    Log.d("ImplLocationService", "Storing location as [" + result + "]");
-                }
-            } catch (IOException e) {
-                Log.e("ImplLocationService", e.getMessage(), e);
+                latitude = mTrees.get(position).getJSONObject("location").optDouble("latitude");
+                longitude = mTrees.get(position).getJSONObject("location").optDouble("latitude");
+            } catch (JSONException e) {
+                haveCoordinates = false;
+                Log.e("TreeAdapter", "Failed while attempting to parse coordinates we thought we had [" + e.getMessage() + "]", e);
             }
 
-            photoLocation.setText(location);
+            if (haveCoordinates) {
+                ImplLocationService.INSTANCE.setOnGetLocalityCompleteListener(new GetLocalityCompleteListener() {
+                    @Override
+                    public void onGetLocalityComplete(String locality) {
+                        photoLocation.setText(locality);
+                    }
+                });
+                ImplLocationService.INSTANCE.getLocalityAsync(latitude, longitude);
+            }
         }
 
         return convertView;
-
     }
 
 //    @Override

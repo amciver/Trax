@@ -5,8 +5,10 @@ import android.location.*;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import com.experiment.trax.listeners.GetLocalityCompleteListener;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -46,6 +48,14 @@ public class ImplLocationService implements ILocationService {
     };
     private static Location mCurrentLocation;
 
+    List<GetLocalityCompleteListener> mGetLocalityCompleteListeners = new ArrayList<GetLocalityCompleteListener>();
+
+    @Override
+    public void setOnGetLocalityCompleteListener(GetLocalityCompleteListener listener) {
+        this.mGetLocalityCompleteListeners.add(listener);
+    }
+
+
     private ImplLocationService() {
 
     }
@@ -61,12 +71,9 @@ public class ImplLocationService implements ILocationService {
         mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, mLocationListener);
     }
 
-    public String getLocality(double latitude, double longitude) {
-
-        latitude = 34.029331;
-        longitude = -118.212891;
-        new LocalityAsyncTask(latitude, longitude).execute();
-        return "";
+    @Override
+    public void getLocalityAsync(double latitude, double longitude) {
+        new GetLocalityAsyncTask(latitude, longitude).execute();
     }
 
     public static Location getCurrentLocation() {
@@ -99,11 +106,11 @@ public class ImplLocationService implements ILocationService {
 
     }
 
-    public class LocalityAsyncTask extends AsyncTask<String, String, String> {
+    public class GetLocalityAsyncTask extends AsyncTask<String, String, String> {
         double latitude;
         double longitude;
 
-        public LocalityAsyncTask(double latitude, double longitude) {
+        public GetLocalityAsyncTask(double latitude, double longitude) {
             this.latitude = latitude;
             this.longitude = longitude;
         }
@@ -115,7 +122,8 @@ public class ImplLocationService implements ILocationService {
             try {
                 List<Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
                 if (addresses.size() > 0) {
-                    result = addresses.get(0).toString();
+                    //TODO: Need to return true objects back, should not be hacking together string here
+                    result = addresses.get(0).getSubAdminArea() + ", " + addresses.get(0).getAdminArea();
                     Log.d("ImplLocationService", "Storing location as [" + result + "]");
                 }
             } catch (IOException e) {
@@ -126,6 +134,11 @@ public class ImplLocationService implements ILocationService {
 
         @Override
         protected void onPostExecute(String result) {
+            //notify all listeners that work is complete
+            for (GetLocalityCompleteListener listener : mGetLocalityCompleteListeners) {
+                listener.onGetLocalityComplete(result);
+            }
+
             super.onPostExecute(result);
         }
     }

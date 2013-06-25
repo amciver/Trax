@@ -1,6 +1,7 @@
 package com.experiment.trax.services;
 
 import android.content.Context;
+import com.experiment.trax.listeners.GetLocalityCompleteListener;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,6 +14,8 @@ public interface ILocationService {
 
     void setApplicationContext(Context applicationContext);
 
-    String getLocality(double latitude, double longitude);
+    void setOnGetLocalityCompleteListener(GetLocalityCompleteListener listener);
+
+    void getLocalityAsync(double latitude, double longitude);
 
 }

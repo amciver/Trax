@@ -5,8 +5,8 @@ import android.util.Log;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.Window;
 import com.experiment.trax.core.BaseActivity;
-import com.experiment.trax.fragments.LotsFragment;
-import com.experiment.trax.listeners.SetLotsCompleteListener;
+import com.experiment.trax.fragments.DropsitesFragment;
+import com.experiment.trax.listeners.SetDropsitesCompleteListener;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,26 +15,29 @@ import com.experiment.trax.listeners.SetLotsCompleteListener;
  * Time: 4:49 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LotSelectionActivity extends BaseActivity {
+public class DropsiteSelectionActivity extends BaseActivity {
 
     private boolean mIsRefreshing;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
+        Log.d("DropsiteSelectionActivity", "onCreate called");
+
         //this must be done before we add anything other UI component
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.lot_selection);
+        Log.d("DropsiteSelectionActivity", "setContentView as R.layout.dropsite_selection");
+        setContentView(R.layout.dropsite_selection);
 
         setRefreshState(true);
 
-        LotsFragment fragment = (LotsFragment) getSupportFragmentManager().findFragmentById(R.id.lots_listing);
-        fragment.setOnSetLotsCompleteListener(new SetLotsCompleteListener() {
+        DropsitesFragment fragment = (DropsitesFragment) getSupportFragmentManager().findFragmentById(R.id.dropsites_listing);
+        fragment.setOnSetDropsitesCompleteListener(new SetDropsitesCompleteListener() {
             @Override
-            public void onSetLotsCompleted() {
+            public void onSetDropsitesCompleted() {
                 setRefreshState(false);
             }
         });
@@ -42,14 +45,14 @@ public class LotSelectionActivity extends BaseActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        menu.findItem(R.id.menu_lot_selection).setVisible(!mIsRefreshing);
+        menu.findItem(R.id.menu_dropsite_selection).setVisible(!mIsRefreshing);
         return true;
     }
 
     @Override
-    public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         com.actionbarsherlock.view.MenuInflater inflater = getSupportMenuInflater();
-        inflater.inflate(R.menu.lot_selection_menu, menu);
+        inflater.inflate(R.menu.dropsite_selection_menu, menu);
         return true;
     }
 
@@ -68,19 +71,19 @@ public class LotSelectionActivity extends BaseActivity {
         //leaving this blank as we do not want tabs here
     }
 
-    public boolean onRefreshLots(final com.actionbarsherlock.view.MenuItem item) {
-        Log.d("LotSelectionActivity", "onRefreshLots called");
+    public boolean onRefreshDropsites(final com.actionbarsherlock.view.MenuItem item) {
+        Log.d("DropsiteSelectionActivity", "onRefreshDropsites called");
         setRefreshState(true);
 
-        LotsFragment fragment = (LotsFragment) getSupportFragmentManager().findFragmentById(R.id.lots_listing);
-        fragment.setOnSetLotsCompleteListener(new SetLotsCompleteListener() {
+        DropsitesFragment fragment = (DropsitesFragment) getSupportFragmentManager().findFragmentById(R.id.dropsites_listing);
+        fragment.setOnSetDropsitesCompleteListener(new SetDropsitesCompleteListener() {
             @Override
-            public void onSetLotsCompleted() {
+            public void onSetDropsitesCompleted() {
                 setRefreshState(false);
             }
         });
-        Log.d("LotSelectionActivity", "Calling setLots() on " + LotsFragment.class.toString());
-        fragment.setLots();
+        Log.d("DropsiteSelectionActivity", "Calling setDropsites() on " + DropsitesFragment.class.toString());
+        fragment.setDropsites();
 
         return true;
     }

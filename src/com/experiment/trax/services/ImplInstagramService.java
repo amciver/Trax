@@ -10,6 +10,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -88,7 +89,8 @@ public class ImplInstagramService implements IInstagramService {
                 JSONObject jsonObject = new JSONObject(dataAsString);
 
                 //grab data to return
-                results = jsonObject.getJSONArray("data");
+                results = setLocations(jsonObject.getJSONArray("data"));
+
 
                 Log.d("ImplInstagramService", "Storing endpoint [" + jsonObject.getJSONObject("pagination").optString("next_url") + "] for tag [" + tag + "]");
                 mTagMapping.put(tag, jsonObject.getJSONObject("pagination").optString("next_url") + "&count=" + COUNT);
@@ -101,10 +103,52 @@ public class ImplInstagramService implements IInstagramService {
             return results;
         }
 
+        private JSONArray setLocations(JSONArray photos) {
+            for (int i = 0; i < photos.length(); ++i) {
+                try {
+
+                    //if we already have a name on the photo use it otherwise
+                    //go fetch the location based on lat/long and store it
+                    //in the JSONObject
+                    JSONObject photo = photos.getJSONObject(i);
+                    JSONObject location = null;
+                    try {
+                        location = photo.getJSONObject("location");
+                    } catch (JSONException ex) {
+                        Log.e("ImplInstagramService", "Unable to locate location for photo + [" + i + "], value is null");
+                    }
+
+                    if (location != null) {
+                        String name = location.optString("name");
+                        if (name.isEmpty() || name.equalsIgnoreCase("null")) {
+                            name = fetchLocation(location);
+
+                            location.put("name", name);
+                            photo.put("location", location);
+                        } else {
+                            photo.put("location", location);
+                        }
+                    }
+                } catch (JSONException e) {
+                    Log.e("ImplInstagramService", e.getMessage(), e);
+                }
+            }
+
+            Log.d("ImplInstagramService", "Returning photos [" + photos.toString() + "]");
+            return photos;
+        }
+
+        private String fetchLocation(JSONObject location) {
+            double latitude = location.optDouble("latitude");
+            double longitude = location.optDouble("longitude");
+
+            return ImplLocationService.INSTANCE.getLocalitySync(latitude, longitude);
+        }
+
         @Override
         protected void onPostExecute(JSONArray result) {
 
-            //Log.d("GetInstagramPhotosTask", "Passing " + mGetLocationsCompleteListeners.size() + " listeners " + locations.size() + " locations");
+            //Log.d("GetInstagramPhotosTask", "Passing " + mGetLotLocationsCompleteListeners.size() + " listeners " + locations.size() + " locations");
             //notify all listeners that work is complete
             //TODO: hack to get passed null for the moment
 

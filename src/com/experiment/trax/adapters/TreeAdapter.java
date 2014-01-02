@@ -10,8 +10,6 @@ import android.widget.TextView;
 import com.androidquery.AQuery;
 import com.androidquery.callback.ImageOptions;
 import com.experiment.trax.R;
-import com.experiment.trax.listeners.GetLocalityCompleteListener;
-import com.experiment.trax.services.ImplLocationService;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -28,6 +26,8 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class TreeAdapter extends ArrayAdapter<JSONObject> {
+
+    private final String LOG_TAG = "TreeAdapter";
 
     private Context mContext;
     private List<JSONObject> mTrees;
@@ -55,20 +55,19 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
         try {
 
             url = mTrees.get(position).getJSONObject("images").getJSONObject("standard_resolution").optString("url");
-            Log.d("TreeAdapter", "URL for position [" + position + "] is [" + url + "]");
+            Log.d(LOG_TAG, "URL for position [" + position + "] is [" + url + "]");
 
             String unix = mTrees.get(position).optString("created_time");
             created = new DateTime(Long.parseLong(unix) * 1000L);
 
             location = mTrees.get(position).optString("location");
 
-            Log.d("TreeAdapter", "Time created for position [" + position + "] at location [" + location + "] is [" + created.toString(formatter) + "]");
+            Log.d(LOG_TAG, "Location for position [" + position + "] is [" + location + "]");
+            Log.d(LOG_TAG, "Time created for position [" + position + "] is [" + created.toString(formatter) + "]");
 
         } catch (JSONException e) {
-            Log.e("TreeAdapter", e.getMessage(), e);
+            Log.e(LOG_TAG, e.getMessage(), e);
         }
-
-        //convertView.setBackgroundColor(R.color.abs__primary_text_holo_light);
 
         //TODO: Will this blow up if the returned type is not a TextView?
 
@@ -83,61 +82,36 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
 
         aq.id(R.id.tree).progress(R.id.progress).image(url, options);
 
+//        aq.id(R.id.tree).progress(R.id.progress).image(url, true, true, 0, 0, new BitmapAjaxCallback() {
+//
+//            @Override
+//            public void callback(String url, ImageView iv, Bitmap bm, AjaxStatus status) {
+//
+//                iv.setImageBitmap(bm);
+//
+//                //do something to the bitmap
+//                //iv.setColorFilter(tint, PorterDuff.Mode.SRC_ATOP);
+//
+//            }
+//        }).animate(AQuery.FADE_IN_NETWORK);
+
+
         TextView photoDate = (TextView) convertView.findViewById(R.id.photo_date);
         if (photoDate != null)
             photoDate.setText(created.toString(formatter));
 
-        final TextView photoLocation = (TextView) convertView.findViewById(R.id.photo_location);
-        if (photoLocation != null && !location.equalsIgnoreCase("null")) {
-
-            boolean haveCoordinates = true;
-
-            double latitude = 8675309;
-            double longitude = 8675309;
-
-            try {
-                latitude = mTrees.get(position).getJSONObject("location").optDouble("latitude");
-                longitude = mTrees.get(position).getJSONObject("location").optDouble("latitude");
-            } catch (JSONException e) {
-                haveCoordinates = false;
-                Log.e("TreeAdapter", "Failed while attempting to parse coordinates we thought we had [" + e.getMessage() + "]", e);
+        try {
+            TextView photoLocation = (TextView) convertView.findViewById(R.id.photo_location);
+            if (photoLocation != null && !location.equalsIgnoreCase("null")) {
+                photoLocation.setText(mTrees.get(position).getJSONObject("location").optString("name"));
+            } else {
+                photoLocation.setText(R.string.empty);
             }
-
-            if (haveCoordinates) {
-                ImplLocationService.INSTANCE.setOnGetLocalityCompleteListener(new GetLocalityCompleteListener() {
-                    @Override
-                    public void onGetLocalityComplete(String locality) {
-                        photoLocation.setText(locality);
-                    }
-                });
-                ImplLocationService.INSTANCE.getLocalityAsync(latitude, longitude);
-            }
+        } catch (JSONException ex) {
+            Log.e(LOG_TAG, "", ex);
         }
 
         return convertView;
     }
-
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//
-//        View v = convertView;
-//        if (v == null) {
-//            LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//            v = vi.inflate(R.layout.tree, null);
-//        }
-//
-////        ImageLoader.getInstance().displayImage(mTrees.get(position), (ImageView)v);
-////        final Tree tree = new Tree();
-////        ImageLoader.getInstance().loadImage(mContext, mTrees.get(position), new SimpleImageLoadingListener() {
-////            @Override
-////            public void onLoadingComplete(Bitmap loadedImage) {
-////                 tree.setImage(loadedImage);
-////            }
-////        });
-//
-//        ((ImageView)v).setImageBitmap(mTrees.get(position));
-//
-//        return v;
-//    }
 
 }

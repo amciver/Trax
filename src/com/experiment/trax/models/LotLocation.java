@@ -11,7 +11,7 @@ import java.util.Hashtable;
  * Time: 2:15 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Location {
+public class LotLocation {
 
     private String id;
     private String name;
@@ -143,8 +143,8 @@ public class Location {
         this.hoursOpen = hoursOpen;
     }
 
-    public static Location asLocation(android.location.Location location) {
-        Location l = new Location();
+    public static LotLocation asLocation(android.location.Location location) {
+        LotLocation l = new LotLocation();
         l.setPoint(new LatLng(location.getLatitude(), location.getLongitude()));
         return l;
     }

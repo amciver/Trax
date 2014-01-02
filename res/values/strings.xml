@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="empty"></string>
     <string name="app_name">O Tannenbaum</string>
     <string name="not_available">N/A</string>
     <string name="lot_phone">phone:</string>

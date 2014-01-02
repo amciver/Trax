@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.experiment.trax.R;
-import com.experiment.trax.models.Location;
+import com.experiment.trax.models.LotLocation;
 import org.joda.time.DateTime;
 
 import java.util.List;
@@ -21,13 +21,13 @@ import java.util.List;
  * Time: 10:31 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LotAdapter extends ArrayAdapter<Location> {
+public class LotAdapter extends ArrayAdapter<LotLocation> {
 
-    private List<Location> mLots;
+    private List<LotLocation> mLots;
 
     private Context mContext;
 
-    public LotAdapter(Context context, int textViewResourceId, List<Location> objects) {
+    public LotAdapter(Context context, int textViewResourceId, List<LotLocation> objects) {
         super(context, textViewResourceId, objects);
 
         mContext = context;
@@ -45,40 +45,40 @@ public class LotAdapter extends ArrayAdapter<Location> {
             v = vi.inflate(R.layout.lot, null);
         }
 
-        Location location = mLots.get(position);
-        if (location != null) {
+        LotLocation lotLocation = mLots.get(position);
+        if (lotLocation != null) {
             TextView name = (TextView) v.findViewById(R.id.lot_name);
             if (name != null)
-                name.setText(location.getName());
+                name.setText(lotLocation.getName());
 
 //            RatingBar rating = (RatingBar) v.findViewById(R.id.lot_ratingBar);
 //            if (rating != null)
 //                rating.setRating(location.getRating());
 
-            showPhone(v, location);
+            showPhone(v, lotLocation);
 
 //            ImageView icon = (ImageView) v.findViewById(R.id.lot_location);
 //            icon.setImageResource(R.drawable.ic_action_location);
 
-            showHours(v, location);
-            showPaymentMethods(v, location);
+            showHours(v, lotLocation);
+            showPaymentMethods(v, lotLocation);
         }
         return v;
     }
 
-    private void showName(View v, Location location) {
+    private void showName(View v, LotLocation lotLocation) {
         TextView name = (TextView) v.findViewById(R.id.lot_name);
         if (name != null) {
-            if (location.getName() != null &&
-                    location.getName().length() != 0) {
+            if (lotLocation.getName() != null &&
+                    lotLocation.getName().length() != 0) {
                 name.setVisibility(View.VISIBLE);
-                name.setText(location.getName());
+                name.setText(lotLocation.getName());
             } else
                 name.setVisibility(View.GONE);
         }
     }
 
-    private void showPhone(View v, Location location) {
+    private void showPhone(View v, LotLocation lotLocation) {
 //        TextView phone = (TextView) v.findViewById(R.id.lot_phone);
 //        if (phone != null) {
 //            if (location.getPhone() != null && !location.getPhone().isEmpty())
@@ -88,11 +88,11 @@ public class LotAdapter extends ArrayAdapter<Location> {
 //        }
     }
 
-    private void showHours(View v, Location location) {
+    private void showHours(View v, LotLocation lotLocation) {
 
         int day = DateTime.now().getDayOfWeek();
-        String openingTime = location.getOpeningTime(day);
-        String closingTime = location.getClosingTime(day);
+        String openingTime = lotLocation.getOpeningTime(day);
+        String closingTime = lotLocation.getClosingTime(day);
         if (openingTime == null ||
                 openingTime.length() == 0 ||
                 closingTime == null ||
@@ -133,10 +133,10 @@ public class LotAdapter extends ArrayAdapter<Location> {
         }
     }
 
-    private void showPaymentMethods(View v, Location location) {
+    private void showPaymentMethods(View v, LotLocation lotLocation) {
         ImageView amex = (ImageView) v.findViewById(R.id.lot_amex);
         if (amex != null) {
-            if (!location.isAcceptsAmex())
+            if (!lotLocation.isAcceptsAmex())
                 amex.setVisibility(View.GONE);
             else
                 amex.setVisibility(View.VISIBLE);
@@ -144,7 +144,7 @@ public class LotAdapter extends ArrayAdapter<Location> {
 
         ImageView visa = (ImageView) v.findViewById(R.id.lot_visa);
         if (visa != null) {
-            if (!location.isAcceptsVisa())
+            if (!lotLocation.isAcceptsVisa())
                 visa.setVisibility(View.GONE);
             else
                 visa.setVisibility(View.VISIBLE);
@@ -152,7 +152,7 @@ public class LotAdapter extends ArrayAdapter<Location> {
 
         ImageView mastercard = (ImageView) v.findViewById(R.id.lot_mastercard);
         if (mastercard != null) {
-            if (!location.isAcceptsMastercard())
+            if (!lotLocation.isAcceptsMastercard())
                 mastercard.setVisibility(View.GONE);
             else
                 mastercard.setVisibility(View.VISIBLE);
@@ -160,7 +160,7 @@ public class LotAdapter extends ArrayAdapter<Location> {
 
         ImageView discover = (ImageView) v.findViewById(R.id.lot_discover);
         if (discover != null) {
-            if (!location.isAcceptsDiscover())
+            if (!lotLocation.isAcceptsDiscover())
                 discover.setVisibility(View.GONE);
             else
                 discover.setVisibility(View.VISIBLE);

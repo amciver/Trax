@@ -10,7 +10,7 @@
                   android:onClick="onShowLots"/>
             <item android:id="@+id/dropsites"
                   android:title="@string/option_dropsites"
-                  android:onClick="onShowLots"/>
+                  android:onClick="onShowDropsites"/>
         </menu>
     </item>
 

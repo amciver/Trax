@@ -1,6 +1,6 @@
 package com.experiment.trax.listeners;
 
-import com.experiment.trax.models.Location;
+import com.experiment.trax.models.LotLocation;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * Time: 2:40 PM
  * To change this template use File | Settings | File Templates.
  */
-public interface GetLocationsCompleteListener {
+public interface GetLotLocationsCompleteListener {
 
-    void onLocationFetchComplete(List<Location> locations);
+    void onLotLocationFetchComplete(List<LotLocation> lotLocations);
 }

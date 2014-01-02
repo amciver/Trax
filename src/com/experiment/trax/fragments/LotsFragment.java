@@ -11,9 +11,9 @@ import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.experiment.trax.R;
 import com.experiment.trax.adapters.LotAdapter;
-import com.experiment.trax.listeners.GetLocationsCompleteListener;
+import com.experiment.trax.listeners.GetLotLocationsCompleteListener;
 import com.experiment.trax.listeners.SetLotsCompleteListener;
-import com.experiment.trax.models.Location;
+import com.experiment.trax.models.LotLocation;
 import com.experiment.trax.services.ImplLocationService;
 import com.experiment.trax.services.ImplSimpleDBService;
 import com.google.android.gms.maps.CameraUpdate;
@@ -34,7 +34,7 @@ import java.util.List;
  */
 public class LotsFragment extends SherlockListFragment {
 
-    List<Location> mLocations = new ArrayList<Location>();
+    List<LotLocation> mLotLocations = new ArrayList<LotLocation>();
 
     List<SetLotsCompleteListener> mSetLotsCompleteListeners = new ArrayList<SetLotsCompleteListener>();
 
@@ -59,7 +59,7 @@ public class LotsFragment extends SherlockListFragment {
                 googleMap.getUiSettings().setCompassEnabled(true);
                 googleMap.getUiSettings().setZoomControlsEnabled(false);
 
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLocations.get(i).getPoint(), 13));
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLotLocations.get(i).getPoint(), 13));
             }
         });
 
@@ -76,14 +76,14 @@ public class LotsFragment extends SherlockListFragment {
             public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
 
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) contextMenuInfo;
-                Location location = mLocations.get(info.position);
+                LotLocation lotLocation = mLotLocations.get(info.position);
 
                 //if we dont have a phone number, return now
-                if (location.getPhone().length() != 7 &&
-                        location.getPhone().length() != 10)
+                if (lotLocation.getPhone().length() != 7 &&
+                        lotLocation.getPhone().length() != 10)
                     return;
 
-                contextMenu.setHeaderTitle(location.getName());
+                contextMenu.setHeaderTitle(lotLocation.getName());
 
                 android.view.MenuInflater inflater = getActivity().getMenuInflater();
                 inflater.inflate(R.menu.lot_menu, contextMenu);
@@ -98,17 +98,17 @@ public class LotsFragment extends SherlockListFragment {
         switch (item.getItemId()) {
             case R.id.call_item: {
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-                Location location = mLocations.get(info.position);
+                LotLocation lotLocation = mLotLocations.get(info.position);
 
-                Intent action = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + location.getPhone()));
+                Intent action = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + lotLocation.getPhone()));
                 startActivity(action);
                 return true;
             }
             case R.id.directions_item: {
 
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-                Location location = mLocations.get(info.position);
-                Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr=" + ImplLocationService.getCurrentLocation().getLatitude() + "," + ImplLocationService.getCurrentLocation().getLongitude() + "&daddr=" + location.getPoint().latitude + "," + location.getPoint().longitude));
+                LotLocation lotLocation = mLotLocations.get(info.position);
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr=" + ImplLocationService.getCurrentLocation().getLatitude() + "," + ImplLocationService.getCurrentLocation().getLongitude() + "&daddr=" + lotLocation.getPoint().latitude + "," + lotLocation.getPoint().longitude));
                 startActivity(intent);
                 return true;
             }
@@ -121,19 +121,22 @@ public class LotsFragment extends SherlockListFragment {
     public void setLots() {
 
         android.location.Location currentLocation = ImplLocationService.getCurrentLocation();
-        final LatLng currentCoordinates = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
 
-        ImplSimpleDBService srvc = new ImplSimpleDBService();
-        srvc.setOnGetLocationCompleteListener(new GetLocationsCompleteListener() {
-            @Override
-            public void onLocationFetchComplete(List<Location> locations) {
+        //we will get null if there is no connection available and thus no location; airplane mode
+        if (currentLocation != null) {
+            final LatLng currentCoordinates = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
 
-                mLocations = locations;
+            ImplSimpleDBService srvc = new ImplSimpleDBService();
+            srvc.setOnGetLocationCompleteListener(new GetLotLocationsCompleteListener() {
+                @Override
+                public void onLotLocationFetchComplete(List<LotLocation> lotLocations) {
 
-                LotAdapter adapter = new LotAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, mLocations);
-                setListAdapter(adapter);
+                    mLotLocations = lotLocations;
 
-                //we need to know when an item is clicked so we can provide the details
+                    LotAdapter adapter = new LotAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, mLotLocations);
+                    setListAdapter(adapter);
+
+                    //we need to know when an item is clicked so we can provide the details
 //                SherlockListFragment listFragment = (SherlockListFragment)lots;
 //                listFragment.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //                    @Override
@@ -154,88 +157,95 @@ public class LotsFragment extends SherlockListFragment {
 //                    }
 //                });
 
-                GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
-                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                googleMap.setMyLocationEnabled(true);
-                googleMap.getUiSettings().setCompassEnabled(true);
-                googleMap.getUiSettings().setZoomControlsEnabled(false);
-                googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
-                    @Override
-                    public View getInfoWindow(Marker marker) {
-                        return null;  //To change body of implemented methods use File | Settings | File Templates.
-                    }
-
-                    @Override
-                    public View getInfoContents(Marker marker) {
-                        // Getting view from the layout file info_window_layout
-                        View v = getLayoutInflater(null).inflate(R.layout.lot_info_window, null);
-
-                        // Getting the position from the marker
-                        LatLng latLng = marker.getPosition();
-
-                        Location location = null;
-                        String id = marker.getId();
-                        for (Location l : mLocations)
-                            if (l.getId().equals(id)) {
-                                location = l;
-                            }
-
-                        if (location != null) {
-                            TextView title = (TextView) v.findViewById(R.id.lot_info_title);
-                            title.setText(location.getName());
-
-                            TextView description = (TextView) v.findViewById(R.id.lot_info_description);
-                            description.setText(location.getDescription());
+                    GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
+                    googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                    googleMap.setMyLocationEnabled(true);
+                    googleMap.getUiSettings().setCompassEnabled(true);
+                    googleMap.getUiSettings().setZoomControlsEnabled(false);
+                    googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+                        @Override
+                        public View getInfoWindow(Marker marker) {
+                            return null;  //To change body of implemented methods use File | Settings | File Templates.
                         }
 
-                        return v;
+                        @Override
+                        public View getInfoContents(Marker marker) {
+                            // Getting view from the layout file info_window_layout
+                            View v = getLayoutInflater(null).inflate(R.layout.lot_info_window, null);
+
+                            // Getting the position from the marker
+                            LatLng latLng = marker.getPosition();
+
+                            LotLocation lotLocation = null;
+                            String id = marker.getId();
+                            for (LotLocation l : mLotLocations)
+                                if (l.getId().equals(id)) {
+                                    lotLocation = l;
+                                }
+
+                            if (lotLocation != null) {
+                                TextView title = (TextView) v.findViewById(R.id.lot_info_title);
+                                title.setText(lotLocation.getName());
+
+                                TextView description = (TextView) v.findViewById(R.id.lot_info_description);
+                                description.setText(lotLocation.getDescription());
+                            }
+
+                            return v;
+                        }
+                    });
+                    CameraUpdate center = CameraUpdateFactory.newLatLng(currentCoordinates);
+                    CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
+
+                    googleMap.moveCamera(center);
+                    googleMap.animateCamera(zoom);
+
+                    googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                        @Override
+                        public void onInfoWindowClick(Marker marker) {
+                            String id = marker.getId();
+                        }
+                    });
+
+                    int position = 1;
+                    for (LotLocation lotLocation : mLotLocations) {
+                        Log.d("showLots", "Location " + lotLocation.getPointAsString() + " being added to map");
+
+                        BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
+                        addLotToMap(googleMap, icon, lotLocation);
+
+                        position++;
                     }
-                });
-                CameraUpdate center = CameraUpdateFactory.newLatLng(currentCoordinates);
-                CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
 
-                googleMap.moveCamera(center);
-                googleMap.animateCamera(zoom);
-
-                googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
-                    @Override
-                    public void onInfoWindowClick(Marker marker) {
-                        String id = marker.getId();
+                    Log.d("setLots", "Notifying " + mSetLotsCompleteListeners.size() + " listeners");
+                    //notify all listeners that work is complete
+                    for (SetLotsCompleteListener listener : mSetLotsCompleteListeners) {
+                        listener.onSetLotsCompleted();
                     }
-                });
 
-                int position = 1;
-                for (Location location : mLocations) {
-                    Log.d("showLots", "Location " + location.getPointAsString() + " being added to map");
-
-                    BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
-                    addLotToMap(googleMap, icon, location);
-
-                    position++;
+                    //zoom in on the first one, which is closest to user
+                    if (mLotLocations.size() > 0)
+                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLotLocations.get(0).getPoint(), 13));
                 }
+            });
 
-                Log.d("setLots", "Notifying " + mSetLotsCompleteListeners.size() + " listeners");
-                //notify all listeners that work is complete
-                for (SetLotsCompleteListener listener : mSetLotsCompleteListeners) {
-                    listener.onSetLotsCompleted();
-                }
-
-                //zoom in on the first one, which is closest to user
-                if (mLocations.size() > 0)
-                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLocations.get(0).getPoint(), 13));
+            srvc.getLocationsAsync(getActivity().getApplicationContext(), currentCoordinates);
+        } else {
+            Log.d("setLots", "Notifying " + mSetLotsCompleteListeners.size() + " listeners");
+            //notify all listeners that work is complete
+            for (SetLotsCompleteListener listener : mSetLotsCompleteListeners) {
+                listener.onSetLotsCompleted();
             }
-        });
-
-        srvc.getLocationsAsync(getActivity().getApplicationContext(), currentCoordinates);
+        }
     }
 
-    private void addLotToMap(GoogleMap googleMap, BitmapDescriptor icon, Location location) {
+    private void addLotToMap(GoogleMap googleMap, BitmapDescriptor icon, LotLocation lotLocation) {
         Marker marker = googleMap.addMarker(new MarkerOptions()
-                .position(location.getPoint())
-                .title(location.getName())
-                .snippet(location.getDescription())
+                .position(lotLocation.getPoint())
+                .title(lotLocation.getName())
+                .snippet(lotLocation.getDescription())
                 .icon(icon));
-        location.setId(marker.getId());
+        lotLocation.setId(marker.getId());
     }
 
 

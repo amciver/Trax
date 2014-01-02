@@ -53,13 +53,13 @@ public class TypefaceSpan extends MetricAffectingSpan {
 
     @Override
     public void updateMeasureState(TextPaint p) {
-        p.setTextSize(32f);
+        p.setTextSize(64f);
         p.setTypeface(mTypeface);
     }
 
     @Override
     public void updateDrawState(TextPaint tp) {
-        tp.setTextSize(32f);
+        tp.setTextSize(64f);
         tp.setTypeface(mTypeface);
     }
 }

@@ -6,10 +6,13 @@ import android.os.AsyncTask;
 import android.util.Log;
 import com.amazonaws.services.simpledb.model.Attribute;
 import com.amazonaws.services.simpledb.model.*;
-import com.experiment.trax.listeners.GetLocationsCompleteListener;
-import com.experiment.trax.models.Location;
+import com.experiment.trax.listeners.GetDropsiteLocationsCompleteListener;
+import com.experiment.trax.listeners.GetLotLocationsCompleteListener;
+import com.experiment.trax.models.DropsiteLocation;
+import com.experiment.trax.models.LotLocation;
 import com.google.android.gms.maps.model.LatLng;
 import nu.xom.*;
+import org.joda.time.DateTime;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
@@ -29,10 +32,15 @@ public class ImplSimpleDBService implements ISimpleDBService {
 
     final static int RETURN_COUNT = 10;
 
-    List<GetLocationsCompleteListener> mGetLocationsCompleteListeners = new ArrayList<GetLocationsCompleteListener>();
+    List<GetDropsiteLocationsCompleteListener> mGetDropsiteLocationsCompleteListeners = new ArrayList<GetDropsiteLocationsCompleteListener>();
+    List<GetLotLocationsCompleteListener> mGetLotLocationsCompleteListeners = new ArrayList<GetLotLocationsCompleteListener>();
 
-    public void setOnGetLocationCompleteListener(GetLocationsCompleteListener listener) {
-        this.mGetLocationsCompleteListeners.add(listener);
+    public void setOnGetLocationCompleteListener(GetDropsiteLocationsCompleteListener listener) {
+        this.mGetDropsiteLocationsCompleteListeners.add(listener);
+    }
+
+    public void setOnGetLocationCompleteListener(GetLotLocationsCompleteListener listener) {
+        this.mGetLotLocationsCompleteListeners.add(listener);
     }
 
     public void getLocationsAsync(Context context, LatLng coordinates) {
@@ -44,10 +52,96 @@ public class ImplSimpleDBService implements ISimpleDBService {
         new GetLocationsTask().execute(currentLocation);
     }
 
-    private class GetLocationsTask extends AsyncTask<android.location.Location, Integer, TreeMap<Float, com.experiment.trax.models.Location>> {
-        protected TreeMap<Float, Location> doInBackground(android.location.Location... location) {
+    public void getDropsitesAsync(Context context, LatLng coordinates) {
+        LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
 
-            TreeMap<Float, Location> locations = new TreeMap<Float, com.experiment.trax.models.Location>();
+        String provider = locationManager.getBestProvider(ImplLocationService.createFineCriteria(), true);
+        android.location.Location currentLocation = locationManager.getLastKnownLocation(provider);
+
+        new GetDropsitesTask().execute(currentLocation);
+    }
+
+    private class GetDropsitesTask extends AsyncTask<android.location.Location, Integer, TreeMap<Float, DropsiteLocation>> {
+        protected TreeMap<Float, DropsiteLocation> doInBackground(android.location.Location... location) {
+
+            TreeMap<Float, DropsiteLocation> locations = new TreeMap<Float, DropsiteLocation>();
+
+            try {
+
+                if (location[0] != null) {
+                    android.location.Location currentLocation = location[0];
+
+                    SelectResult result = SimpleDB.getInstance().select(new SelectRequest("select * from `Dropsites`"));
+                    for (Item dropsite : result.getItems()) {
+                        android.location.Location dropsiteLocation = new android.location.Location(currentLocation.getProvider());
+
+                        DropsiteLocation internalDropsiteLocation = new DropsiteLocation();
+                        internalDropsiteLocation.setName(dropsite.getName());
+
+                        //used to temporarily store hours of open and close for each location
+                        Hashtable<Integer, String> dateOpen = new Hashtable<Integer, String>();
+                        Hashtable<Integer, String> dateClose = new Hashtable<Integer, String>();
+
+                        for (Attribute attribute : dropsite.getAttributes()) {
+
+                            if (attribute.getName().equalsIgnoreCase("id"))
+                                internalDropsiteLocation.setId(attribute.getValue());
+                            if (attribute.getName().equalsIgnoreCase("description"))
+                                internalDropsiteLocation.setDescription(attribute.getValue());
+
+                            if (attribute.getName().equalsIgnoreCase("start_collection"))
+                                internalDropsiteLocation.setDateOpen(DateTime.parse(attribute.getValue()));
+                            if (attribute.getName().equalsIgnoreCase("end_collection"))
+                                internalDropsiteLocation.setDateClose(DateTime.parse(attribute.getValue()));
+
+                            if (attribute.getName().equalsIgnoreCase("lat"))
+                                dropsiteLocation.setLatitude(Double.parseDouble(attribute.getValue()));
+                            if (attribute.getName().equalsIgnoreCase("lng"))
+                                dropsiteLocation.setLongitude(Double.parseDouble(attribute.getValue()));
+                        }
+
+                        //store the location of the lot
+                        internalDropsiteLocation.setPoint(new LatLng(dropsiteLocation.getLatitude(), dropsiteLocation.getLongitude()));
+
+                        //save it to our locations listing to return back to the consumer
+                        locations.put(currentLocation.distanceTo(dropsiteLocation), internalDropsiteLocation);
+                    }
+                }
+            } catch (Exception e) {
+                Log.e("GetDropsitesTask", "Failure attempting to get locations", e);
+            }
+
+            return locations;
+        }
+
+        protected void onProgressUpdate(Integer... progress) {
+        }
+
+        protected void onPostExecute(TreeMap<Float, DropsiteLocation> result) {
+            Log.d("GetDropsiteTask", result.size() + " total locations obtained");
+
+            int count = RETURN_COUNT;
+            List<DropsiteLocation> locations = new ArrayList<DropsiteLocation>();
+            for (Map.Entry<Float, DropsiteLocation> l : result.entrySet()) {
+                locations.add(l.getValue());
+
+                //only return a subset of the overall count
+                if (--count == 0)
+                    break;
+            }
+
+            Log.d("GetDropsitesTaskl", "Passing " + mGetDropsiteLocationsCompleteListeners.size() + " listeners " + locations.size() + " locations");
+            //notify all listeners that work is complete
+            for (GetDropsiteLocationsCompleteListener listener : mGetDropsiteLocationsCompleteListeners) {
+                listener.onDropsiteLocationFetchComplete(locations);
+            }
+        }
+    }
+
+    private class GetLocationsTask extends AsyncTask<android.location.Location, Integer, TreeMap<Float, LotLocation>> {
+        protected TreeMap<Float, LotLocation> doInBackground(android.location.Location... location) {
+
+            TreeMap<Float, LotLocation> locations = new TreeMap<Float, LotLocation>();
 
             try {
 
@@ -58,7 +152,7 @@ public class ImplSimpleDBService implements ISimpleDBService {
                     for (Item lot : result.getItems()) {
                         android.location.Location lotLocation = new android.location.Location(currentLocation.getProvider());
 
-                        Location internalLotLocation = new Location();
+                        LotLocation internalLotLocation = new LotLocation();
                         internalLotLocation.setName(lot.getName());
 
                         //used to temporarily store hours of open and close for each location
@@ -141,12 +235,12 @@ public class ImplSimpleDBService implements ISimpleDBService {
         protected void onProgressUpdate(Integer... progress) {
         }
 
-        protected void onPostExecute(TreeMap<Float, com.experiment.trax.models.Location> result) {
+        protected void onPostExecute(TreeMap<Float, LotLocation> result) {
             Log.d("GetLocationsTask", result.size() + " total locations obtained");
 
             int count = RETURN_COUNT;
-            List<Location> locations = new ArrayList<Location>();
-            for (Map.Entry<Float, Location> l : result.entrySet()) {
+            List<LotLocation> locations = new ArrayList<LotLocation>();
+            for (Map.Entry<Float, LotLocation> l : result.entrySet()) {
                 locations.add(l.getValue());
 
                 //only return a subset of the overall count
@@ -154,16 +248,16 @@ public class ImplSimpleDBService implements ISimpleDBService {
                     break;
             }
 
-            Log.d("GetLocationsTask", "Passing " + mGetLocationsCompleteListeners.size() + " listeners " + locations.size() + " locations");
+            Log.d("GetLocationsTask", "Passing " + mGetLotLocationsCompleteListeners.size() + " listeners " + locations.size() + " locations");
             //notify all listeners that work is complete
-            for (GetLocationsCompleteListener listener : mGetLocationsCompleteListeners) {
-                listener.onLocationFetchComplete(locations);
+            for (GetLotLocationsCompleteListener listener : mGetLotLocationsCompleteListeners) {
+                listener.onLotLocationFetchComplete(locations);
             }
         }
     }
 
     public void loadLocationsAsync(String kml) {
-        List<Location> locations = new ArrayList<Location>();
+        List<LotLocation> locations = new ArrayList<LotLocation>();
 
         try {
             XMLReader parser = XMLReaderFactory.createXMLReader("org.ccil.cowan.tagsoup.Parser");
@@ -179,7 +273,7 @@ public class ImplSimpleDBService implements ISimpleDBService {
             Nodes nodes = doc.query(".//ns:Placemark", context);
 
             for (int index = 0; index < nodes.size(); index++) {
-                Location placemark = new Location();
+                LotLocation placemark = new LotLocation();
                 Node placemarkNode = nodes.get(index);
 
                 Node nameNode = placemarkNode.query("ns:name", context).get(0);
@@ -210,11 +304,11 @@ public class ImplSimpleDBService implements ISimpleDBService {
 
     }
 
-    private class LoadLocationsTask extends AsyncTask<List<Location>, Integer, Void> {
-        protected Void doInBackground(List<Location>... locations) {
+    private class LoadLocationsTask extends AsyncTask<List<LotLocation>, Integer, Void> {
+        protected Void doInBackground(List<LotLocation>... locations) {
             try {
                 int count = locations[0].size();
-                for (Location placemark : locations[0]) {
+                for (LotLocation placemark : locations[0]) {
                     ReplaceableAttribute descriptionAttribute = new ReplaceableAttribute("description", placemark.getDescription(), Boolean.TRUE);
                     ReplaceableAttribute latAttribute = new ReplaceableAttribute("lat", String.valueOf(placemark.getPoint().latitude), Boolean.TRUE);
                     ReplaceableAttribute lngAttribute = new ReplaceableAttribute("lng", String.valueOf(placemark.getPoint().longitude), Boolean.TRUE);

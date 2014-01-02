@@ -72,6 +72,42 @@ public class ImplLocationService implements ILocationService {
     }
 
     @Override
+    public String getLocalitySync(double latitude, double longitude) {
+        String result = "";
+        Geocoder geocoder = new Geocoder(mApplicationContext, Locale.getDefault());
+        try {
+            String a = "";
+            String b = "";
+            List<Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
+            if (addresses.size() > 0) {
+                if (addresses.get(0).getLocality() != null)
+                    a = addresses.get(0).getLocality();
+                if (addresses.get(0).getAdminArea() != null)
+                    if (a.isEmpty())
+                        a = addresses.get(0).getAdminArea();
+                    else
+                        b = addresses.get(0).getAdminArea();
+                if (b.isEmpty())
+                    b = addresses.get(0).getCountryName();
+                result = a + ", " + b;
+//                addresses.get(0).getAdminArea() == null)
+//                {
+//                    //if(addresses.get(0).getLocality().equalsIgnoreCase("Knoxville")  ||
+//                            //addresses.get(0).getLocality().equalsIgnoreCase("null"))
+//                        //Log.d("blah", "aa");
+//                    result = addresses.get(0).getLocality() + ", " + addresses.get(0).getCountryName();
+//                }
+//                else
+//                    result = addresses.get(0).getLocality() + ", " + addresses.get(0).getAdminArea();
+                Log.d("ImplLocationService", "Returning location found as [" + result + "]");
+            }
+        } catch (IOException e) {
+            Log.e("ImplLocationService", e.getMessage(), e);
+        }
+        return result;
+    }
+
+    @Override
     public void getLocalityAsync(double latitude, double longitude) {
         new GetLocalityAsyncTask(latitude, longitude).execute();
     }

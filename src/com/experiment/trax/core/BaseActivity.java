@@ -9,6 +9,7 @@ import android.util.Log;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.androidquery.util.AQUtility;
+import com.experiment.trax.DropsiteSelectionActivity;
 import com.experiment.trax.LotSelectionActivity;
 import com.experiment.trax.R;
 
@@ -147,12 +148,16 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
     }
 
     public boolean onShowLots(com.actionbarsherlock.view.MenuItem item) {
-        Intent myIntent = new Intent(BaseActivity.this, LotSelectionActivity.class);
-        startActivity(myIntent);
+        Log.d("BaseActivity", "onShowLots called; calling " + DropsiteSelectionActivity.class.toString());
+        Intent lotIntent = new Intent(BaseActivity.this, LotSelectionActivity.class);
+        startActivity(lotIntent);
         return true;
     }
 
     public boolean onShowDropsites(com.actionbarsherlock.view.MenuItem item) {
-        return false;
+        Log.d("BaseActivity", "onShowDropsites called; calling " + DropsiteSelectionActivity.class.toString());
+        Intent dropsiteIntent = new Intent(BaseActivity.this, DropsiteSelectionActivity.class);
+        startActivity(dropsiteIntent);
+        return true;
     }
 }

@@ -16,6 +16,8 @@ public interface ILocationService {
 
     void setOnGetLocalityCompleteListener(GetLocalityCompleteListener listener);
 
+    String getLocalitySync(double latitude, double longitude);
+
     void getLocalityAsync(double latitude, double longitude);
 
 }

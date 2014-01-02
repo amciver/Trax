@@ -98,7 +98,8 @@ public class PhotosFragment extends PullToRefreshListFragment implements PullToR
                     Log.e(LOG_TAG, e.getMessage(), e);
                 }
 
-
+                Log.d(LOG_TAG, "Trees size is [" + mTrees.size() + "]");
+                Log.d(LOG_TAG, "Current position is [" + mCurrentPosition + "]");
                 if (mTrees.size() >= mCurrentPosition) {
 
                     mTreesAdapter.notifyDataSetChanged();
@@ -119,9 +120,11 @@ public class PhotosFragment extends PullToRefreshListFragment implements PullToR
 
                 //done loading imagery, hide progress bar
                 mThis.setListShown(true);
+
             }
         });
 
+        Log.d(LOG_TAG, "Making call to ImplInstagramService with tag [" + TAG + "]");
         mInstagramService.getInstagramPhotosAsync(TAG);
     }
 

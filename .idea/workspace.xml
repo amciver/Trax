@@ -40,38 +40,11 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/models/DropsiteLocation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/DropsiteSelectionActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/listeners/GetDropsiteLocationsCompleteListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/listeners/SetDropsitesCompleteListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/dropsite.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/dropsite_info_window.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/dropsite_menu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/dropsite_selection.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/dropsite_selection_menu.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocationsCompleteListener.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLotLocationsCompleteListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/experiment/trax/models/Location.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/models/LotLocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ISimpleDBService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ISimpleDBService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trax.iml" afterPath="$PROJECT_DIR$/Trax.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot.xml" afterPath="$PROJECT_DIR$/res/layout/lot.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/main_menu.xml" afterPath="$PROJECT_DIR$/res/menu/main_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+    <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="Numerous changes to bring in Dropsites functionality, modified font size for title, additional refactoring&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/dropsite.xml" afterPath="$PROJECT_DIR$/res/layout/dropsite.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/dropsite_selection.xml" afterPath="$PROJECT_DIR$/res/layout/dropsite_selection.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot_selection.xml" afterPath="$PROJECT_DIR$/res/layout/lot_selection.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Streak for the Cash Scheduler.iws" />
@@ -148,7 +121,7 @@
       <file leaf-file-name="LotSelectionActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="34" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="1140">
+            <state line="34" column="34" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -157,13 +130,13 @@
       <file leaf-file-name="DropsitesFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="17" selection-start="4520" selection-end="4520" vertical-scroll-proportion="2.8076923" vertical-offset="1558" max-vertical-offset="3105">
+            <state line="105" column="17" selection-start="4522" selection-end="4522" vertical-scroll-proportion="-0.0" vertical-offset="1485" max-vertical-offset="3075">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1299#1317#0" expanded="true" />
                 <element signature="e#1407#1437#0" expanded="true" />
-                <element signature="e#4741#9026#0" expanded="true" />
-                <element signature="e#9011#9012#0" expanded="true" />
+                <element signature="e#4743#9028#0" expanded="true" />
+                <element signature="e#9013#9014#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -175,10 +148,22 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="34" selection-start="1412" selection-end="1412" vertical-scroll-proportion="-5.769231" vertical-offset="150" max-vertical-offset="645">
+            <state line="13" column="49" selection-start="646" selection-end="646" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="660">
               <folding>
                 <element signature="e#675#698#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lot_selection.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="60" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.77290076" vertical-offset="0" max-vertical-offset="600">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -189,7 +174,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="18" selection-start="0" selection-end="3082" vertical-scroll-proportion="-7.576923" vertical-offset="656" max-vertical-offset="1140">
+            <state line="63" column="39" selection-start="2801" selection-end="2801" vertical-scroll-proportion="-12.769231" vertical-offset="281" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -201,28 +186,16 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="56" selection-start="516" selection-end="516" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="360">
+            <state line="10" column="36" selection-start="513" selection-end="513" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropsite_info_window.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/dropsite_info_window.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="50" selection-start="577" selection-end="577" vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DropsiteAdapter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DropsiteAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="45" selection-start="635" selection-end="635" vertical-scroll-proportion="0.35454544" vertical-offset="0" max-vertical-offset="1005">
+            <state line="82" column="9" selection-start="2690" selection-end="2690" vertical-scroll-proportion="-9.807693" vertical-offset="795" max-vertical-offset="1335">
               <folding />
             </state>
           </provider>
@@ -231,7 +204,7 @@
       <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="55" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="2370">
+            <state line="45" column="55" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2370">
               <folding />
             </state>
           </provider>
@@ -240,7 +213,7 @@
       <file leaf-file-name="TypefaceSpan.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="32" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="990">
+            <state line="51" column="32" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -250,7 +223,9 @@
         <entry file="file://$PROJECT_DIR$/../sdks/android-sdk-macosx/sources/android-19/android/text/SpannableString.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="30" column="5" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-              <folding />
+              <folding>
+                <element signature="e#0#1722#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -282,7 +257,6 @@
         <option value="$PROJECT_DIR$/res/layout/tree.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocalityCompleteListener.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
-        <option value="$PROJECT_DIR$/res/layout/lot_selection.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
@@ -300,7 +274,6 @@
         <option value="$PROJECT_DIR$/src/com/experiment/trax/models/DropsiteLocation.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
         <option value="$PROJECT_DIR$/res/menu/main_menu.xml" />
-        <option value="$PROJECT_DIR$/res/layout/dropsite_selection.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/DropsiteSelectionActivity.java" />
         <option value="$PROJECT_DIR$/res/menu/dropsite_selection_menu.xml" />
@@ -310,8 +283,10 @@
         <option value="$PROJECT_DIR$/res/layout/lot.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" />
+        <option value="$PROJECT_DIR$/res/layout/dropsite_selection.xml" />
         <option value="$PROJECT_DIR$/res/layout/dropsite.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/lot_selection.xml" />
       </list>
     </option>
   </component>
@@ -1135,7 +1110,11 @@
       <created>1372188387890</created>
       <updated>1372188387890</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Numerous changes to bring in Dropsites functionality, modified font size for title, additional refactoring&#10;">
+      <created>1388637993048</created>
+      <updated>1388637993048</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1182,7 +1161,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.78197676" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29971388" sideWeight="0.5849057" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30014327" sideWeight="0.5849057" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31566265" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1215,7 +1194,8 @@
     <MESSAGE value="Adjusted theme, fixed background processing view, cleaned up views" />
     <MESSAGE value="Layout changes to photos view, adapter changes" />
     <MESSAGE value="Moved ImplLocationService geocode lookup to background thread out of TreeAdapter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved ImplLocationService geocode lookup to background thread out of TreeAdapter" />
+    <MESSAGE value="Numerous changes to bring in Dropsites functionality, modified font size for title, additional refactoring&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Numerous changes to bring in Dropsites functionality, modified font size for title, additional refactoring&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1348,7 +1328,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="14" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.5382775" vertical-offset="0" max-vertical-offset="1620">
           <folding>
-            <element signature="e#4115#4129#0" expanded="true" />
+            <element signature="e#3829#3843#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1569,9 +1549,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="27" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="5235">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1189#1227#0" expanded="true" />
-            <element signature="e#6011#6029#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1136#1174#0" expanded="false" />
+            <element signature="e#5958#5976#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1591,27 +1571,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="50" selection-start="577" selection-end="577" vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="295" selection-end="295" vertical-scroll-proportion="0.21327014" vertical-offset="0" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/dropsite_selection.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="56" selection-start="516" selection-end="516" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="360">
+        <state line="12" column="50" selection-start="577" selection-end="577" vertical-scroll-proportion="-0.0" vertical-offset="180" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
@@ -1619,7 +1579,9 @@
     <entry file="file://$PROJECT_DIR$/../sdks/android-sdk-macosx/sources/android-19/android/text/SpannableString.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="5" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <folding />
+          <folding>
+            <element signature="e#0#1722#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1637,33 +1599,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="17" selection-start="4522" selection-end="4522" vertical-scroll-proportion="-0.0" vertical-offset="1485" max-vertical-offset="3075">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1299#1317#0" expanded="true" />
+            <element signature="e#1407#1437#0" expanded="true" />
+            <element signature="e#4743#9028#0" expanded="true" />
+            <element signature="e#9013#9014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dropsite_selection.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="513" selection-end="513" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="18" selection-start="0" selection-end="3082" vertical-scroll-proportion="-7.576923" vertical-offset="656" max-vertical-offset="1140">
+        <state line="63" column="39" selection-start="2801" selection-end="2801" vertical-scroll-proportion="-12.769231" vertical-offset="281" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="9" selection-start="2690" selection-end="2690" vertical-scroll-proportion="-9.807693" vertical-offset="795" max-vertical-offset="1335">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="34" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="1140">
+        <state line="34" column="34" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1140">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="17" selection-start="4520" selection-end="4520" vertical-scroll-proportion="2.8076923" vertical-offset="1558" max-vertical-offset="3105">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1299#1317#0" expanded="true" />
-            <element signature="e#1407#1437#0" expanded="true" />
-            <element signature="e#4741#9026#0" expanded="true" />
-            <element signature="e#9011#9012#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1672,16 +1651,19 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="34" selection-start="1412" selection-end="1412" vertical-scroll-proportion="-5.769231" vertical-offset="150" max-vertical-offset="645">
+        <state line="13" column="49" selection-start="646" selection-end="646" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="660">
           <folding>
             <element signature="e#675#698#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="45" selection-start="635" selection-end="635" vertical-scroll-proportion="0.35454544" vertical-offset="0" max-vertical-offset="1005">
+        <state line="27" column="60" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.77290076" vertical-offset="0" max-vertical-offset="600">
           <folding />
         </state>
       </provider>

@@ -28,11 +28,12 @@
                 android:textColor="#7D7D7D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" - "/>
+                android:text=" - "
+                android:visibility="gone"/>
         <TextView android:id="@+id/dropsite_hours_close"
                   android:textColor="#7D7D7D"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                />
+                  android:visibility="gone"/>
     </LinearLayout>
 </LinearLayout>

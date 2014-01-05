@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.experiment.trax.R;
 import com.experiment.trax.models.DropsiteLocation;
+import org.joda.time.DateTime;
 
 import java.util.List;
 
@@ -56,16 +57,38 @@ public class DropsiteAdapter extends ArrayAdapter<DropsiteLocation> {
 
     private void showDates(View v, DropsiteLocation dropsiteLocation) {
 
+        DateTime openDate = dropsiteLocation.getDateOpen();
+        DateTime closeDate = dropsiteLocation.getDateClose();
+
+        boolean showOpenClose = ((Integer) openDate.compareTo(closeDate)).equals(0) ? false : true;
+
         TextView open = (TextView) v.findViewById(R.id.dropsite_hours_open);
         if (open != null) {
             open.setVisibility(View.VISIBLE);
-            open.setText(dropsiteLocation.getDateOpen().toString("MMMM dd, Y"));
+            open.setText(openDate.toString("MMMM dd, Y"));
         }
 
+        TextView seperator = (TextView) v.findViewById(R.id.dropsite_time_seperator);
         TextView close = (TextView) v.findViewById(R.id.dropsite_hours_close);
-        if (close != null) {
-            close.setVisibility(View.VISIBLE);
-            close.setText(dropsiteLocation.getDateClose().toString("MMMM dd, Y"));
+
+        if (showOpenClose) {
+            if (seperator != null) {
+                seperator.setVisibility(View.VISIBLE);
+            }
+            if (close != null) {
+                close.setVisibility(View.VISIBLE);
+                close.setText(closeDate.toString("MMMM dd, Y"));
+            }
+        } else {
+
+            if (seperator != null) {
+                seperator.setVisibility(View.GONE);
+            }
+            if (close != null) {
+
+                close.setVisibility(View.GONE);
+                close.setText("");
+            }
         }
     }
 }

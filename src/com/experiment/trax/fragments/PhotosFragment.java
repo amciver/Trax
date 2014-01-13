@@ -118,8 +118,9 @@ public class PhotosFragment extends PullToRefreshListFragment implements PullToR
                     mInstagramService.getInstagramPhotosAsync(TAG);
                 }
 
-                //done loading imagery, hide progress bar
-                mThis.setListShown(true);
+                //done loading imagery, hide progress bar if we are not detached
+                if (!mThis.isDetached())
+                    mThis.setListShown(true);
 
             }
         });

@@ -36,15 +36,21 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="LotSelectionActivity" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="testingstuff" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="Numerous changes to bring in Dropsites functionality, modified font size for title, additional refactoring&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/dropsite.xml" afterPath="$PROJECT_DIR$/res/layout/dropsite.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/dropsite_selection.xml" afterPath="$PROJECT_DIR$/res/layout/dropsite_selection.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot_selection.xml" afterPath="$PROJECT_DIR$/res/layout/lot_selection.xml" />
+    <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="Added dynamic visibility to Dropsite which is only open on one day, adjusted layout_weight for Lots and Dropsites">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/CareFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/care.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Streak for the Cash Scheduler.iws" />
@@ -121,7 +127,7 @@
       <file leaf-file-name="LotSelectionActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="34" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1140">
+            <state line="29" column="26" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -130,72 +136,82 @@
       <file leaf-file-name="DropsitesFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="17" selection-start="4522" selection-end="4522" vertical-scroll-proportion="-0.0" vertical-offset="1485" max-vertical-offset="3075">
+            <state line="47" column="0" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="2685">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewsAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="38" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1200">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1299#1317#0" expanded="true" />
-                <element signature="e#1407#1437#0" expanded="true" />
-                <element signature="e#4743#9028#0" expanded="true" />
-                <element signature="e#9013#9014#0" expanded="true" />
+                <element signature="e#986#987#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropsite.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/dropsite.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="49" selection-start="646" selection-end="646" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="660">
+            <state line="7" column="30" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
               <folding>
-                <element signature="e#675#698#0" expanded="true" />
+                <element signature="e#675#693#0" expanded="true" />
+                <element signature="e#1360#1399#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lot_selection.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="CareFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/CareFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="60" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.77290076" vertical-offset="0" max-vertical-offset="600">
+            <state line="46" column="28" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1695">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lot.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
+      <file leaf-file-name="care.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/care.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="43" selection-start="1386" selection-end="1386" vertical-scroll-proportion="-5.3653846" vertical-offset="6" max-vertical-offset="720">
+              <folding>
+                <element signature="e#502#524#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="39" selection-start="2801" selection-end="2801" vertical-scroll-proportion="-12.769231" vertical-offset="281" max-vertical-offset="1140">
+            <state line="10" column="9" selection-start="414" selection-end="414" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropsite_selection.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/dropsite_selection.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="PhotosFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="36" selection-start="513" selection-end="513" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="360">
+            <state line="134" column="12" selection-start="5035" selection-end="5035" vertical-scroll-proportion="2.847247" vertical-offset="32" max-vertical-offset="2535">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DropsiteAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java">
+      <file leaf-file-name="ImplInstagramService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="9" selection-start="2690" selection-end="2690" vertical-scroll-proportion="-9.807693" vertical-offset="795" max-vertical-offset="1335">
+            <state line="116" column="48" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="2280">
               <folding />
             </state>
           </provider>
@@ -204,28 +220,8 @@
       <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="55" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2370">
+            <state line="37" column="42" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2250">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypefaceSpan.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="32" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="990">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpannableString.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sdks/android-sdk-macosx/sources/android-19/android/text/SpannableString.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="5" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-              <folding>
-                <element signature="e#0#1722#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -249,19 +245,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" />
         <option value="$USER_HOME$/Downloads/Android-PullToRefresh-master/library/res/values/attrs.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/core/AspectRatioImageView.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/res/layout/tree.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/listeners/GetLocalityCompleteListener.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ISimpleDBService.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/models/Location.java" />
@@ -279,14 +269,22 @@
         <option value="$PROJECT_DIR$/res/menu/dropsite_selection_menu.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/dropsite_info_window.xml" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/lot.xml" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" />
         <option value="$PROJECT_DIR$/res/layout/dropsite_selection.xml" />
         <option value="$PROJECT_DIR$/res/layout/dropsite.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java" />
         <option value="$PROJECT_DIR$/res/layout/lot_selection.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/CareFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
+        <option value="$PROJECT_DIR$/res/layout/care.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
       </list>
     </option>
   </component>
@@ -513,6 +511,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Trax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -797,16 +805,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -855,12 +853,14 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="SearchEverywhereHistory" value="&#10;unable to location&#10;INSTANCE" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.experiment.trax.fragments" />
       <recent name="com.experiment.trax.adapters" />
       <recent name="com.experiment.trax.listeners" />
-      <recent name="com.experiment.trax.fragments" />
       <recent name="com.experiment.trax" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -870,15 +870,15 @@
       <recent name="$PROJECT_DIR$/res/values" />
       <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.experiment" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/fonts" />
       <recent name="$PROJECT_DIR$/res/menu" />
       <recent name="$PROJECT_DIR$/res/drawable-ldpi" />
       <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
       <recent name="$PROJECT_DIR$/res/drawable" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.experiment" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Trax">
@@ -916,6 +916,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -941,19 +954,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1114,7 +1114,11 @@
       <created>1388637993048</created>
       <updated>1388637993048</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added dynamic visibility to Dropsite which is only open on one day, adjusted layout_weight for Lots and Dropsites">
+      <created>1388965875843</created>
+      <updated>1388965875843</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1151,17 +1155,17 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.78197676" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39518073" sideWeight="0.4913917" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6716216" sideWeight="0.29238507" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29971388" sideWeight="0.46100917" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771084" sideWeight="0.7065997" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29971388" sideWeight="0.46100917" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41445783" sideWeight="0.48852223" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36506024" sideWeight="0.70258623" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32656023" sideWeight="0.49426112" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29971388" sideWeight="0.46100917" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.78197676" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30014327" sideWeight="0.5849057" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29971388" sideWeight="0.53899086" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31566265" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1195,7 +1199,8 @@
     <MESSAGE value="Layout changes to photos view, adapter changes" />
     <MESSAGE value="Moved ImplLocationService geocode lookup to background thread out of TreeAdapter" />
     <MESSAGE value="Numerous changes to bring in Dropsites functionality, modified font size for title, additional refactoring&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Numerous changes to bring in Dropsites functionality, modified font size for title, additional refactoring&#10;" />
+    <MESSAGE value="Added dynamic visibility to Dropsite which is only open on one day, adjusted layout_weight for Lots and Dropsites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added dynamic visibility to Dropsite which is only open on one day, adjusted layout_weight for Lots and Dropsites" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1207,62 +1212,19 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="61" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1905">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="37" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="4020">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="43" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="55" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="705">
-          <folding>
-            <element signature="e#456#474#0" expanded="true" />
-            <element signature="e#675#693#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="52" selection-start="4518" selection-end="4518" vertical-scroll-proportion="0.0" vertical-offset="1965" max-vertical-offset="2265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../sdks/android-sdk-macosx/sources/android-17/android/os/AsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="178" column="8" selection-start="8656" selection-end="8656" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/tree_type.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="47" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/TypesFragment.java">
@@ -1280,13 +1242,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/tree.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="29" selection-start="781" selection-end="781" vertical-scroll-proportion="-5.1923075" vertical-offset="0" max-vertical-offset="615">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/IInstagramService.java">
@@ -1303,32 +1265,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="39" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="2625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="119" selection-start="4878" selection-end="4878" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="2295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="14" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.5382775" vertical-offset="0" max-vertical-offset="1620">
           <folding>
-            <element signature="e#3829#3843#0" expanded="true" />
+            <element signature="e#3829#3843#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1356,47 +1297,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="43" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2520">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1543#1555#0" expanded="false" />
-            <element signature="e#3125#4701#0" expanded="false" />
-            <element signature="e#4051#4398#0" expanded="false" />
-            <element signature="e#4375#4376#0" expanded="false" />
-            <element signature="e#4690#4691#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/tab_title.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="752">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="898" selection-end="898" vertical-scroll-proportion="-4.6153846" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="24" selection-start="1492" selection-end="1492" vertical-scroll-proportion="-1.2532637" vertical-offset="1575" max-vertical-offset="4185">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/SetLotsCompleteListener.java">
@@ -1483,16 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding>
-            <element signature="e#456#474#0" expanded="true" />
-            <element signature="e#675#693#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/lot_selection_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="46" selection-start="287" selection-end="287" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="420">
@@ -1507,13 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/dropsite_selection_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="37" selection-start="195" selection-end="195" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="210">
@@ -1522,13 +1413,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/lot_details.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="447">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/DropsiteSelectionActivity.java">
@@ -1557,113 +1448,218 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/lot_info_window.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="26" selection-start="286" selection-end="286" vertical-scroll-proportion="0.21327014" vertical-offset="0" max-vertical-offset="422">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/dropsite_info_window.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dropsite_info_window.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="50" selection-start="577" selection-end="577" vertical-scroll-proportion="-0.0" vertical-offset="180" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../sdks/android-sdk-macosx/sources/android-19/android/text/SpannableString.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="5" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dropsite_selection.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="513" selection-end="513" vertical-scroll-proportion="-0.0" vertical-offset="150" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="39" selection-start="2801" selection-end="2801" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="9" selection-start="2669" selection-end="2669" vertical-scroll-proportion="-0.0" vertical-offset="1050" max-vertical-offset="1335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dropsite.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="49" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="42" selection-start="985" selection-end="985" vertical-scroll-proportion="0.629771" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jars/android-support-v4.jar!/android/support/v4/app/FragmentPagerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="174" selection-end="174" vertical-scroll-proportion="0.16629712" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="47" selection-start="446" selection-end="446" vertical-scroll-proportion="-2.0192308" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="60" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="2625">
           <folding>
-            <element signature="e#0#1722#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1604#1633#0" expanded="false" />
+            <element signature="e#4342#4343#0" expanded="false" />
+            <element signature="e#4381#4382#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="32" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="990">
+        <state line="42" column="36" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/TraxApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="22" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1380">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#766#794#0" expanded="false" />
+            <element signature="e#1120#1172#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="39" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3810">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="55" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="2370">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="17" selection-start="4522" selection-end="4522" vertical-scroll-proportion="-0.0" vertical-offset="1485" max-vertical-offset="3075">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1299#1317#0" expanded="true" />
-            <element signature="e#1407#1437#0" expanded="true" />
-            <element signature="e#4743#9028#0" expanded="true" />
-            <element signature="e#9013#9014#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/dropsite_selection.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="36" selection-start="513" selection-end="513" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="39" selection-start="2801" selection-end="2801" vertical-scroll-proportion="-12.769231" vertical-offset="281" max-vertical-offset="1140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="9" selection-start="2690" selection-end="2690" vertical-scroll-proportion="-9.807693" vertical-offset="795" max-vertical-offset="1335">
+        <state line="37" column="42" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2250">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="34" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1140">
+        <state line="29" column="26" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/dropsite.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/ViewsAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="49" selection-start="646" selection-end="646" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="660">
+        <state line="18" column="38" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1200">
           <folding>
-            <element signature="e#675#698#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/CareFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="28" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="48" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="2280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/care.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="43" selection-start="1386" selection-end="1386" vertical-scroll-proportion="-5.3653846" vertical-offset="6" max-vertical-offset="720">
+          <folding>
+            <element signature="e#502#524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="60" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.77290076" vertical-offset="0" max-vertical-offset="600">
+        <state line="10" column="9" selection-start="414" selection-end="414" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="30" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding>
+            <element signature="e#675#693#0" expanded="true" />
+            <element signature="e#1360#1399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../sdks/android-sdk-macosx/platforms/android-8/android.jar!/java/lang/reflect/Method.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="33" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.7408207" vertical-offset="362" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="2685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="12" selection-start="5035" selection-end="5035" vertical-scroll-proportion="2.847247" vertical-offset="32" max-vertical-offset="2535">
           <folding />
         </state>
       </provider>

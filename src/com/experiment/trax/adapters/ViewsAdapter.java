@@ -3,6 +3,8 @@ package com.experiment.trax.adapters;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import com.experiment.trax.TraxApplication;
+import com.experiment.trax.fragments.CareFragment;
 import com.experiment.trax.fragments.PhotosFragment;
 import com.experiment.trax.fragments.TypesFragment;
 
@@ -15,16 +17,19 @@ import com.experiment.trax.fragments.TypesFragment;
  */
 public class ViewsAdapter extends FragmentPagerAdapter {
 
-    private static final int NUM_ITEMS = 2;
+    private static final int NUM_ITEMS = 3;
+    private FragmentManager mFragmentManager = null;
 
     public ViewsAdapter(FragmentManager fm) {
         super(fm);
+        mFragmentManager = fm;
     }
 
     @Override
     public int getCount() {
         return NUM_ITEMS;
     }
+
 
     @Override
     public Fragment getItem(int position) {
@@ -37,19 +42,25 @@ public class ViewsAdapter extends FragmentPagerAdapter {
             case 1:
                 fragmentToReturn = new TypesFragment();
                 break;
+            case 2:
+                fragmentToReturn = new CareFragment();
+                break;
         }
         return fragmentToReturn;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        String title = "N/A";
+        CharSequence title = "N/A";
         switch (position) {
             case 0:
-                title = "PHOTOS";
+                title = TraxApplication.INSTANCE.getTextAs("Photos", "");
                 break;
             case 1:
-                title = "TYPES";
+                title = TraxApplication.INSTANCE.getTextAs("Types", "");
+                break;
+            case 2:
+                title = TraxApplication.INSTANCE.getTextAs("Care", "");
                 break;
         }
         return title;

@@ -3,8 +3,6 @@ package com.experiment.trax.core;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.util.Log;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -12,6 +10,7 @@ import com.androidquery.util.AQUtility;
 import com.experiment.trax.DropsiteSelectionActivity;
 import com.experiment.trax.LotSelectionActivity;
 import com.experiment.trax.R;
+import com.experiment.trax.TraxApplication;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,11 +21,7 @@ import com.experiment.trax.R;
  */
 public abstract class BaseActivity extends SherlockFragmentActivity {
 
-    //This font should not include extension and should be a .ttf font placed
-    //within assets/fonts folder
-    private final String FONT = "kayleigh";
-
-    //private ViewPager mViewPager;
+//    private ViewPager mViewPager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,12 +36,7 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
 //                    }
 //                });
 
-
-        SpannableString s = new SpannableString(getApplicationContext().getString(R.string.app_name));
-        s.setSpan(new com.experiment.trax.utils.TypefaceSpan(this, FONT), 0, s.length(),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        getSupportActionBar().setTitle(s);
+        getSupportActionBar().setTitle(TraxApplication.INSTANCE.getTitle());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //onAddTabs();
@@ -67,6 +57,7 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
             public void onTabSelected(ActionBar.Tab tab,
                                       FragmentTransaction ft) {
                 //mViewPager.setCurrentItem(tab.getPosition());
+                Log.d("BaseActivity", "onTabSelected called with tab " + tab);
             }
 
             public void onTabUnselected(ActionBar.Tab tab,
@@ -148,7 +139,7 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
     }
 
     public boolean onShowLots(com.actionbarsherlock.view.MenuItem item) {
-        Log.d("BaseActivity", "onShowLots called; calling " + DropsiteSelectionActivity.class.toString());
+        Log.d("BaseActivity", "onShowLots called; calling " + LotSelectionActivity.class.toString());
         Intent lotIntent = new Intent(BaseActivity.this, LotSelectionActivity.class);
         startActivity(lotIntent);
         return true;

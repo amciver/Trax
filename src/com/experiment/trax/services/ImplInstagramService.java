@@ -115,7 +115,7 @@ public class ImplInstagramService implements IInstagramService {
                     try {
                         location = photo.getJSONObject("location");
                     } catch (JSONException ex) {
-                        Log.e("ImplInstagramService", "Unable to locate location for photo + [" + i + "], value is null");
+                        Log.w("ImplInstagramService", "Unable to locate location for photo [" + i + "], value is null", ex);
                     }
 
                     if (location != null) {

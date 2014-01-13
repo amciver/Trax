@@ -16,11 +16,10 @@ package com.experiment.trax.utils;
  * limitations under the License.
  */
 
-import android.content.Context;
 import android.graphics.Typeface;
-import android.support.v4.util.LruCache;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
+import com.experiment.trax.TraxApplication;
 
 /**
  * Style a {@link android.text.Spannable} with a custom {@link Typeface}.
@@ -28,27 +27,15 @@ import android.text.style.MetricAffectingSpan;
  * @author Tristan Waddington
  */
 public class TypefaceSpan extends MetricAffectingSpan {
-    /**
-     * An <code>LruCache</code> for previously loaded typefaces.
-     */
-    private static LruCache<java.lang.String, Typeface> sTypefaceCache =
-            new LruCache<java.lang.String, Typeface>(12);
 
     private Typeface mTypeface;
 
     /**
      * Load the {@link Typeface} and apply to a {@link android.text.Spannable}.
      */
-    public TypefaceSpan(Context context, java.lang.String typefaceName) {
-        mTypeface = sTypefaceCache.get(typefaceName);
-
-        if (mTypeface == null) {
-            mTypeface = Typeface.createFromAsset(context.getApplicationContext()
-                    .getAssets(), java.lang.String.format("fonts/%s.ttf", typefaceName));
-
-            // Cache the loaded Typeface
-            sTypefaceCache.put(typefaceName, mTypeface);
-        }
+    public TypefaceSpan(java.lang.String typefaceName) {
+        TraxApplication traxApplication = TraxApplication.INSTANCE;
+        mTypeface = traxApplication.getTypeface(typefaceName);
     }
 
     @Override

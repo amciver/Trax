@@ -14,9 +14,9 @@
  */
 package com.experiment.trax.services;
 
-import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.services.simpledb.AmazonSimpleDBClient;
 import com.amazonaws.services.simpledb.model.*;
+import com.experiment.trax.TraxApplication;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,21 +30,7 @@ public class SimpleDB {
     public static final String DOMAIN_NAME = "_domain_name";
 
     public static AmazonSimpleDBClient getInstance() {
-        if (sdb == null) {
-            sdb = new AmazonSimpleDBClient(new AWSCredentials() {
-                @Override
-                public String getAWSAccessKeyId() {
-                    return "AKIAIVU3BQ4XU5AA6OXA";
-                }
-
-                @Override
-                public String getAWSSecretKey() {
-                    return "Wwfa31BVKPSsqoJZ3MUieMvgxF0tdOx9iVfqinAF";
-                }
-            });
-        }
-
-        return sdb;
+        return TraxApplication.CLIENT_MANAGER.sdb();
     }
 
     public static List<String> getDomainNames() {

@@ -3,6 +3,7 @@ package com.experiment.trax.adapters;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import com.experiment.trax.R;
 import com.experiment.trax.TraxApplication;
 import com.experiment.trax.fragments.CareFragment;
 import com.experiment.trax.fragments.PhotosFragment;
@@ -54,13 +55,13 @@ public class ViewsAdapter extends FragmentPagerAdapter {
         CharSequence title = "N/A";
         switch (position) {
             case 0:
-                title = TraxApplication.INSTANCE.getTextAs("Photos", "");
+                title = TraxApplication.INSTANCE.getTextAs(TraxApplication.INSTANCE.getText(R.string.tab_otannenbaum), "");
                 break;
             case 1:
-                title = TraxApplication.INSTANCE.getTextAs("Types", "");
+                title = TraxApplication.INSTANCE.getTextAs(TraxApplication.INSTANCE.getText(R.string.tab_types), "");
                 break;
             case 2:
-                title = TraxApplication.INSTANCE.getTextAs("Care", "");
+                title = TraxApplication.INSTANCE.getTextAs(TraxApplication.INSTANCE.getText(R.string.tab_care), "");
                 break;
         }
         return title;

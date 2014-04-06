@@ -6,9 +6,21 @@
               android:layout_height="match_parent">
     <ScrollView android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:text="@string/care_content"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_margin="4dp"
+                      style="@style/ContentFont"
+                      android:text="@string/care_content"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_margin="4dp"
+                      style="@style/AttribFont"
+                      android:text="Prepared by Dr. Gary Chastagner and Dr. Eric Hinesley; edited by the National Christmas Tree Association"/>
+        </LinearLayout>
     </ScrollView>
 
     <!--<WebView android:layout_width="match_parent" android:layout_height="match_parent">-->

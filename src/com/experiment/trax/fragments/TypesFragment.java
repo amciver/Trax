@@ -3,6 +3,7 @@ package com.experiment.trax.fragments;
 import android.os.Bundle;
 import android.util.Log;
 import com.actionbarsherlock.app.SherlockListFragment;
+import com.experiment.trax.R;
 import com.experiment.trax.adapters.TypeAdapter;
 import com.experiment.trax.models.Type;
 
@@ -26,6 +27,7 @@ public class TypesFragment extends SherlockListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        //TODO Need to clean this up?
         if (savedInstanceState != null) {
             String blah = savedInstanceState.getString("Blah");
             Log.d(LOG_TAG, blah);
@@ -50,51 +52,44 @@ public class TypesFragment extends SherlockListFragment {
 
         Type douglasFir = new Type();
         douglasFir.setId("1");
-        douglasFir.setName("Douglas Fir");
-        douglasFir.setDescription("Long soft blue-green needles and a sweet fragrance with flexible, medium weight branches.");
+        douglasFir.setName(getString(R.string.types_content_douglar_fir_title));
+        douglasFir.setDescription(getString(R.string.types_content_douglas_fir));
 
 
         Type balsamFir = new Type();
         balsamFir.setId("2");
-        balsamFir.setName("Balsam Fir");
-        balsamFir.setDescription("Medium length very soft needles with a slightly tapered shape, the tree is full and has strong branches and excellent needle retention. Very fragrant tree that exudes the scent of Christmas.");
+        balsamFir.setName(getString(R.string.types_content_balsam_fir_title));
+        balsamFir.setDescription(getString(R.string.types_content_balsam_fir));
 
 
         Type fraserFir = new Type();
         fraserFir.setId("3");
-        fraserFir.setName("Fraser Fir");
-        fraserFir.setDescription("Short, soft and rounded at the tip needles with a deep green on the topside of the needle and a silver tint underside. Standard fir fragrance with an extremely lengthy life after being cut, able to be put up throughout the entire season.");
+        fraserFir.setName(getString(R.string.types_content_fraser_fir_title));
+        fraserFir.setDescription(getString(R.string.types_content_fraser_fir));
 
 
-        Type douglasFir4 = new Type();
-        douglasFir4.setId("1");
-        douglasFir4.setName("Douglas Fir");
-        douglasFir4.setDescription("Douglas fir also known as Oregon pine, or Douglas spruce, is an evergreen conifer species native to western North America. The common name is misleading since it is not a true fir. For this reason the name is often written as Douglas-fir.");
+        Type whitePine = new Type();
+        whitePine.setId("4");
+        whitePine.setName(getString(R.string.types_content_white_pine_title));
+        whitePine.setDescription(getString(R.string.types_content_white_pine));
 
 
-        Type douglasFir5 = new Type();
-        douglasFir5.setId("1");
-        douglasFir5.setName("Douglas Fir");
-        douglasFir5.setDescription("Douglas fir also known as Oregon pine, or Douglas spruce, is an evergreen conifer species native to western North America. The common name is misleading since it is not a true fir. For this reason the name is often written as Douglas-fir.");
+        Type grandFir = new Type();
+        grandFir.setId("5");
+        grandFir.setName(getString(R.string.types_content_grand_fir_title));
+        grandFir.setDescription(getString(R.string.types_content_grand_fir));
 
-        Type douglasFir6 = new Type();
-        douglasFir6.setId("1");
-        douglasFir6.setName("Douglas Fir");
-        douglasFir6.setDescription("Douglas fir also known as Oregon pine, or Douglas spruce, is an evergreen conifer species native to western North America. The common name is misleading since it is not a true fir. For this reason the name is often written as Douglas-fir.");
-
-        Type douglasFir7 = new Type();
-        douglasFir7.setId("1");
-        douglasFir7.setName("Douglas Fir");
-        douglasFir7.setDescription("Douglas fir also known as Oregon pine, or Douglas spruce, is an evergreen conifer species native to western North America. The common name is misleading since it is not a true fir. For this reason the name is often written as Douglas-fir.");
-
-        Type douglasFir8 = new Type();
-        douglasFir8.setId("1");
-        douglasFir8.setName("Douglas Fir");
-        douglasFir8.setDescription("Douglas fir also known as Oregon pine, or Douglas spruce, is an evergreen conifer species native to western North America. The common name is misleading since it is not a true fir. For this reason the name is often written as Douglas-fir.");
+        Type nobleFir = new Type();
+        nobleFir.setId("6");
+        nobleFir.setName(getString(R.string.types_content_noble_fir_title));
+        nobleFir.setDescription(getString(R.string.types_content_noble_fir));
 
         treeTypes.add(douglasFir);
         treeTypes.add(balsamFir);
         treeTypes.add(fraserFir);
+        treeTypes.add(whitePine);
+        treeTypes.add(grandFir);
+        treeTypes.add(nobleFir);
 
         return treeTypes;
     }
@@ -103,6 +98,7 @@ public class TypesFragment extends SherlockListFragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
+        //TODO Need to clean this up?
         outState.putString("Blah", "BLAH BLAH");
     }
 }

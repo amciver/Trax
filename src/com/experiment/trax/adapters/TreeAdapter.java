@@ -73,7 +73,7 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
 
         AQuery aq = new AQuery(convertView);
         ImageOptions options = new ImageOptions();
-        options.memCache = true;
+        options.memCache = false;
         options.fileCache = true;
         options.fallback = 0;
         options.ratio = 1.0f;

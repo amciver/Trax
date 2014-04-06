@@ -30,7 +30,7 @@ import java.util.List;
  */
 public class PhotosFragment extends PullToRefreshListFragment implements PullToRefreshBase.OnRefreshListener<ListView> {
 
-    private final String TAG = "christmastreefarm";
+    private final String TAG = "otannenbaum";
 
     private final String LOG_TAG = "PhotosFragment";
     private final String SETTINGS_PHOTO_POSITION = "currentPosition";

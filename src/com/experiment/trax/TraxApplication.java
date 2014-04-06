@@ -1,10 +1,12 @@
 package com.experiment.trax;
 
 import android.app.Application;
+import android.content.Context;
 import android.graphics.Typeface;
 import android.support.v4.util.LruCache;
 import android.text.Spannable;
 import android.text.SpannableString;
+import com.experiment.trax.services.AWSClientManager;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,12 +28,16 @@ public class TraxApplication extends Application {
             new LruCache<java.lang.String, Typeface>(12);
 
     public static TraxApplication INSTANCE = null;
+    public static AWSClientManager CLIENT_MANAGER = null;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         INSTANCE = this;
+
+        CLIENT_MANAGER = new AWSClientManager(getSharedPreferences(
+                "com.experiment.trax", Context.MODE_PRIVATE));
     }
 
     /*

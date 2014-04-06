@@ -19,6 +19,7 @@ package com.experiment.trax.utils;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
+import android.util.TypedValue;
 import com.experiment.trax.TraxApplication;
 
 /**
@@ -40,13 +41,20 @@ public class TypefaceSpan extends MetricAffectingSpan {
 
     @Override
     public void updateMeasureState(TextPaint p) {
-        p.setTextSize(64f);
+        p.setTextSize(getPixelSize(24));
         p.setTypeface(mTypeface);
     }
 
     @Override
     public void updateDrawState(TextPaint tp) {
-        tp.setTextSize(64f);
+        tp.setTextSize(getPixelSize(24));
         tp.setTypeface(mTypeface);
+    }
+
+    //http://stackoverflow.com/questions/3061930/how-to-set-unit-for-paint-settextsize
+    private float getPixelSize(int dipSize) {
+
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                dipSize, TraxApplication.INSTANCE.getResources().getDisplayMetrics());
     }
 }

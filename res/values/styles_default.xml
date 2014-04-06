@@ -12,4 +12,8 @@
     <style name="ContentFont" parent="@android:style/TextAppearance">
         <item name="android:textColor">#7D7D7D</item>
     </style>
+    <style name="AttribFont" parent="@android:style/TextAppearance">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#7D7D7D</item>
+    </style>
 </resources>

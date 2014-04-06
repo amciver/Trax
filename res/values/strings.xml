@@ -5,8 +5,42 @@
     <string name="not_available">N/A</string>
     <string name="lot_phone">phone:</string>
     <string name="lot_hours">hours:</string>
+    <string name="tab_otannenbaum">#otannenbaum</string>
+    <string name="tab_types">types</string>
+    <string name="tab_care">care</string>
     <string name="option_lots">Lots</string>
     <string name="option_dropsites">Dropsites</string>
+
+    <string name="types_content_douglar_fir_title">Douglas Fir</string>
+    <string name="types_content_douglas_fir">Long soft blue-green needles and a sweet fragrance with flexible, medium
+        weight branches. Branches can be difficult to safely hang ornaments on depending on shearing technique.
+    </string>
+    <string name="types_content_balsam_fir_title">Balsam Fir</string>
+    <string name="types_content_balsam_fir">Medium length very soft needles with a slightly tapered shape, the tree is
+        full and has strong branches and excellent needle retention. Very fragrant tree that exudes the scent of
+        Christmas.
+    </string>
+    <string name="types_content_fraser_fir_title">Fraser Fir</string>
+    <string name="types_content_fraser_fir">Short, soft and rounded at the tip needles with a deep green on the topside
+        of the needle and a silver tint underside. Standard fir fragrance with an extremely lengthy life after being
+        cut, able to be put up throughout the entire season.
+    </string>
+    <string name="types_content_white_pine_title">White Pine</string>
+    <string name="types_content_white_pine">Soft and flexible with bluish-green to silver green needles ranging from 2.5
+        to 5" in length. Needles have excellent retention however the trees fragrance is mild. Struggles with heavier
+        ornaments due to the branch size.
+    </string>
+    <string name="types_content_grand_fir_title">Grand Fir</string>
+    <string name="types_content_grand_fir">Dark green and shiny needles with a silvery underside which are 1 - 1.5" in
+        length. Needle retention is good. Exudes a citrus like aroma that makes this one of the strongest and most
+        appealing trees for those craving scent.
+    </string>
+    <string name="types_content_noble_fir_title">Noble Fir</string>
+    <string name="types_content_noble_fir">Bluish green needles that evoke a silvery appearance. It has shorter, stiff
+        branches which work well for heavier ornaments. Needle retention is excellent and wreaths are commonly made from
+        this type.
+    </string>
+
     <string name="care_content">
         "Displaying trees in water in a traditional reservoir type stand is the most effective way of maintaining their
         freshness and minimizing needle loss problems.
@@ -39,12 +73,6 @@
 
         Drilling a hole in the base of the trunk does NOT improve water uptake.
 
-        Use of lights that produce low heat, such as miniature lights, will reduce drying of the tree.
-
-        Always inspect light sets prior to placing them on the tree. If worn, replace with a new set.
-
-        Do not overload electrical circuits.
-
-        Always turn off the tree lights when leaving the house or when going to bed."
+        Use of lights that produce low heat, such as miniature lights, will reduce drying of the tree."
     </string>
 </resources>

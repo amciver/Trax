@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/dropsite_parent_layout"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:paddingLeft="4dp"
@@ -9,14 +10,32 @@
               android:orientation="horizontal">
     <ImageView
             android:id="@+id/cityofphoenix"
-            android:layout_width="64dip"
-            android:layout_height="64dip"
-            android:src="@drawable/cityofmesa"/>
+            android:visibility="gone"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_gravity="left"
+            android:src="@drawable/az_phoenix"/>
+    <ImageView
+            android:id="@+id/cityofmesa"
+            android:visibility="gone"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_gravity="left"
+            android:src="@drawable/az_mesa"/>
+    <ImageView
+            android:id="@+id/cityofglendale"
+            android:visibility="gone"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/az_glendale"/>
+
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-        <TextView android:id="@+id/dropsite_name"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp">
+    <TextView android:id="@+id/dropsite_name"
                   android:textColor="#7D7D7D"
                   android:textStyle="bold"
                   android:layout_width="wrap_content"

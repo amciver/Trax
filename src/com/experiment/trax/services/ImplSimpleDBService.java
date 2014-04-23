@@ -30,7 +30,7 @@ import java.util.*;
 
 public class ImplSimpleDBService implements ISimpleDBService {
 
-    final static int RETURN_COUNT = 10;
+    final static int RETURN_COUNT = 30;
 
     List<GetDropsiteLocationsCompleteListener> mGetDropsiteLocationsCompleteListeners = new ArrayList<GetDropsiteLocationsCompleteListener>();
     List<GetLotLocationsCompleteListener> mGetLotLocationsCompleteListeners = new ArrayList<GetLotLocationsCompleteListener>();
@@ -98,6 +98,9 @@ public class ImplSimpleDBService implements ISimpleDBService {
                                 dropsiteLocation.setLatitude(Double.parseDouble(attribute.getValue()));
                             if (attribute.getName().equalsIgnoreCase("lng"))
                                 dropsiteLocation.setLongitude(Double.parseDouble(attribute.getValue()));
+
+                            if (attribute.getName().equalsIgnoreCase("city"))
+                                internalDropsiteLocation.setCityCode(attribute.getValue());
                         }
 
                         //store the location of the lot

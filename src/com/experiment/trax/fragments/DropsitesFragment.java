@@ -112,78 +112,81 @@ public class DropsitesFragment extends SherlockListFragment {
 
                     mDropsiteLocations = dropsiteLocations;
 
-                    DropsiteAdapter adapter = new DropsiteAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, mDropsiteLocations);
-                    setListAdapter(adapter);
+                    if (mDropsiteLocations != null) {
 
-                    GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.dropsites_map))).getMap();
-                    googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                    googleMap.setMyLocationEnabled(true);
-                    googleMap.getUiSettings().setCompassEnabled(true);
-                    googleMap.getUiSettings().setZoomControlsEnabled(false);
-                    googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
-                        @Override
-                        public View getInfoWindow(Marker marker) {
-                            return null;  //To change body of implemented methods use File | Settings | File Templates.
-                        }
+                        DropsiteAdapter adapter = new DropsiteAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, mDropsiteLocations);
+                        setListAdapter(adapter);
 
-                        @Override
-                        public View getInfoContents(Marker marker) {
-                            // Getting view from the layout file info_window_layout
-                            View v = getLayoutInflater(null).inflate(R.layout.dropsite_info_window, null);
-
-                            // Getting the position from the marker
-                            LatLng latLng = marker.getPosition();
-
-                            DropsiteLocation dropsiteLocation = null;
-                            String id = marker.getId();
-                            for (DropsiteLocation l : mDropsiteLocations)
-                                if (l.getId().equals(id)) {
-                                    dropsiteLocation = l;
-                                }
-
-                            if (dropsiteLocation != null) {
-                                TextView title = (TextView) v.findViewById(R.id.dropsite_info_title);
-                                title.setText(dropsiteLocation.getName());
-
-                                TextView description = (TextView) v.findViewById(R.id.dropsite_info_description);
-                                description.setText(dropsiteLocation.getDescription());
+                        GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.dropsites_map))).getMap();
+                        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                        googleMap.setMyLocationEnabled(true);
+                        googleMap.getUiSettings().setCompassEnabled(true);
+                        googleMap.getUiSettings().setZoomControlsEnabled(false);
+                        googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+                            @Override
+                            public View getInfoWindow(Marker marker) {
+                                return null;  //To change body of implemented methods use File | Settings | File Templates.
                             }
 
-                            return v;
+                            @Override
+                            public View getInfoContents(Marker marker) {
+                                // Getting view from the layout file info_window_layout
+                                View v = getLayoutInflater(null).inflate(R.layout.dropsite_info_window, null);
+
+                                // Getting the position from the marker
+                                LatLng latLng = marker.getPosition();
+
+                                DropsiteLocation dropsiteLocation = null;
+                                String id = marker.getId();
+                                for (DropsiteLocation l : mDropsiteLocations)
+                                    if (l.getId().equals(id)) {
+                                        dropsiteLocation = l;
+                                    }
+
+                                if (dropsiteLocation != null) {
+                                    TextView title = (TextView) v.findViewById(R.id.dropsite_info_title);
+                                    title.setText(dropsiteLocation.getName());
+
+                                    TextView description = (TextView) v.findViewById(R.id.dropsite_info_description);
+                                    description.setText(dropsiteLocation.getDescription());
+                                }
+
+                                return v;
+                            }
+                        });
+                        CameraUpdate center = CameraUpdateFactory.newLatLng(currentCoordinates);
+                        CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
+
+                        googleMap.moveCamera(center);
+                        googleMap.animateCamera(zoom);
+
+                        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                            @Override
+                            public void onInfoWindowClick(Marker marker) {
+                                String id = marker.getId();
+                            }
+                        });
+
+                        int position = 1;
+                        for (DropsiteLocation dropsiteLocation : mDropsiteLocations) {
+                            Log.d("setDropsites", "Location " + dropsiteLocation.getPointAsString() + " being added to map");
+
+                            BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE);
+                            addDropsiteToMap(googleMap, icon, dropsiteLocation);
+
+                            position++;
                         }
-                    });
-                    CameraUpdate center = CameraUpdateFactory.newLatLng(currentCoordinates);
-                    CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
 
-                    googleMap.moveCamera(center);
-                    googleMap.animateCamera(zoom);
-
-                    googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
-                        @Override
-                        public void onInfoWindowClick(Marker marker) {
-                            String id = marker.getId();
+                        Log.d("setDropsites", "Notifying " + mSetDropsitesCompleteListeners.size() + " listeners");
+                        //notify all listeners that work is complete
+                        for (SetDropsitesCompleteListener listener : mSetDropsitesCompleteListeners) {
+                            listener.onSetDropsitesCompleted();
                         }
-                    });
 
-                    int position = 1;
-                    for (DropsiteLocation dropsiteLocation : mDropsiteLocations) {
-                        Log.d("setDropsites", "Location " + dropsiteLocation.getPointAsString() + " being added to map");
-
-                        BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE);
-                        addDropsiteToMap(googleMap, icon, dropsiteLocation);
-
-                        position++;
+                        //zoom in on the first one, which is closest to user
+                        if (mDropsiteLocations.size() > 0)
+                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mDropsiteLocations.get(0).getPoint(), 13));
                     }
-
-                    Log.d("setDropsites", "Notifying " + mSetDropsitesCompleteListeners.size() + " listeners");
-                    //notify all listeners that work is complete
-                    for (SetDropsitesCompleteListener listener : mSetDropsitesCompleteListeners) {
-                        listener.onSetDropsitesCompleted();
-                    }
-
-                    //zoom in on the first one, which is closest to user
-                    if (mDropsiteLocations.size() > 0)
-                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mDropsiteLocations.get(0).getPoint(), 13));
                 }
             });
 

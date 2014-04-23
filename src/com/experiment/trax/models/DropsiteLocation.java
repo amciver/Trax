@@ -12,6 +12,7 @@ public class DropsiteLocation {
     private String name;
     private String description;
     private LatLng point;
+    private String cityCode;
     private DateTime dateOpen;
     private DateTime dateClose;
 
@@ -65,5 +66,13 @@ public class DropsiteLocation {
 
     public void setDateClose(DateTime dateClose) {
         this.dateClose = dateClose;
+    }
+
+    public String getCityCode() {
+        return cityCode;
+    }
+
+    public void setCityCode(String cityCode) {
+        this.cityCode = cityCode;
     }
 }

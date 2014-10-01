@@ -1,5 +1,6 @@
 package com.experiment.trax;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import com.actionbarsherlock.view.Menu;
@@ -42,6 +43,7 @@ public class LotSelectionActivity extends BaseActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.findItem(R.id.menu_lot_add).setVisible(!mIsRefreshing);
         menu.findItem(R.id.menu_lot_selection).setVisible(!mIsRefreshing);
         return true;
     }
@@ -72,15 +74,26 @@ public class LotSelectionActivity extends BaseActivity {
         Log.d("LotSelectionActivity", "onRefreshLots called");
         setRefreshState(true);
 
-        LotsFragment fragment = (LotsFragment) getSupportFragmentManager().findFragmentById(R.id.lots_listing);
+        final LotsFragment fragment = (LotsFragment) getSupportFragmentManager().findFragmentById(R.id.lots_listing);
         fragment.setOnSetLotsCompleteListener(new SetLotsCompleteListener() {
             @Override
             public void onSetLotsCompleted() {
+                //this will remove the listener
+                fragment.removeOnSetLotsCompleteListener(this);
                 setRefreshState(false);
             }
         });
         Log.d("LotSelectionActivity", "Calling setLots() on " + LotsFragment.class.toString());
         fragment.setLots();
+
+        return true;
+    }
+
+    public boolean onAddLot(final com.actionbarsherlock.view.MenuItem item) {
+
+        Log.d("LotSelectionActivity", "onAddLot called; calling " + LotAddActivity.class.toString());
+        Intent lotAddIntent = new Intent(this.getApplicationContext(), LotAddActivity.class);
+        startActivity(lotAddIntent);
 
         return true;
     }

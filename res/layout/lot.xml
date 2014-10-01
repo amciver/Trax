@@ -7,7 +7,7 @@
               android:paddingRight="4dp"
               android:paddingBottom="4dp"
               android:orientation="vertical">
-    <TextView android:id="@+id/lot_name"
+    <TextView android:id="@+id/lot_location"
               android:textColor="#7D7D7D"
               android:textStyle="bold"
               android:layout_width="wrap_content"

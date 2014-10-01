@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 import com.experiment.trax.TraxApplication;
 import com.experiment.trax.adapters.TreeAdapter;
 import com.experiment.trax.listeners.GetInstagramPhotosCompleteListener;
@@ -100,22 +101,27 @@ public class PhotosFragment extends PullToRefreshListFragment implements PullToR
 
                 Log.d(LOG_TAG, "Trees size is [" + mTrees.size() + "]");
                 Log.d(LOG_TAG, "Current position is [" + mCurrentPosition + "]");
-                if (mTrees.size() >= mCurrentPosition) {
 
-                    mTreesAdapter.notifyDataSetChanged();
+                if (mTrees.size() == 0)
+                    Toast.makeText(mTreesWrapperListView.getContext(), "Unable to access Instagram. Please verify your connection is active.", Toast.LENGTH_SHORT).show();
+                else {
+                    if (mTrees.size() >= mCurrentPosition) {
 
-                    //TODO: This works now, would like no visible "selection" when setting item
-                    mTreesWrapperListView.getRefreshableView().post(new Runnable() {
-                        @Override
-                        public void run() {
-                            Log.d(LOG_TAG, "Posting current position as [" + mCurrentPosition + "]");
-                            mTreesWrapperListView.getRefreshableView().setSelection(mCurrentPosition);
-                        }
-                    });
+                        mTreesAdapter.notifyDataSetChanged();
 
-                    mTreesWrapperListView.onRefreshComplete();
-                } else {
-                    mInstagramService.getInstagramPhotosAsync(TAG);
+                        //TODO: This works now, would like no visible "selection" when setting item
+                        mTreesWrapperListView.getRefreshableView().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Log.d(LOG_TAG, "Posting current position as [" + mCurrentPosition + "]");
+                                mTreesWrapperListView.getRefreshableView().setSelection(mCurrentPosition);
+                            }
+                        });
+
+                        mTreesWrapperListView.onRefreshComplete();
+                    } else {
+                        mInstagramService.getInstagramPhotosAsync(TAG);
+                    }
                 }
 
                 //done loading imagery, hide progress bar if we are not detached
@@ -170,17 +176,16 @@ public class PhotosFragment extends PullToRefreshListFragment implements PullToR
     }
 
     private void saveCurrentPosition(Bundle outState) {
-        mCurrentPosition = mTreesWrapperListView.getRefreshableView().getLastVisiblePosition();
-
         if (outState != null) {
+            mCurrentPosition = mTreesWrapperListView.getRefreshableView().getLastVisiblePosition();
             outState.putInt(SETTINGS_PHOTO_POSITION, mCurrentPosition);
         } else {
             String prefs = ((TraxApplication) getActivity().getApplication()).PREFS;
-            Log.d(LOG_TAG, "Saving position [" + mCurrentPosition + "] to SharedPreferences [" + prefs + "]");
-
             SharedPreferences settings = getActivity().getSharedPreferences(prefs, 0);
             SharedPreferences.Editor editor = settings.edit();
             mCurrentPosition = mTreesWrapperListView.getRefreshableView().getLastVisiblePosition();
+
+            Log.d(LOG_TAG, "Saving position [" + mCurrentPosition + "] to SharedPreferences [" + prefs + "]");
             editor.putInt(SETTINGS_PHOTO_POSITION, mCurrentPosition);
             editor.commit();
         }

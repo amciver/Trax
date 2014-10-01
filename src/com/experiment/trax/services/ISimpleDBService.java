@@ -1,6 +1,7 @@
 package com.experiment.trax.services;
 
 import android.content.Context;
+import com.experiment.trax.models.LotLocation;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
@@ -11,6 +12,8 @@ import com.google.android.gms.maps.model.LatLng;
  * To change this template use File | Settings | File Templates.
  */
 public interface ISimpleDBService {
+
+    void addLotLocationAsync(Context context, LotLocation location);
 
     void getLocationsAsync(Context context, LatLng coordinate);
 

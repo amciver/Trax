@@ -71,7 +71,7 @@ public class DropsiteSelectionActivity extends BaseActivity {
         //leaving this blank as we do not want tabs here
     }
 
-    public boolean onRefreshDropsites(final com.actionbarsherlock.view.MenuItem item) {
+    public boolean onRefreshDropsites(com.actionbarsherlock.view.MenuItem item) {
         Log.d("DropsiteSelectionActivity", "onRefreshDropsites called");
         setRefreshState(true);
 

@@ -14,9 +14,9 @@ import java.util.Hashtable;
 public class LotLocation {
 
     private String id;
-    private String name;
     private float rating;
     private String business;
+    private String location;
     private String description;
     private LatLng point;
     private String phone;
@@ -119,14 +119,6 @@ public class LotLocation {
         this.point = point;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Hashtable<Integer, String> getHoursClose() {
         return hoursClose;
     }
@@ -141,6 +133,14 @@ public class LotLocation {
 
     public void setHoursOpen(Hashtable<Integer, String> hoursOpen) {
         this.hoursOpen = hoursOpen;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public static LotLocation asLocation(android.location.Location location) {

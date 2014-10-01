@@ -23,15 +23,17 @@ public class String {
     }
 
     public static java.lang.String formatPhoneNumber(java.lang.String s, java.lang.String seperator) {
-        if (s.length() == 10) {
-            java.lang.String part1 = s.substring(0, 3);
-            java.lang.String part2 = s.substring(3, 6);
-            java.lang.String part3 = s.substring(6, 10);
-            return part1 + seperator + part2 + seperator + part3;
-        } else if (s.length() == 7) {
-            java.lang.String part1 = s.substring(0, 3);
-            java.lang.String part2 = s.substring(3, 7);
-            return part1 + seperator + part2;
+        if (s != null && !s.isEmpty()) {
+            if (s.length() == 10) {
+                java.lang.String part1 = s.substring(0, 3);
+                java.lang.String part2 = s.substring(3, 6);
+                java.lang.String part3 = s.substring(6, 10);
+                return part1 + seperator + part2 + seperator + part3;
+            } else if (s.length() == 7) {
+                java.lang.String part1 = s.substring(0, 3);
+                java.lang.String part2 = s.substring(3, 7);
+                return part1 + seperator + part2;
+            }
         }
         return s;
     }

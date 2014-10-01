@@ -11,6 +11,18 @@
     <string name="option_lots">Lots</string>
     <string name="option_dropsites">Dropsites</string>
 
+    <string name="add_lot_business">Business Name</string>
+    <string name="add_lot_cross">Cross Streets</string>
+    <string name="add_lot_landmark">Nearest Landmark</string>
+    <string name="add_lot_phone">Phone</string>
+    <string name="add_lot_hours">Hours</string>
+
+
+    <string name="add_lot_amex">American Express</string>
+    <string name="add_lot_visa">Visa</string>
+    <string name="add_lot_mastercard">Mastercard</string>
+    <string name="add_lot_discover">Discover</string>
+
     <string name="types_content_douglar_fir_title">Douglas Fir</string>
     <string name="types_content_douglas_fir">Long soft blue-green needles and a sweet fragrance with flexible, medium
         weight branches. Branches can be difficult to safely hang ornaments on depending on shearing technique.

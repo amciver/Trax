@@ -2,9 +2,12 @@
 <resources>
     <style name="TitleFont" parent="@android:style/TextAppearance">
         <item name="android:textColor">#7D7D7D</item>
-        <!--<item name="android:textSize"></item>-->
+        <!--<item name="android:textSize">10sp</item>-->
         <item name="android:textStyle">bold</item>
-        <item name="android:text">@string/not_available</item>
+    </style>
+    <style name="TitleLightFont" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#7D7D7D</item>
+        <!--<item name="android:textSize">10sp</item>-->
     </style>
     <style name="SubTitleFont" parent="@android:style/TextAppearance">
         <item name="android:textColor">#7D7D7D</item>
@@ -15,5 +18,18 @@
     <style name="AttribFont" parent="@android:style/TextAppearance">
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">#7D7D7D</item>
+    </style>
+    <style name="ButtonFont">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <!--<item name="android:textSize">10sp</item> -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
     </style>
 </resources>

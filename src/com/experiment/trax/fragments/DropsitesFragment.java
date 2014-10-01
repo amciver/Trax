@@ -70,7 +70,7 @@ public class DropsitesFragment extends SherlockListFragment {
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) contextMenuInfo;
                 DropsiteLocation dropsiteLocation = mDropsiteLocations.get(info.position);
 
-                contextMenu.setHeaderTitle(dropsiteLocation.getName());
+                contextMenu.setHeaderTitle(dropsiteLocation.getLocation());
 
                 android.view.MenuInflater inflater = getActivity().getMenuInflater();
                 inflater.inflate(R.menu.dropsite_menu, contextMenu);
@@ -87,7 +87,7 @@ public class DropsitesFragment extends SherlockListFragment {
 
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
                 DropsiteLocation dropsiteLocation = mDropsiteLocations.get(info.position);
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr=" + ImplLocationService.getCurrentLocation().getLatitude() + "," + ImplLocationService.getCurrentLocation().getLongitude() + "&daddr=" + dropsiteLocation.getPoint().latitude + "," + dropsiteLocation.getPoint().longitude));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr=" + ImplLocationService.INSTANCE.getCurrentLocation().getLatitude() + "," + ImplLocationService.INSTANCE.getCurrentLocation().getLongitude() + "&daddr=" + dropsiteLocation.getPoint().latitude + "," + dropsiteLocation.getPoint().longitude));
                 startActivity(intent);
                 return true;
             }
@@ -99,7 +99,7 @@ public class DropsitesFragment extends SherlockListFragment {
 
     public void setDropsites() {
 
-        android.location.Location currentLocation = ImplLocationService.getCurrentLocation();
+        android.location.Location currentLocation = ImplLocationService.INSTANCE.getCurrentLocation();
 
         //we will get null if there is no connection available and thus no location; airplane mode
         if (currentLocation != null) {
@@ -145,7 +145,7 @@ public class DropsitesFragment extends SherlockListFragment {
 
                                 if (dropsiteLocation != null) {
                                     TextView title = (TextView) v.findViewById(R.id.dropsite_info_title);
-                                    title.setText(dropsiteLocation.getName());
+                                    title.setText(dropsiteLocation.getLocation());
 
                                     TextView description = (TextView) v.findViewById(R.id.dropsite_info_description);
                                     description.setText(dropsiteLocation.getDescription());
@@ -203,7 +203,7 @@ public class DropsitesFragment extends SherlockListFragment {
     private void addDropsiteToMap(GoogleMap googleMap, BitmapDescriptor icon, DropsiteLocation dropsiteLocation) {
         Marker marker = googleMap.addMarker(new MarkerOptions()
                 .position(dropsiteLocation.getPoint())
-                .title(dropsiteLocation.getName())
+                .title(dropsiteLocation.getLocation())
                 .snippet(dropsiteLocation.getDescription())
                 .icon(icon));
         dropsiteLocation.setId(marker.getId());

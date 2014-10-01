@@ -104,8 +104,6 @@ public class TreeAdapter extends ArrayAdapter<JSONObject> {
             TextView photoLocation = (TextView) convertView.findViewById(R.id.photo_location);
             if (photoLocation != null && !location.equalsIgnoreCase("null")) {
                 photoLocation.setText(mTrees.get(position).getJSONObject("location").optString("name"));
-            } else {
-                photoLocation.setText(R.string.empty);
             }
         } catch (JSONException ex) {
             Log.e(LOG_TAG, "", ex);

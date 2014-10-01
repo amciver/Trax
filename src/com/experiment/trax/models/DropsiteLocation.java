@@ -9,7 +9,7 @@ import org.joda.time.DateTime;
 public class DropsiteLocation {
 
     private String id;
-    private String name;
+    private String location;
     private String description;
     private LatLng point;
     private String cityCode;
@@ -22,14 +22,6 @@ public class DropsiteLocation {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getDescription() {
@@ -74,5 +66,13 @@ public class DropsiteLocation {
 
     public void setCityCode(String cityCode) {
         this.cityCode = cityCode;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

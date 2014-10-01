@@ -112,7 +112,8 @@ public class ImplLocationService implements ILocationService {
         new GetLocalityAsyncTask(latitude, longitude).execute();
     }
 
-    public static Location getCurrentLocation() {
+    @Override
+    public Location getCurrentLocation() {
         return mCurrentLocation;
     }
 

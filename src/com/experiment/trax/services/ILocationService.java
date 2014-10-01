@@ -1,6 +1,7 @@
 package com.experiment.trax.services;
 
 import android.content.Context;
+import android.location.Location;
 import com.experiment.trax.listeners.GetLocalityCompleteListener;
 
 /**
@@ -19,5 +20,7 @@ public interface ILocationService {
     String getLocalitySync(double latitude, double longitude);
 
     void getLocalityAsync(double latitude, double longitude);
+
+    Location getCurrentLocation();
 
 }

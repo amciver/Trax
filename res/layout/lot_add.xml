@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/add_lot_root"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+    <EditText
+            android:id="@+id/add_lot_business"
+            android:inputType="text"
+            android:hint="@string/add_lot_business"
+            android:layout_marginTop="8dip"
+            android:layout_marginBottom="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <EditText
+            android:id="@+id/add_lot_landmark"
+            android:inputType="text"
+            android:hint="@string/add_lot_landmark"
+            android:layout_marginBottom="8dip"
+            android:layout_below="@+id/add_lot_business"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:id="@+id/add_lot_cross"
+            android:inputType="text"
+            android:hint="@string/add_lot_cross"
+            android:layout_marginBottom="8dip"
+            android:layout_below="@+id/add_lot_landmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:id="@+id/add_lot_phone"
+            android:inputType="phone"
+            android:hint="@string/add_lot_phone"
+            android:layout_marginBottom="8dip"
+            android:layout_below="@+id/add_lot_cross"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <CheckBox
+            android:id="@+id/add_lot_amex"
+            android:layout_marginBottom="8dip"
+            android:layout_below="@+id/add_lot_phone"
+            android:layout_alignLeft="@+id/add_lot_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <ImageView
+            android:id="@+id/add_lot_amex_img"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/ic_american_express"
+            android:layout_below="@+id/add_lot_phone"
+            android:layout_toRightOf="@+id/add_lot_amex"
+            android:layout_marginRight="16dip"/>
+
+    <CheckBox
+            android:id="@+id/add_lot_visa"
+            android:layout_marginBottom="8dip"
+            android:layout_below="@+id/add_lot_phone"
+            android:layout_toRightOf="@+id/add_lot_amex_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <ImageView
+            android:id="@+id/add_lot_visa_img"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/ic_visa"
+            android:layout_below="@+id/add_lot_phone"
+            android:layout_toRightOf="@+id/add_lot_visa"
+            android:layout_marginRight="16dip"/>
+
+
+    <CheckBox
+            android:id="@+id/add_lot_mastercard"
+            android:layout_marginBottom="8dip"
+            android:layout_below="@+id/add_lot_phone"
+            android:layout_toRightOf="@+id/add_lot_visa_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <ImageView
+            android:id="@+id/add_lot_mastercard_img"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/ic_mastercard"
+            android:layout_below="@+id/add_lot_phone"
+            android:layout_toRightOf="@+id/add_lot_mastercard"
+            android:layout_marginRight="16dip"/>
+
+
+    <CheckBox
+            android:id="@+id/add_lot_discover"
+            android:layout_marginBottom="8dip"
+            android:layout_below="@+id/add_lot_phone"
+            android:layout_toRightOf="@+id/add_lot_mastercard_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/ic_discover"
+            android:layout_below="@+id/add_lot_phone"
+            android:layout_toRightOf="@+id/add_lot_discover"
+            android:id="@+id/add_lot_discover_img"
+            />
+
+    <Button
+            android:background="@drawable/green_button"
+            android:text="ADD LOT"
+            android:onClick="onPersistLot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            style="@style/ButtonFont"/>
+
+</RelativeLayout>

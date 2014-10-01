@@ -47,9 +47,9 @@ public class LotAdapter extends ArrayAdapter<LotLocation> {
 
         LotLocation lotLocation = mLots.get(position);
         if (lotLocation != null) {
-            TextView name = (TextView) v.findViewById(R.id.lot_name);
-            if (name != null)
-                name.setText(lotLocation.getName());
+            TextView location = (TextView) v.findViewById(R.id.lot_location);
+            if (location != null)
+                location.setText(lotLocation.getLocation());
 
 //            RatingBar rating = (RatingBar) v.findViewById(R.id.lot_ratingBar);
 //            if (rating != null)
@@ -67,14 +67,14 @@ public class LotAdapter extends ArrayAdapter<LotLocation> {
     }
 
     private void showName(View v, LotLocation lotLocation) {
-        TextView name = (TextView) v.findViewById(R.id.lot_name);
-        if (name != null) {
-            if (lotLocation.getName() != null &&
-                    lotLocation.getName().length() != 0) {
-                name.setVisibility(View.VISIBLE);
-                name.setText(lotLocation.getName());
+        TextView location = (TextView) v.findViewById(R.id.lot_location);
+        if (location != null) {
+            if (lotLocation.getLocation() != null &&
+                    lotLocation.getLocation().length() != 0) {
+                location.setVisibility(View.VISIBLE);
+                location.setText(lotLocation.getLocation());
             } else
-                name.setVisibility(View.GONE);
+                location.setVisibility(View.GONE);
         }
     }
 

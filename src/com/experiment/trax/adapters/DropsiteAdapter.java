@@ -63,9 +63,9 @@ public class DropsiteAdapter extends ArrayAdapter<DropsiteLocation> {
         DropsiteLocation dropsiteLocation = mDropsites.get(position);
         if (dropsiteLocation != null) {
             showLogo(v, dropsiteLocation.getCityCode());
-            TextView name = (TextView) v.findViewById(R.id.dropsite_name);
-            if (name != null)
-                name.setText(dropsiteLocation.getName());
+            TextView location = (TextView) v.findViewById(R.id.dropsite_location);
+            if (location != null)
+                location.setText(dropsiteLocation.getLocation());
 
 
             showDates(v, dropsiteLocation);

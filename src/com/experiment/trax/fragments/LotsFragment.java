@@ -85,15 +85,14 @@ public class LotsFragment extends SherlockListFragment {
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) contextMenuInfo;
                 LotLocation lotLocation = mLotLocations.get(info.position);
 
+                android.view.MenuInflater inflater = getActivity().getMenuInflater();
+
                 //if we dont have a phone number, return now
                 if (lotLocation.getPhone().length() != 7 &&
                         lotLocation.getPhone().length() != 10)
-                    return;
-
-                contextMenu.setHeaderTitle(lotLocation.getLocation());
-
-                android.view.MenuInflater inflater = getActivity().getMenuInflater();
-                inflater.inflate(R.menu.lot_menu, contextMenu);
+                    inflater.inflate(R.menu.lot_menu_no_phone, contextMenu);
+                else
+                    inflater.inflate(R.menu.lot_menu, contextMenu);
             }
         });
 

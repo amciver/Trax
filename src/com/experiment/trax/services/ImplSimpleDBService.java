@@ -253,6 +253,8 @@ public class ImplSimpleDBService implements ISimpleDBService {
                                         internalLotLocation.setAcceptsDiscover(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
                                     if (attribute.getName().equalsIgnoreCase("phone"))
                                         internalLotLocation.setPhone(attribute.getValue());
+                                    if (attribute.getName().equalsIgnoreCase("verified"))
+                                        internalLotLocation.setVerified(com.experiment.trax.utils.Boolean.valueOf(attribute.getValue()));
 
                                     //create a key -> value to day of week and time opened or closed
                                     if (attribute.getName().equalsIgnoreCase("1_open"))

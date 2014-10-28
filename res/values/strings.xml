@@ -10,6 +10,7 @@
     <string name="tab_care">care</string>
     <string name="option_lots">Lots</string>
     <string name="option_dropsites">Dropsites</string>
+    <string name="lot_verified">V E R I F I E D</string>
 
     <string name="add_lot_business">Business Name</string>
     <string name="add_lot_cross">Cross Streets</string>
@@ -75,8 +76,9 @@
         Use a stand that fits your tree. Avoid whittling the sides of the trunk down to fit a stand. The outer layers of
         wood are the most efficient in taking up water and should not be removed.
 
-        Keep trees away from major sources of heat (fireplaces, heaters, heat vents, direct sunlight). Lowering the room
-        temperature will slow the drying process, resulting in less water consumption each day.
+        Keep trees away form major sources of heat (fireplaces, heaters, heat vents, direct sunlight).
+
+        Lowering the room temperature will slow the drying process, resulting in less water consumption each day.
 
         The temperature of the water used to fill the stand is not important and does not affect water uptake.
 

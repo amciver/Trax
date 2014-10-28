@@ -88,7 +88,8 @@ public class LotsFragment extends SherlockListFragment {
                 android.view.MenuInflater inflater = getActivity().getMenuInflater();
 
                 //if we dont have a phone number, return now
-                if (lotLocation.getPhone().length() != 7 &&
+                if (lotLocation.getPhone() != null &&
+                        lotLocation.getPhone().length() != 7 &&
                         lotLocation.getPhone().length() != 10)
                     inflater.inflate(R.menu.lot_menu_no_phone, contextMenu);
                 else

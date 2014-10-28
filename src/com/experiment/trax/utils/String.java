@@ -40,16 +40,18 @@ public class String {
 
     /* Takes a String in HHmm format and returns a String in h:mm aa format  */
     public static java.lang.String formatHours(java.lang.String s) {
-        try {
-            DateTime open = DateTime.parse(
-                    DateTime.now().getDayOfMonth() + "-" +
-                            DateTime.now().getMonthOfYear() + "-" +
-                            DateTime.now().getYear() + " " + s,
-                    DateTimeFormat.forPattern("dd-MM-yyyy HHmm"));
+        if (s != null && s.length() > 0) {
+            try {
+                DateTime open = DateTime.parse(
+                        DateTime.now().getDayOfMonth() + "-" +
+                                DateTime.now().getMonthOfYear() + "-" +
+                                DateTime.now().getYear() + " " + s,
+                        DateTimeFormat.forPattern("dd-MM-yyyy HHmm"));
 
-            return open.toString(DateTimeFormat.forPattern("h:mm aa"));
-        } catch (Exception e) {
-            Log.e("String", "Failure when trying to format [" + s + "] as h:mm aa");
+                return open.toString(DateTimeFormat.forPattern("h:mm aa"));
+            } catch (Exception e) {
+                Log.e("String", "Failure when trying to format [" + s + "] as h:mm aa");
+            }
         }
         return "";
     }

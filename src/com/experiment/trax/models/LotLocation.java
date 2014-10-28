@@ -27,6 +27,8 @@ public class LotLocation {
     private boolean acceptsMastercard = false;
     private boolean acceptsDiscover = false;
 
+    private boolean verified = false;
+
     public String getId() {
         return id;
     }
@@ -133,6 +135,14 @@ public class LotLocation {
 
     public void setHoursOpen(Hashtable<Integer, String> hoursOpen) {
         this.hoursOpen = hoursOpen;
+    }
+
+    public boolean isVerified() {
+        return verified;
+    }
+
+    public void setVerified(boolean verified) {
+        this.verified = verified;
     }
 
     public String getLocation() {

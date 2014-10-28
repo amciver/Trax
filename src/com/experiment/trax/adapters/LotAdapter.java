@@ -55,6 +55,7 @@ public class LotAdapter extends ArrayAdapter<LotLocation> {
 //            if (rating != null)
 //                rating.setRating(location.getRating());
 
+            showVerified(v, lotLocation);
             showPhone(v, lotLocation);
 
 //            ImageView icon = (ImageView) v.findViewById(R.id.lot_location);
@@ -75,6 +76,13 @@ public class LotAdapter extends ArrayAdapter<LotLocation> {
                 location.setText(lotLocation.getLocation());
             } else
                 location.setVisibility(View.GONE);
+        }
+    }
+
+    private void showVerified(View v, LotLocation lotLocation) {
+        ImageView verified = (ImageView) v.findViewById(R.id.lot_verified);
+        if (verified != null) {
+            verified.setVisibility(lotLocation.isVerified() ? View.VISIBLE : View.GONE);
         }
     }
 

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Phoenix, Arizona Christmas Trees</name>
+  <description><![CDATA[2014 Locations for Mast-Roth Farms family-grown Oregon Christmas Tree lots and select Pumpkin lots.]]></description>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://2.bp.blogspot.com/-hnAPLrXTIqw/UJcxoPHNV5I/AAAAAAAAANs/Z0-mXbhJGi8/s1600/pumpkin.jpg</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style15">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://2.bp.blogspot.com/-hnAPLrXTIqw/UJcxoPHNV5I/AAAAAAAAANs/Z0-mXbhJGi8/s1600/pumpkin.jpg</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://2.bp.blogspot.com/-hnAPLrXTIqw/UJcxoPHNV5I/AAAAAAAAANs/Z0-mXbhJGi8/s1600/pumpkin.jpg</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://2.bp.blogspot.com/-hnAPLrXTIqw/UJcxoPHNV5I/AAAAAAAAANs/Z0-mXbhJGi8/s1600/pumpkin.jpg</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style14">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/tree.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>99th Ave &amp; McDowell</name>
+    <description><![CDATA[<div dir="ltr">2033 N 99th Ave Phoenix AZ 85037</div>]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>-112.272255,33.468826,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>NW Corner of Estrella &amp; Van Buren</name>
+    <description><![CDATA[<div dir="ltr">440 N Estrella Parkway, Goodyear, AZ 85338</div>]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>-112.393143,33.451279,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Desert Sky Mall</name>
+    <description><![CDATA[<div dir="ltr">2510 N 75th Ave, Phoenix, AZ 85035</div>]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>-112.221832,33.475491,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>North Scottsdale Nursery</name>
+    <description><![CDATA[<div dir="ltr">25601 N Scottsdale Rd, Scottsdale, AZ 85255</div>]]></description>
+    <styleUrl>#style15</styleUrl>
+    <Point>
+      <coordinates>-111.924980,33.715485,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Dysart &amp; McDowell</name>
+    <description><![CDATA[<div dir="ltr">1551 N Dysart Rd, Avondale, AZ 85392</div>]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>-112.340958,33.464249,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Guadalupe &amp; Country Club Way</name>
+    <description><![CDATA[<div dir="ltr">1945 E Guadalupe Rd, Tempe, AZ 85283</div>]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>-111.902824,33.363544,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SE Corner of Baseline &amp; Lindsay</name>
+    <description><![CDATA[<div dir="ltr">2811 E Baseline Rd, Gilbert, AZ 85234</div>]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>-111.770683,33.378609,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>NW Corner of Signal Butte &amp; Southern</name>
+    <description><![CDATA[<div dir="ltr">10720 E Southern Ave, Mesa, AZ 85234</div>]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>-111.598312,33.393497,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paradise Valley Mall</name>
+    <description><![CDATA[<div dir="ltr">4324 E Cactus Rd, Phoenix, AZ 85032</div>]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>-111.983986,33.600609,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Arcadia Crossings Shopping Center</name>
+    <description><![CDATA[<div dir="ltr">2501 N 44th St, Phoenix, AZ 85007 </div>]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>-111.985283,33.479214,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SW Corner of Litchfield &amp; Indian School</name>
+    <description><![CDATA[<div dir="ltr">14175 W Indian School Rd, Goodyear, AZ 85338</div>]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>-112.363930,33.485405,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SE Corner of Broadway &amp; Rural</name>
+    <description><![CDATA[<div dir="ltr">909 E Broadway Rd, Tempe, AZ 85282</div>]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>-111.925255,33.406708,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>SW Corner of 6th Ave &amp; Michigan Dr</name>
+    <description><![CDATA[<div dir="ltr">4518 S 6th Ave Tucson AZ</div>]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>-110.968506,32.169777,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Southern &amp; McClintock</name>
+    <description><![CDATA[<div dir="ltr">3141 S McClintock Dr, Tempe, AZ 85282</div>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>-111.908630,33.395439,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Cave Creek</name>
+    <description><![CDATA[<div dir="ltr">33955 N Cave Creek Rd, Cave Creek, AZ 85331</div>]]></description>
+    <styleUrl>#style14</styleUrl>
+    <Point>
+      <coordinates>-111.967117,33.793236,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

@@ -14,6 +14,7 @@ import java.util.Hashtable;
 public class LotLocation {
 
     private String id;
+    private String markerId;
     private float rating;
     private String business;
     private String location;
@@ -35,6 +36,14 @@ public class LotLocation {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getMarkerId() {
+        return markerId;
+    }
+
+    public void setMarkerId(String markerId) {
+        this.markerId = markerId;
     }
 
     public String getPhone() {

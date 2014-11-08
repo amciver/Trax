@@ -34,19 +34,21 @@ import java.util.List;
  */
 public class LotsFragment extends SherlockListFragment {
 
+    private final String LOG_TAG = "LotsFragment";
+
     List<LotLocation> mLotLocations = new ArrayList<LotLocation>();
 
     List<SetLotsCompleteListener> mSetLotsCompleteListeners = new ArrayList<SetLotsCompleteListener>();
 
     public void setOnSetLotsCompleteListener(SetLotsCompleteListener listener) {
         this.mSetLotsCompleteListeners.add(listener);
-        Log.d("LotsFragment", "Listener added, [" + this.mSetLotsCompleteListeners + "] listeners exist");
+        Log.d(LOG_TAG, "Listener added, [" + this.mSetLotsCompleteListeners + "] listeners exist");
     }
 
     //TODO: Verify that we dont hold on to a listener
     public void removeOnSetLotsCompleteListener(SetLotsCompleteListener listener) {
         boolean result = this.mSetLotsCompleteListeners.remove(listener);
-        Log.d("LotsFragment", "Result of removing listener was [" + result + "] - [" + this.mSetLotsCompleteListeners.size() + "] listeners remain");
+        Log.d("LOG_TAG", "Result of removing listener was [" + result + "] - [" + this.mSetLotsCompleteListeners.size() + "] listeners remain");
     }
 
     @Override
@@ -112,12 +114,19 @@ public class LotsFragment extends SherlockListFragment {
                 return true;
             }
             case R.id.directions_item: {
-
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
                 LotLocation lotLocation = mLotLocations.get(info.position);
+
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr=" + ImplLocationService.INSTANCE.getCurrentLocation().getLatitude() + "," + ImplLocationService.INSTANCE.getCurrentLocation().getLongitude() + "&daddr=" + lotLocation.getPoint().latitude + "," + lotLocation.getPoint().longitude));
                 startActivity(intent);
                 return true;
+            }
+            case R.id.flag_item: {
+                AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+                LotLocation lotLocation = mLotLocations.get(info.position);
+
+                ImplSimpleDBService srvc = new ImplSimpleDBService();
+                srvc.addLotFlagAsync(getActivity().getApplicationContext(), lotLocation);
             }
             default:
                 return super.onContextItemSelected(item);
@@ -187,20 +196,20 @@ public class LotsFragment extends SherlockListFragment {
                             LatLng latLng = marker.getPosition();
 
                             LotLocation lotLocation = null;
-                            String id = marker.getId();
-                            Log.d("SAMPLESAMPLE", "Lot location marker id [" + id + "]");
+                            String markerId = marker.getId();
+                            Log.d(LOG_TAG, "Lot location marker id [" + markerId + "]");
                             for (LotLocation l : mLotLocations)
-                                if (l.getId().equals(id)) {
+                                if (l.getMarkerId().equals(markerId)) {
                                     lotLocation = l;
                                 }
-                            Log.d("SAMPLESAMPLE", "Lot location [" + lotLocation + "]");
+                            Log.d(LOG_TAG, "Lot location [" + lotLocation + "]");
                             if (lotLocation != null) {
                                 TextView title = (TextView) v.findViewById(R.id.lot_info_title);
                                 title.setText(lotLocation.getLocation());
 
                                 TextView description = (TextView) v.findViewById(R.id.lot_info_description);
                                 description.setText(lotLocation.getDescription());
-                                Log.d("SAMPLESAMPLE", "Logging description " + lotLocation.getDescription());
+                                Log.d(LOG_TAG, "Logging description " + lotLocation.getDescription());
                             }
 
                             return v;
@@ -215,14 +224,14 @@ public class LotsFragment extends SherlockListFragment {
                     googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                         @Override
                         public void onInfoWindowClick(Marker marker) {
-                            String id = marker.getId();
-                            Log.d("SAMPLESAMPLE", "Id is [" + id + "]");
+                            String markerId = marker.getId();
+                            Log.d(LOG_TAG, "Marker Id is [" + markerId + "]");
                         }
                     });
 
                     int position = 1;
                     for (LotLocation lotLocation : mLotLocations) {
-                        Log.d("showLots", "Location " + lotLocation.getPointAsString() + " being added to map");
+                        Log.d("setLots", "Location " + lotLocation.getPointAsString() + " being added to map");
 
                         BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
                         addLotToMap(googleMap, icon, lotLocation);
@@ -259,8 +268,8 @@ public class LotsFragment extends SherlockListFragment {
                 .title(lotLocation.getLocation())
                 .snippet(lotLocation.getDescription())
                 .icon(icon));
-        lotLocation.setId(marker.getId());
-        Log.d("SAMPLESAMPLE", "Adding marker with id [" + marker.getId() + "]");
+        lotLocation.setMarkerId(marker.getId());
+        Log.d(LOG_TAG, "Adding marker with id [" + marker.getId() + "]");
     }
 
 

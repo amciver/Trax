@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="time_seperator">-</string>
     <string name="empty"></string>
     <string name="app_name">O Tannenbaum</string>
     <string name="not_available">N/A</string>
@@ -11,6 +12,9 @@
     <string name="option_lots">Lots</string>
     <string name="option_dropsites">Dropsites</string>
     <string name="lot_verified">V E R I F I E D</string>
+    <string name="context_directions">Directions</string>
+    <string name="context_call">Call</string>
+    <string name="context_flag">Flag</string>
 
     <string name="add_lot_business">Business Name</string>
     <string name="add_lot_cross">Cross Streets</string>

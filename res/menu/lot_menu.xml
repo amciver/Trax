@@ -4,7 +4,9 @@
       android:layout_height="fill_parent"
       android:layout_width="fill_parent">
     <item android:id="@+id/call_item"
-          android:title="Call"/>
+          android:title="@string/context_call"/>
     <item android:id="@+id/directions_item"
-          android:title="Directions"/>
+          android:title="@string/context_directions"/>
+    <item android:id="@+id/flag_item"
+          android:title="@string/context_flag"/>
 </menu>

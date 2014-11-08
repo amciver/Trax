@@ -30,6 +30,8 @@ import java.util.List;
  */
 public class ImplInstagramService implements IInstagramService {
 
+    private final String LOG_TAG = "ImplInstagramService";
+
     private final int COUNT = 20;
     private final String CLIENT_ID = "f8bf37e4a94c4de392b43ebac820bda4";
     private Hashtable<String, String> mTagMapping = new Hashtable<String, String>();
@@ -61,7 +63,7 @@ public class ImplInstagramService implements IInstagramService {
                 if (mTagMapping.containsKey(tag))
                     endpoint = mTagMapping.get(tag);
 
-                Log.d("ImplInstagramService", "Making HttpGet call to [" + endpoint + "]");
+                Log.d(LOG_TAG, "Making HttpGet call to [" + endpoint + "]");
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet(endpoint);
                 HttpResponse response = client.execute(request);
@@ -92,12 +94,12 @@ public class ImplInstagramService implements IInstagramService {
                 results = setLocations(jsonObject.getJSONArray("data"));
 
 
-                Log.d("ImplInstagramService", "Storing endpoint [" + jsonObject.getJSONObject("pagination").optString("next_url") + "] for tag [" + tag + "]");
+                Log.d(LOG_TAG, "Storing endpoint [" + jsonObject.getJSONObject("pagination").optString("next_url") + "] for tag [" + tag + "]");
                 mTagMapping.put(tag, jsonObject.getJSONObject("pagination").optString("next_url") + "&count=" + COUNT);
 
 
             } catch (Exception e) {
-                Log.e("ImplInstagramService", e.getMessage(), e);
+                Log.e(LOG_TAG, e.getMessage(), e);
             }
 
             return results;
@@ -115,7 +117,7 @@ public class ImplInstagramService implements IInstagramService {
                     try {
                         location = photo.getJSONObject("location");
                     } catch (JSONException ex) {
-                        Log.w("ImplInstagramService", "Unable to locate location for photo [" + i + "], value is null", ex);
+                        Log.w(LOG_TAG, "Unable to locate location for photo [" + i + "], value is null", ex);
                     }
 
                     if (location != null) {
@@ -130,11 +132,11 @@ public class ImplInstagramService implements IInstagramService {
                         }
                     }
                 } catch (JSONException e) {
-                    Log.e("ImplInstagramService", e.getMessage(), e);
+                    Log.e(LOG_TAG, e.getMessage(), e);
                 }
             }
 
-            Log.d("ImplInstagramService", "Returning photos [" + photos.toString() + "]");
+            Log.d(LOG_TAG, "Returning photos [" + photos.toString() + "]");
             return photos;
         }
 

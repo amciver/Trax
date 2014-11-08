@@ -30,7 +30,7 @@ import com.experiment.trax.services.tvmclient.Response;
  * accessing a client the credentials should be checked to ensure validity.
  */
 public class AWSClientManager {
-    private static final String LOG_TAG = "AWSClientManager";
+    private final String LOG_TAG = "AWSClientManager";
 
     //	private AmazonS3Client s3Client = null;
 //	private AmazonSQSClient sqsClient = null;

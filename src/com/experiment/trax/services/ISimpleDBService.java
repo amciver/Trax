@@ -19,6 +19,8 @@ public interface ISimpleDBService {
 
     void getDropsitesAsync(Context context, LatLng coordinate);
 
+    void addLotFlagAsync(Context context, LotLocation location);
+
     void loadLocationsAsync(String kml);
     ////void loadDropSitesAsync();
 }

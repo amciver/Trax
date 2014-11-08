@@ -52,6 +52,55 @@ public class ImplSimpleDBService implements ISimpleDBService {
         this.mGetLotLocationsCompleteListeners.add(listener);
     }
 
+    public void addLotFlagAsync(Context context, LotLocation location) {
+        new AddLotFlagTask().execute(location);
+    }
+
+    private class AddLotFlagTask extends AsyncTask<LotLocation, Integer, Boolean> {
+
+        @Override
+        protected Boolean doInBackground(LotLocation... lotLocation) {
+
+            AmazonSimpleDBClient instance = SimpleDB.getInstance();
+            if (instance != null) {
+
+                //this was being used when we were pulling flags from the LotLocation db and then updating a single column value
+                //by 1 to increment continually however felt it was better to store separately so that we can get more data on it
+//                int flagCount = 0;
+//
+//                SelectResult result = instance.select(new SelectRequest("select flags from `Locations` where itemName() = '" + lotLocation[0].getId() + "'"));
+//                if (result != null) {
+//                    //grab the flag count currently in place for the lot then increment it by 1
+//                    String flagCountString = ((Attribute)result.getItems().get(0).getAttributes().toArray()[0]).getValue();
+//                    flagCount = flagCountString == null || flagCountString.isEmpty() ? 0 : Integer.valueOf(flagCountString);
+//                    flagCount += 1;
+//                }
+
+                String deviceId = Generator.getUniquePsuedoID();
+
+                PutAttributesRequest request = new PutAttributesRequest().withDomainName("Location_Flags");
+                request.setItemName(lotLocation[0].getId() + "," + deviceId);
+
+                Collection<ReplaceableAttribute> attributes = new ArrayList<ReplaceableAttribute>();
+                attributes.add(new ReplaceableAttribute("location_id", lotLocation[0].getId(), true));
+                attributes.add(new ReplaceableAttribute("flagged_by", deviceId, true));
+                attributes.add(new ReplaceableAttribute("date_time", new DateTime().toString(), true));
+                request.setAttributes(attributes);
+
+                boolean success = true;
+                try {
+                    SimpleDB.getInstance().putAttributes(request);
+                } catch (Exception e) {
+                    success = false;
+                    Log.e("AddLotFlagTask", "Failure trying to update flag count for location [" + lotLocation[0] + "]", e);
+                }
+
+                return success;
+            } else
+                return false;
+        }
+    }
+
     public void addLotLocationAsync(Context context, LotLocation location) {
         new AddLotLocationTask().execute(location);
     }
@@ -75,6 +124,7 @@ public class ImplSimpleDBService implements ISimpleDBService {
             attributes.add(new ReplaceableAttribute("discover", lotLocation[0].isAcceptsDiscover() ? "1" : "0", true));
             attributes.add(new ReplaceableAttribute("mastercard", lotLocation[0].isAcceptsMastercard() ? "1" : "0", true));
             attributes.add(new ReplaceableAttribute("visa", lotLocation[0].isAcceptsVisa() ? "1" : "0", true));
+            attributes.add(new ReplaceableAttribute("added_by", Generator.getUniquePsuedoID(), true));
             attributes.add(new ReplaceableAttribute("date_added", new DateTime().toString(), true));
             attributes.add(new ReplaceableAttribute("active", "1", true));
             request.setAttributes(attributes);

@@ -90,15 +90,7 @@ public class ImplLocationService implements ILocationService {
                 if (b.isEmpty())
                     b = addresses.get(0).getCountryName();
                 result = a + ", " + b;
-//                addresses.get(0).getAdminArea() == null)
-//                {
-//                    //if(addresses.get(0).getLocality().equalsIgnoreCase("Knoxville")  ||
-//                            //addresses.get(0).getLocality().equalsIgnoreCase("null"))
-//                        //Log.d("blah", "aa");
-//                    result = addresses.get(0).getLocality() + ", " + addresses.get(0).getCountryName();
-//                }
-//                else
-//                    result = addresses.get(0).getLocality() + ", " + addresses.get(0).getAdminArea();
+
                 Log.d("ImplLocationService", "Returning location found as [" + result + "]");
             }
         } catch (IOException e) {

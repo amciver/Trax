@@ -81,6 +81,7 @@ public class LotsFragment extends SherlockListFragment {
 //        });
 
         listView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+
             @Override
             public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
 
@@ -89,13 +90,20 @@ public class LotsFragment extends SherlockListFragment {
 
                 android.view.MenuInflater inflater = getActivity().getMenuInflater();
 
+                boolean flagAvailable = !lotLocation.isVerified();
+
                 //if we dont have a phone number, return now
                 if (lotLocation.getPhone() != null &&
                         lotLocation.getPhone().length() != 7 &&
                         lotLocation.getPhone().length() != 10)
-                    inflater.inflate(R.menu.lot_menu_no_phone, contextMenu);
-                else
+                    if (flagAvailable)
+                        inflater.inflate(R.menu.lot_menu_no_phone, contextMenu);
+                    else
+                        inflater.inflate(R.menu.lot_menu_no_phone_or_flag, contextMenu);
+                else if (flagAvailable)
                     inflater.inflate(R.menu.lot_menu, contextMenu);
+                else
+                    inflater.inflate(R.menu.lot_menu_no_flag, contextMenu);
             }
         });
 
@@ -152,27 +160,6 @@ public class LotsFragment extends SherlockListFragment {
 
                     LotAdapter adapter = new LotAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, mLotLocations);
                     setListAdapter(adapter);
-
-                    //we need to know when an item is clicked so we can provide the details
-//                SherlockListFragment listFragment = (SherlockListFragment)lots;
-//                listFragment.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                    @Override
-//                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                        //GoogleMap googleMap = ((SupportMapFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
-//                        //googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(locations.get(i).getPoint(), 13));
-//
-//                        Intent intent = new Intent(getActivity().getApplicationContext(), LotDetailsActivity.class);
-//                        startActivity(intent);
-//
-//                        //FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-//                        //LotsFragment lotsFragment = (LotsFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_lots));
-//                        //DetailsFragment detailsFragment = (DetailsFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_details));
-//                        //trans.hide(lotsFragment);
-//                        //trans.show(detailsFragment);
-//                        //trans.commit();
-//
-//                    }
-//                });
 
                     GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
                     googleMap.clear();
@@ -271,37 +258,4 @@ public class LotsFragment extends SherlockListFragment {
         lotLocation.setMarkerId(marker.getId());
         Log.d(LOG_TAG, "Adding marker with id [" + marker.getId() + "]");
     }
-
-
-//    public boolean onContextItemSelected(MenuItem aItem) {
-//        Log.d("MakingCall", "Im in fragment");
-//        //AdapterContextMenuInfo menuInfo = (AdapterContextMenuInfo) aItem.getMenuInfo();
-//        return false;
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        Log.d("MakingCall", "Im in fragment, onOptionsItemSelected");
-//        return super.onOptionsItemSelected(item);    //To change body of overridden methods use File | Settings | File Templates.
-//    }
-
-//    @Override
-//    public void onListItemClick(ListView l, View v, int position, long id) {
-//        super.onListItemClick(l, v, position, id);
-//
-//        GoogleMap googleMap = ((SupportMapFragment) (getActivity().getSupportFragmentManager().findFragmentById(R.id.lots_map))).getMap();
-//        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mLocations.get(position).getPoint(), 13));
-//
-////        Intent intent = new Intent(getActivity().getApplicationContext(), LotDetailsActivity.class);
-////        startActivity(intent);
-//
-////        FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-////        LotsFragment lotsFragment = (LotsFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_lots));
-////        DetailsFragment detailsFragment = (DetailsFragment)(getSupportFragmentManager().findFragmentById(R.id.lots_details));
-////        trans.hide(lotsFragment);
-////        trans.show(detailsFragment);
-////        trans.commit();
-//    }
-
-
 }

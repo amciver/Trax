@@ -5,6 +5,4 @@
       android:layout_width="fill_parent">
     <item android:id="@+id/directions_item"
           android:title="Directions"/>
-    <item android:id="@+id/flag_item"
-          android:title="@string/context_flag"/>
 </menu>

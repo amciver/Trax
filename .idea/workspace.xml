@@ -63,9 +63,12 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.experiment.trax" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="Ability to flag lots added, broker out marker id from lot id, general refactoring">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lot.xml" afterPath="$PROJECT_DIR$/res/layout/lot.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+    <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="Cleaned up formatting of strings.xml">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/lot_menu_no_flag.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/lot_menu_no_phone_or_flag.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml" afterPath="$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Streak for the Cash Scheduler.iws" />
@@ -138,21 +141,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LotsFragment.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LotsFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0555556" vertical-offset="0" max-vertical-offset="4170">
-              <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.40829694" vertical-offset="908" max-vertical-offset="3525">
+              <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
+              <folding>
+                <element signature="e#3489#4729#0" expanded="true" />
+                <element signature="e#4718#4719#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lot_menu_no_phone_or_flag.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone_or_flag.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="195">
+              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AWSClientManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/AWSClientManager.java">
+      <file leaf-file-name="lot_menu_no_flag.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_flag.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="2925">
-              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+            <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="225">
+              <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -162,7 +178,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2280">
-              <caret line="45" column="21" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
               <folding>
                 <element signature="e#1315#1351#0" expanded="true" />
               </folding>
@@ -170,21 +186,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImplLocationService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2610">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="1305">
+              <caret line="16" column="60" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="lot_menu_no_phone.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8627451" vertical-offset="354" max-vertical-offset="885">
-              <caret line="50" column="1815" selection-start-line="50" selection-start-column="1815" selection-end-line="50" selection-end-column="1815" />
+            <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="225">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -196,11 +212,21 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.769231" vertical-offset="45" max-vertical-offset="1395">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="345" max-vertical-offset="1395">
               <caret line="23" column="63" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding>
                 <element signature="e#1417#1440#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lot_menu.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/lot_menu.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="10" column="53" selection-start-line="9" selection-start-column="3" selection-end-line="10" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -229,28 +255,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LotLocation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/models/LotLocation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1680">
-              <caret line="30" column="48" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISimpleDBService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ISimpleDBService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="450">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -270,8 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/dropsite_selection.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/core/BaseActivity.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/CareFragment.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/TypefaceSpan.java" />
@@ -292,7 +294,6 @@
         <option value="$PROJECT_DIR$/src/com/experiment/trax/listeners/AddLotLocationCompleteListener.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/DropsiteSelectionActivity.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ILocationService.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/models/DropsiteLocation.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/DropsitesFragment.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/DropsiteAdapter.java" />
@@ -303,7 +304,6 @@
         <option value="$PROJECT_DIR$/res/values/styles_default.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
-        <option value="$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/String.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
@@ -316,11 +316,15 @@
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ISimpleDBService.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/models/LotLocation.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/Generator.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
         <option value="$PROJECT_DIR$/res/layout/lot.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
+        <option value="$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml" />
+        <option value="$PROJECT_DIR$/res/menu/lot_menu_no_phone_or_flag.xml" />
+        <option value="$PROJECT_DIR$/res/menu/lot_menu_no_flag.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
       </list>
     </option>
   </component>
@@ -894,11 +898,11 @@
       <recent name="com.experiment.trax" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/menu" />
       <recent name="$PROJECT_DIR$/res/drawable-ldpi" />
       <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
       <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
       <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
-      <recent name="$PROJECT_DIR$/libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/fonts" />
@@ -1163,7 +1167,11 @@
       <created>1415486872104</created>
       <updated>1415486872104</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Cleaned up formatting of strings.xml">
+      <created>1415488672638</created>
+      <updated>1415488672638</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1255,13 +1263,14 @@
     <MESSAGE value="Modified context menu on lot selection to dynamically provide directions or phone number" />
     <MESSAGE value="Added verified images for lots, updated services to deal with verified flag, general cleanup" />
     <MESSAGE value="Ability to flag lots added, broker out marker id from lot id, general refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ability to flag lots added, broker out marker id from lot id, general refactoring" />
+    <MESSAGE value="Cleaned up formatting of strings.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up formatting of strings.xml" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="29" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1269,25 +1278,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/lot_selection.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="600">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/lot_add_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="210">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/listeners/GetInstagramPhotosCompleteListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38391224" vertical-offset="0" max-vertical-offset="547">
@@ -1351,6 +1341,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,14 +1439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="60" max-vertical-offset="195">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/utils/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="930">
@@ -1540,14 +1523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/lot_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="255">
-          <caret line="8" column="58" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/tree.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1610,16 +1585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2280">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#1315#1351#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ISimpleDBService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
@@ -1660,16 +1625,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2610">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.06946983" vertical-offset="1268" max-vertical-offset="2490">
+          <caret line="94" column="42" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0555556" vertical-offset="0" max-vertical-offset="4170">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2280">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="e#1315#1351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/lot_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="10" column="53" selection-start-line="9" selection-start-column="3" selection-end-line="10" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1679,7 +1654,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.769231" vertical-offset="45" max-vertical-offset="1395">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="345" max-vertical-offset="1395">
           <caret line="23" column="63" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
           <folding>
             <element signature="e#1417#1440#0" expanded="true" />
@@ -1689,9 +1664,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8627451" vertical-offset="354" max-vertical-offset="885">
-          <caret line="50" column="1815" selection-start-line="50" selection-start-column="1815" selection-end-line="50" selection-end-column="1815" />
+        <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="1305">
+          <caret line="16" column="60" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="225">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone_or_flag.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="195">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_flag.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="225">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40829694" vertical-offset="908" max-vertical-offset="3525">
+          <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
+          <folding>
+            <element signature="e#3489#4729#0" expanded="true" />
+            <element signature="e#4718#4719#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

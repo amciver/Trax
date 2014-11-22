@@ -381,7 +381,8 @@ public class ImplSimpleDBService implements ISimpleDBService {
             Log.d("GetLocationsTask", "Passing " + mGetLotLocationsCompleteListeners.size() + " listeners " + locations.size() + " locations");
             //notify all listeners that work is complete
             for (GetLotLocationsCompleteListener listener : mGetLotLocationsCompleteListeners) {
-                listener.onLotLocationFetchComplete(locations);
+                if (listener != null)
+                    listener.onLotLocationFetchComplete(locations);
             }
         }
     }

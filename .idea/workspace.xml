@@ -63,12 +63,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.experiment.trax" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="Cleaned up formatting of strings.xml">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/lot_menu_no_flag.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/lot_menu_no_phone_or_flag.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml" afterPath="$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml" />
+    <list default="true" id="0c541b48-ae8f-4dbc-b913-5cd8b5866c5f" name="Default" comment="Put in ability for dynamic context menu so user can't flag verified lots">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" afterPath="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Streak for the Cash Scheduler.iws" />
@@ -141,15 +138,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LotsFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LotsFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40829694" vertical-offset="908" max-vertical-offset="3525">
-              <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
+            <state vertical-scroll-proportion="-6.5" vertical-offset="1811" max-vertical-offset="3525">
+              <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
               <folding>
-                <element signature="e#3489#4729#0" expanded="true" />
-                <element signature="e#4718#4719#0" expanded="true" />
+                <element signature="e#3449#4689#0" expanded="true" />
+                <element signature="e#4678#4679#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LotAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="2565">
+              <caret line="114" column="35" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LotLocation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/models/LotLocation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1680">
+              <caret line="144" column="23" selection-start-line="144" selection-start-column="23" selection-end-line="144" selection-end-column="23" />
+              <folding>
+                <element signature="e#584#601#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,7 +186,7 @@
       <file leaf-file-name="lot_menu_no_phone_or_flag.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone_or_flag.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="195">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="90" max-vertical-offset="195">
               <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
               <folding />
             </state>
@@ -167,21 +196,9 @@
       <file leaf-file-name="lot_menu_no_flag.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_flag.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="225">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="120" max-vertical-offset="225">
               <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImplInstagramService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2280">
-              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-              <folding>
-                <element signature="e#1315#1351#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -199,7 +216,7 @@
       <file leaf-file-name="lot_menu_no_phone.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="225">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="120" max-vertical-offset="225">
               <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
@@ -212,7 +229,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="345" max-vertical-offset="1395">
+            <state vertical-scroll-proportion="-0.5769231" vertical-offset="315" max-vertical-offset="1395">
               <caret line="23" column="63" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding>
                 <element signature="e#1417#1440#0" expanded="true" />
@@ -221,36 +238,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lot_menu.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/menu/lot_menu.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="10" column="53" selection-start-line="9" selection-start-column="3" selection-end-line="10" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImplSimpleDBService.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImplSimpleDBService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="6855">
-              <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.3895131" vertical-offset="5162" max-vertical-offset="6840">
+              <caret line="381" column="0" selection-start-line="381" selection-start-column="0" selection-end-line="384" selection-end-column="67" />
               <folding>
-                <element signature="e#2228#2229#0" expanded="true" />
-                <element signature="e#2282#2283#0" expanded="true" />
                 <element signature="e#3803#3825#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Generator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/utils/Generator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="870">
-              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -261,6 +256,10 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/../signing/production.keystore.jks" />
+    <option name="KEY_ALIAS" value="3xperiment Production" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -305,8 +304,6 @@
         <option value="$PROJECT_DIR$/src/com/experiment/trax/LotSelectionActivity.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/PhotosFragment.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/String.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/drawable/arrow_up.xml" />
         <option value="$PROJECT_DIR$/res/layout/dropsite.xml" />
         <option value="$PROJECT_DIR$/res/menu/lot_selection_menu.xml" />
@@ -315,9 +312,7 @@
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/AWSClientManager.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplInstagramService.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ISimpleDBService.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/models/LotLocation.java" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/utils/Generator.java" />
-        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
         <option value="$PROJECT_DIR$/res/layout/lot.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplLocationService.java" />
@@ -325,6 +320,10 @@
         <option value="$PROJECT_DIR$/res/menu/lot_menu_no_phone_or_flag.xml" />
         <option value="$PROJECT_DIR$/res/menu/lot_menu_no_flag.xml" />
         <option value="$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/models/LotLocation.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java" />
       </list>
     </option>
   </component>
@@ -889,6 +888,9 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="SearchEverywhereHistory" value="&#10;unable to location&#10;INSTANCE" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="ExportedModule" value="Trax" />
+    <property name="ExportedApkPath" value="$PROJECT_DIR$/Trax.apk" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1171,7 +1173,11 @@
       <created>1415488672638</created>
       <updated>1415488672638</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Put in ability for dynamic context menu so user can't flag verified lots">
+      <created>1415490836668</created>
+      <updated>1415490836669</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1204,7 +1210,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23635058" sideWeight="0.754717" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27951807" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27951807" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.78197676" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39518073" sideWeight="0.4913917" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34819278" sideWeight="0.3474212" order="7" side_tool="true" content_ui="tabs" />
@@ -1212,7 +1218,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771084" sideWeight="0.7065997" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29971388" sideWeight="0.46100917" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28674698" sideWeight="0.48852223" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33975902" sideWeight="0.65186244" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33975902" sideWeight="0.65186244" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650602" sideWeight="0.49426112" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29971388" sideWeight="0.46100917" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1264,7 +1270,8 @@
     <MESSAGE value="Added verified images for lots, updated services to deal with verified flag, general cleanup" />
     <MESSAGE value="Ability to flag lots added, broker out marker id from lot id, general refactoring" />
     <MESSAGE value="Cleaned up formatting of strings.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up formatting of strings.xml" />
+    <MESSAGE value="Put in ability for dynamic context menu so user can't flag verified lots" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put in ability for dynamic context menu so user can't flag verified lots" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1472,14 +1479,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="765">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/TreeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="1575">
@@ -1492,14 +1491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="240" max-vertical-offset="330">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2075" max-vertical-offset="2565">
-          <caret line="169" column="79" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1593,33 +1584,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/models/LotLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1680">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/utils/Generator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
           <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="6855">
-          <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
-          <folding>
-            <element signature="e#2228#2229#0" expanded="true" />
-            <element signature="e#2282#2283#0" expanded="true" />
-            <element signature="e#3803#3825#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1649,19 +1618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="345" max-vertical-offset="1395">
-          <caret line="23" column="63" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding>
-            <element signature="e#1417#1440#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="1305">
@@ -1672,7 +1628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="225">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="120" max-vertical-offset="225">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
@@ -1680,7 +1636,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_phone_or_flag.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="195">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="90" max-vertical-offset="195">
           <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
           <folding />
         </state>
@@ -1688,19 +1644,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/lot_menu_no_flag.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="225">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="120" max-vertical-offset="225">
           <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/models/LotLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1680">
+          <caret line="144" column="23" selection-start-line="144" selection-start-column="23" selection-end-line="144" selection-end-column="23" />
+          <folding>
+            <element signature="e#584#601#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/lot.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5769231" vertical-offset="315" max-vertical-offset="1395">
+          <caret line="23" column="63" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <folding>
+            <element signature="e#1417#1440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/adapters/LotAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="2565">
+          <caret line="114" column="35" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/fragments/LotsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40829694" vertical-offset="908" max-vertical-offset="3525">
-          <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
+        <state vertical-scroll-proportion="-6.5" vertical-offset="1811" max-vertical-offset="3525">
+          <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
           <folding>
-            <element signature="e#3489#4729#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
+            <element signature="e#3449#4689#0" expanded="true" />
+            <element signature="e#4678#4679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/experiment/trax/services/ImplSimpleDBService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3895131" vertical-offset="5162" max-vertical-offset="6840">
+          <caret line="381" column="0" selection-start-line="381" selection-start-column="0" selection-end-line="384" selection-end-column="67" />
+          <folding>
+            <element signature="e#3803#3825#0" expanded="true" />
           </folding>
         </state>
       </provider>
